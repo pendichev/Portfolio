@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Andon Pendichev - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style3.css">
     <link rel="stylesheet" href="comp.css">
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="test@.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Menu de navigation -->
@@ -18,176 +19,469 @@
         <div class="logo">
             <a href="https://iutv.univ-paris13.fr/?sitemap">IUT Villetaneuse</a>
         </div> 
-        <div class="menu-toggle">
+    
+        <button class="menu-toggle">
             <i class="fas fa-bars"></i>
-        </div>            
-        <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        </button>
+    
+        <nav class="nav-principale">
+            <ul class="nav-menu">
+                <li><a href="#accueil" data-i18n="nav-accueil">Accueil</a></li>
+                <li><a href="#about" data-i18n="nav-a-propos">À propos</a></li>
+                <li><a href="#competences" data-i18n="nav-competences">Compétences</a></li>
+                <li><a href="#portfolio" data-i18n="nav-portfolio">Portfolio</a></li>
+                <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+                <li>
+                    <button id="language-toggle" class="language-btn">
+                        <i class="fas fa-globe"></i> EN
+                    </button>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Section Accueil -->
     <section id="accueil" class>
         <div class="titre">  
-            <h1>Andon Pendichev</h1>
-            <h2>Etudiant en BUT R&T</h2>
+            <h1 data-i18n="accueil-titre">Andon Pendichev</h1>
+            <h2 data-i18n="accueil-sous-titre">Étudiant en BUT R&T</h2>
         </div>
     </section>
 
     <!-- Section À propos -->
     <section id="about" class="section">
-        <h1>À propos</h1>
+        <h1 data-i18n="about-titre">À propos</h1>
         <main>
             <section>
-                <h2>Pour moi</h2>
-                <p>Actuellement étudiant en première année de BUT Réseaux et Télécommunications à l’IUT de Villetaneuse, je recherche une alternance pour développer mes compétences pratiques et théoriques en administration réseau, cybersécurité et informatique . Curieux, adaptable et motivé, je suis prêt à contribuer activement aux projets de votre entreprise tout en consolidant mon expertise technique. Volontaire, je me distingue par mon engagement au service du collectif et mon goût d'apprendre. Afin d'enrichir mon parcours professionnel, je suis ouvert à des propositions d’alternance dans mon domaine. Ponctuel et organisé, je contribue au bon déroulement des activités en faisant preuve de sérieux et d'implication.</p>
+                <h2 data-i18n="about-pour-moi">Pour moi</h2>
+                <p data-i18n="about-text">Actuellement étudiant en deuxième année de BUT Réseaux et Télécommunications à l'IUT de Villetaneuse, je suis à la recherche d'une expérience professionnelle. Curieux, adaptable et motivé, je suis désireux de contribuer activement aux projets de votre entreprise tout en renforçant mon expertise technique. Engagé, je me distingue par mon sens du service en équipe et ma passion pour l'apprentissage. Afin d'enrichir mon parcours professionnel, je suis ouvert aux opportunités d'emploi dans mon domaine. Ponctuel et organisé, je participe au bon déroulement des activités en faisant preuve de sérieux et d'implication.</p>
             </section>
             <section>
-                <h2>Personnalité</h2>
-                <p>Créatif : Je suis capable de m’adapter à des situations nouvelles et de changer de perspective si nécessaire pour trouver des solutions originales.</p>
-                <p>Determiné : Je croit fermement en mes capacités à réussir.</p>
-                <p>Motivé : Je m’investis pleinement, avec énergie et enthousiasme.</p>
-                <p>Résolu : Je suis discipliné dans mon approche, planifiant et exécutant mes actions de manière réfléchie.</p>
-                <p>Cooperatif : Je respecte mes engagements et joue mon rôle dans l’équipe, ce qui renforce la confiance mutuelle.</p>
+                <h2 data-i18n="about-personnalite">Personnalité</h2>
+                <p data-i18n="about-creatif">Créatif : Je suis capable de m'adapter à des situations nouvelles et de changer de perspective si nécessaire pour trouver des solutions originales.</p>
+                <p data-i18n="about-determined">Déterminé : Je crois fermement en mes capacités à réussir.</p>
+                <p data-i18n="about-motivated">Motivé : Je m'investis pleinement, avec énergie et enthousiasme.</p>
+                <p data-i18n="about-resolu">Résolu : Je suis discipliné dans mon approche, planifiant et exécutant mes actions de manière réfléchie.</p>
+                <p data-i18n="about-cooperative">Coopératif : Je respecte mes engagements et joue mon rôle dans l'équipe, ce qui renforce la confiance mutuelle.</p>
             </section>
             <section>
-                <h2>Formation</h2>
-                <p>2024-2027  -  UNIVERSITÉ SORBONNE PARIS NORD - IUT DE VILLETANEUSE, Bachelor Universitaire de Technologie en Réseaux et Télécommunications</p>
-                    <p>2021-2024  -  LYCÉE PRIVÉ SAINT-PIERRE CALAIS, Baccalauréat général</p>
+                <h2 data-i18n="about-formation">Formation</h2>
+                <p data-i18n="about-formation-1">2024-2027 - UNIVERSITÉ SORBONNE PARIS NORD - IUT DE VILLETANEUSE, Bachelor Universitaire de Technologie en Réseaux et Télécommunications</p>
+                <p data-i18n="about-formation-2">2021-2024 - LYCÉE PRIVÉ SAINT-PIERRE CALAIS, Baccalauréat général</p>
             </section>
         </main>
     </section>
 
     <!-- Section Compétences -->
-    <section id="skills" class="section">
-        <h1>Mes Compétences</h1>
-        <div class="sections">
-            <div class="section" id="administrer">
-                <i class="fas fa-cogs"></i>
-                <h2>Administrer</h2>
-                <p><i class="fas fa-server"></i> Gestion des utilisateurs, paramétrage de serveurs de base.</p>
-                <p><i class="fas fa-tools"></i> Maintenance et résolution de problèmes.</p>
-                <p><i class="fas fa-shield-alt"></i> Sécurisation des systèmes.</p>
+    <section id="competences" class="skills-section">
+        <h2 data-i18n="skills-titre">Mes Compétences Techniques</h2>
+        
+        <div class="skills-container">
+            <!-- Carte Administrer -->
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <i class="fas fa-server skill-icon"></i>
+                        <h3 data-i18n="skills-administrer">Administrer</h3>
+                        <p data-i18n="skills-hover">Survolez pour découvrir mes compétences</p>
+                    </div>
+                    <div class="skill-card-back">
+                        <h3 data-i18n="skills-admin-titre">Administration & Supervision</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fas fa-network-wired"></i>
+                                    <span data-i18n="skills-reseaux">Réseaux</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">LAN/WAN</span>
+                                    <span class="skill-item">Pare-feu</span>
+                                    <span class="skill-item">VPN</span>
+                                    <span class="skill-item">Supervision</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fas fa-desktop"></i>
+                                    <span data-i18n="skills-systemes">Systèmes</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">Linux</span>
+                                    <span class="skill-item">Windows</span>
+                                    <span class="skill-item">iOS</span>
+                                    <span class="skill-item">Serveurs</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fas fa-cogs"></i>
+                                    <span data-i18n="skills-services">Services</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">Active Directory</span>
+                                    <span class="skill-item">DNS</span>
+                                    <span class="skill-item">DHCP</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fas fa-cloud"></i>
+                                    <span data-i18n="skills-virtualisation">Virtualisation</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">VMware</span>
+                                    <span class="skill-item">VirtualBox</span>
+                                    <span class="skill-item">GNS3</span>
+                                    <span class="skill-item">Packet Tracer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="section" id="connecter">
-                <i class="fas fa-network-wired"></i>
-                <h2>Connecter</h2>
-                <p><i class="fas fa-wifi"></i> Configuration de routeurs, commutateurs et switchs</p>
-                <p><i class="fas fa-lock"></i> Gestion des protocoles TCP/IP </p>
-                <p><i class="fas fa-link"></i> Interconnexion de systèmes.</p>
+
+            <!-- Carte Connecter -->
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <i class="fas fa-network-wired skill-icon"></i>
+                        <h3 data-i18n="skills-connecter">Connecter</h3>
+                        <p data-i18n="skills-hover">Survolez pour découvrir mes compétences</p>
+                    </div>
+                    <div class="skill-card-back">
+                        <h3 data-i18n="skills-connect-titre">Networking & Télécoms</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span data-i18n="skills-core-networking">Core Networking</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">TCP/IP</span>
+                                    <span class="skill-item">HTTP/HTTPS</span>
+                                    <span class="skill-item">DNS</span>
+                                    <span class="skill-item">SSH/FTP</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fas fa-route"></i>
+                                    <span data-i18n="skills-routage">Routage & Switching</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">Routage</span>
+                                    <span class="skill-item">Switching</span>
+                                    <span class="skill-item">VLAN</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fas fa-wifi"></i>
+                                    <span data-i18n="skills-sans-fil">Sans-fil</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">WiFi</span>
+                                    <span class="skill-item">Réseaux mobiles</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <span data-i18n="skills-telephonie">Téléphonie</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">VoIP</span>
+                                    <span class="skill-item">SIP</span>
+                                    <span class="skill-item">PABX/IPBX</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fas fa-cable"></i>
+                                    <span data-i18n="skills-cablage">Câblage</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">Cuivre</span>
+                                    <span class="skill-item">Fibre optique</span>
+                                    <span class="skill-item">Baies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="section" id="programmer">
-                <i class="fas fa-code"></i>
-                <h2>Programmer</h2>
-                <p><i class="fas fa-terminal"></i>HTML, CSS, JavaScript.</p>
-                <p><i class="fas fa-code-branch"></i>Python, initiation au C.</p>
-                <p><i class="fas fa-laptop-code"></i>Scripts pour automatisation des tâches.</p>
+
+            <!-- Carte Programmer -->
+            <div class="skill-card">
+                <div class="skill-card-inner">
+                    <div class="skill-card-front">
+                        <i class="fas fa-code skill-icon"></i>
+                        <h3 data-i18n="skills-programmer">Programmer</h3>
+                        <p data-i18n="skills-hover">Survolez pour découvrir mes compétences</p>
+                    </div>
+                    <div class="skill-card-back">
+                        <h3 data-i18n="skills-programmer-titre">Développement & Scripts</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fab fa-python"></i>
+                                    <span data-i18n="skills-langages">Langages</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">Python</span>
+                                    <span class="skill-item">Java</span>
+                                    <span class="skill-item">PHP</span>
+                                    <span class="skill-item">Bash</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fab fa-html5"></i>
+                                    <span data-i18n="skills-web">Web</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">HTML5</span>
+                                    <span class="skill-item">CSS3</span>
+                                    <span class="skill-item">JavaScript</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fas fa-database"></i>
+                                    <span data-i18n="skills-bdd">Bases de données</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">MySQL</span>
+                                    <span class="skill-item">SQL</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <div class="skill-category-title">
+                                    <i class="fas fa-robot"></i>
+                                    <span data-i18n="skills-automatisation">Automatisation</span>
+                                </div>
+                                <div class="skill-items">
+                                    <span class="skill-item">Scripts</span>
+                                    <span class="skill-item">Tâches planifiées</span>
+                                    <span class="skill-item">Outils DevOps</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="section" id="langues">
-                <i class="fas fa-language"></i>
-                <h2>Langues</h2>
-                <p><i class="fas fa-comment"></i> Communication en anglais (Avancé).</p>
-                <p><i class="fas fa-comments"></i> Maîtrise du français (bilangue).</p>
-                <p><i class="fas fa-globe"></i> Notions en espagnol.</p>
-                <p><i class="fas fa-globe"></i> Bulgare (Langue maternelle).</p>
-            </div>
+        </div>
     </section>
 
     <!-- Section Portfolio -->
     <section id="portfolio" class="section">
-        <h1>Mon Portfolio</h1>
-        <div class="portfolio-item">
-            <a href="CV copy.pdf" class="cv-button" target="_blank">Voir mon CV</a>
-        </div>
-        
-        <main class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="Screenshot 2025-02-05 at 16.00.17.png" alt="Projet 1">
-                <a href="L'A2F.mp4" target="_blank">
-                    <div class="description">
-                        <h3>Se sensibiliser à l’hygiène informatique et à la cybersécurité</h3>
-                        <p>Communication technique, gestion de projet, sensibilisation aux risques informatiques</p>
-                    </div>
-                </a>
+        <div class="portfolio-container">
+            <div class="portfolio-header">
+                <h1 data-i18n="portfolio-titre">Mon Portfolio</h1>
             </div>
-            <div class="portfolio-item">
-                <img src="marionnet.jpeg" alt="Projet 2">
-                <a href="CR_SAE12.pdf" target="_blank">
-                    <div class="description">
-                        <h3>S’initier aux réseaux informatiques</h3>
-                        <p>Comprendre les notions des réseaux informatiques, configurer un réseau, tester et dépanner un réseau</p>
-                    </div>
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <img src="sae15.jpeg" alt="Projet 3">
-                <a href="sae15.html" target="_blank">
-                    <div class="description">
-                        <h3>Traiter des données</h3>
-                        <p>Analyser des données, visualiser des données, s’organiser</p>
-                    </div>
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <img src="sae14.jpeg" alt="Projet 4">
-                <a href="index.html" target="_blank">
-                    <div class="description">
-                        <h3>Se présenter sur internet</h3>
-                        <p>Communication numérique, design de supports web, rédaction technique</p>
-                    </div>
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <img src="sae12.jpeg" alt="Projet 5">
-                <div class="description">
-                    <h3>Découverte d’un dispositif de transmission</h3>
-                    <p>Analyser une liaison, faire des mesures, présenter des résultats</p>
+            
+            <!-- Section CV -->
+            <div class="cv-section">
+                <h2 data-i18n="portfolio-cv-titre">📄 Mes CV</h2>
+                <p data-i18n="portfolio-cv-text">Téléchargez mes CV en français et anglais</p>
+                <div class="cv-buttons">
+                    <a href="PendichevAndon.pdf" class="cv-button" target="_blank">
+                        <i class="fas fa-file-pdf"></i>
+                        <span data-i18n="portfolio-cv-fr">CV Français</span>
+                    </a>
+                    <a href="AndonPendichev.pdf" class="cv-button" target="_blank">
+                        <i class="fas fa-file-pdf"></i>
+                        <span data-i18n="portfolio-cv-en">CV English</span>
+                    </a>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="arduino.webp" alt="Projet 6">
-                <a href="sae13.pdf" target="_blank">
-                    <div class="description">
-                        <h3>Arduino</h3>
-                        <p>Se mettre dans la position d'un développeur professionnel</p>
-                    </div>
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <img src="IMG_9748.jpeg" alt="Projet 1">
-                <a href="handball.jpeg" target="_blank">
-                    <div class="description">
-                        <h3>Handball</h3>
-                        <p>Membre actif d'une équipe depuis 10 ans, actuellement joueur en Nationale 3  Masculine et membre de l’équipe nationale de Bulgarie</p>
-                    </div>
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <img src="IMG_2920.jpg" alt="Projet 1">
-                <a href="matrix.jpeg" target="_blank">
-                    <div class="description">
-                        <h3>Barman</h3>
-                        <p>Chargé de fournir un service client et de préparer les commandes des clients</p>
-                    </div>
-                </a>
-            </div>
 
-        </main>
+            <!-- Filtres de projets -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all" data-i18n="portfolio-filtre-tous">Tous les projets</button>
+                <button class="filter-btn" data-filter="reseaux" data-i18n="portfolio-filtre-reseaux">Réseaux</button>
+                <button class="filter-btn" data-filter="electronique" data-i18n="portfolio-filtre-electronique">Électronique</button>
+                <button class="filter-btn" data-filter="developpement" data-i18n="portfolio-filtre-developpement">Développement</button>
+                <button class="filter-btn" data-filter="cybersecurite" data-i18n="portfolio-filtre-cybersecurite">Cybersécurité</button>
+                <button class="filter-btn" data-filter="personnel" data-i18n="portfolio-filtre-personnel">Personnel</button>
+            </div>
+            
+            <!-- Grid de projets -->
+            <div class="portfolio-grid">
+                <!-- Projet 1 -->
+                <div class="portfolio-item" data-category="reseaux">
+                    <span class="project-category" data-i18n="portfolio-filtre-reseaux">Réseaux</span>
+                    <img src="logo.png" alt="SAEJ">
+                    <a href="JurisNova.pdf" target="_blank">
+                        <div class="description">
+                            <h3>Projet integratif</h3>
+                            <p>Segmentation réseau (VLANs, DMZ, LAN), Implémentation de la cybersécurité (ACLs), Déploiement de services (Apache, GLPI, MariaDB), Gestion du SLA et du budget.</p>
+                            <span class="project-link" data-i18n="portfolio-voir-plus">Voir plus</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="portfolio-item" data-category="developpement">
+                    <span class="project-category" data-i18n="portfolio-filtre-developpement">Développement</span>
+                    <img src="s23.png" alt="SAE23">
+                    <a href="SAE23_Pendichev.pdf" target="_blank">
+                        <div class="description">
+                            <h3>Mettre en place une solution informatique pour l'entreprise</h3>
+                            <p>Conception et mise en œuvre de base de données, Développement web (PHP), Automatisation réseau (VRF, VLAN, IP), Interface utilisateur (HMI), Sécurité & gestion des erreurs (SQL).</p>
+                            <span class="project-link" data-i18n="portfolio-voir-projet">Voir le projet</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="portfolio-item" data-category="electronique">
+                    <span class="project-category" data-i18n="portfolio-filtre-electronique">Électronique</span>
+                    <img src="S22.png" alt="SAE22">
+                    <a href="SAE22_Pendichev.pdf" target="_blank">
+                        <div class="description">
+                            <h3>Mesurer et caractériser un signal</h3>
+                            <p>Mise en œuvre de circuits analogiques, Analyse du signal, Ingénierie RF, Documentation technique, Protocole expérimental, Travail en collaboration.</p>
+                            <span class="project-link" data-i18n="portfolio-voir-pdf">Voir le PDF</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="portfolio-item" data-category="cybersecurite">
+                    <span class="project-category" data-i18n="portfolio-filtre-cybersecurite">Cybersécurité</span>
+                    <img src="screen.png" alt="SAE21">
+                    <a href="SAE21 Rapport.pdf" target="_blank">
+                        <div class="description">
+                            <h3>Construire un Réseau Informatique pour une petite structure</h3>
+                            <p>Conception d'architecture réseau, Mise en œuvre de services (DNS, HTTP, NAT/PAT), Configuration de sécurité (ACLs, SSH), Tests et dépannage (Wireshark), Maîtrise d'outils (Packet Tracer, GNS3)</p>
+                            <span class="project-link" data-i18n="portfolio-voir-pdf">Voir le PDF</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="portfolio-item" data-category="cybersecurite">
+                    <span class="project-category" data-i18n="portfolio-filtre-cybersecurite">Cybersécurité</span>
+                    <img src="Screenshot 2025-02-05 at 16.00.17.png" alt="Projet Cybersécurité">
+                    <a href="L'A2F.mp4" target="_blank">
+                        <div class="description">
+                            <h3>Hygiène Informatique & Cybersécurité</h3>
+                            <p>Communication technique, gestion de projet, sensibilisation aux risques informatiques</p>
+                            <span class="project-link" data-i18n="portfolio-voir-video">Voir la vidéo</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Projet 6 -->
+                <div class="portfolio-item" data-category="reseaux">
+                    <span class="project-category" data-i18n="portfolio-filtre-reseaux">Réseaux</span>
+                    <img src="s21.png" alt="Projet Réseaux">
+                    <a href="CR_SAE12.pdf" target="_blank">
+                        <div class="description">
+                            <h3>Initiation aux Réseaux Informatiques</h3>
+                            <p>Configuration réseau, dépannage, utilisation d'outils numériques</p>
+                            <span class="project-link" data-i18n="portfolio-voir-projet">Voir le projet</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Projet 7 -->
+                <div class="portfolio-item" data-category="developpement">
+                    <span class="project-category" data-i18n="portfolio-filtre-developpement">Développement</span>
+                    <img src="scr1.png" alt="Projet Data">
+                    <a href="sae15.html" target="_blank">
+                        <div class="description">
+                            <h3>Analyse & Visualisation de Données</h3>
+                            <p>Analyse de données d'entreprises culturelles, création de dashboards interactifs</p>
+                            <span class="project-link" data-i18n="portfolio-voir-projet">Voir le projet</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Projet 8 -->
+                <div class="portfolio-item" data-category="developpement">
+                    <span class="project-category" data-i18n="portfolio-filtre-developpement">Développement</span>
+                    <img src="9210E2B5-D4E3-4F03-85D6-C8EA4F6003A5.jpeg" alt="Projet Web">
+                    <a href="portfolio.html" target="_blank">
+                        <div class="description">
+                            <h3>Présentation Web & Design</h3>
+                            <p>Communication numérique, design de supports web, rédaction technique</p>
+                            <span class="project-link" data-i18n="portfolio-voir-site">Voir le site</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Projet 9 -->
+                <div class="portfolio-item" data-category="electronique">
+                    <span class="project-category" data-i18n="portfolio-filtre-electronique">Électronique</span>
+                    <img src="sae12.jpeg" alt="Projet Transmission">
+                    <div class="description">
+                        <h3>Dispositif de Transmission</h3>
+                        <p>Analyse de liaison, mesures techniques, présentation de résultats</p>
+                    </div>
+                </div>
+
+                <!-- Projet 10 -->
+                <div class="portfolio-item" data-category="electronique">
+                    <span class="project-category" data-i18n="portfolio-filtre-electronique">Électronique</span>
+                    <img src="arduino.webp" alt="Projet Arduino">
+                    <a href="sae13.pdf" target="_blank">
+                        <div class="description">
+                            <h3>Microprocesseur Arduino 4 bits</h3>
+                            <p>Développement professionnel, programmation embarquée, IoT</p>
+                            <span class="project-link" data-i18n="portfolio-voir-pdf">Voir le PDF</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Projet 11 -->
+                <div class="portfolio-item" data-category="personnel">
+                    <span class="project-category" data-i18n="portfolio-filtre-personnel">Personnel</span>
+                    <img src="IMG_9748.jpeg" alt="Handball">
+                    <a href="handball.jpeg" target="_blank">
+                        <div class="description">
+                            <h3>Handball - Sport de Haut Niveau</h3>
+                            <p>Nationale 3 Masculine, Équipe nationale de Bulgarie, 10 ans d'expérience</p>
+                            <span class="project-link" data-i18n="portfolio-voir-plus">Voir plus</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Projet 12 -->
+                <div class="portfolio-item" data-category="personnel">
+                    <span class="project-category" data-i18n="portfolio-filtre-personnel">Personnel</span>
+                    <img src="a1.png" alt="A1">
+                    <a href="a1_.png" target="_blank">
+                        <div class="description">
+                            <h3>Stage, A1 Bulgarie</h3>
+                            <p>Une maîtrise pratique des outils de supervision et de collaborer avec des ingénieurs dans un environnement opérationnel 24h/24 et 7j/7.</p>
+                            <span class="project-link" data-i18n="portfolio-voir-plus">Voir plus</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
-    
 
     <!-- Section Contact -->
     <section id="contact" class="section">
         <div class="container">
-            <h1>Me contacter</h1>
+            <h1 data-i18n="contact-titre">Me contacter</h1>
             <div class="info">
-                <p><strong>Nom :</strong> Andon Pendichev</p>
-                <p><strong>Email :</strong> <a href="mailto:pendichev.andon@gmail.com">pendichev.andon@gmail.com</a></p>
-                <p><strong>Numéro :</strong> +33 7 66 67 92 38 </p>
+                <p><strong data-i18n="contact-nom">Nom :</strong> Andon Pendichev</p>
+                <p><strong data-i18n="contact-email">Email :</strong> <a href="mailto:pendichev.andon@gmail.com">pendichev.andon@gmail.com</a></p>
+                <p><strong data-i18n="contact-telephone">Numéro :</strong> +33 7 66 67 92 38</p>
             </div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/andon-pendichev-a8b141338/" target="_blank">LinkedIn</a>
@@ -198,7 +492,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Andon Pendichev. Tous droits réservés.</p>
+        <p data-i18n="footer">© 2024 Andon Pendichev. Tous droits réservés.</p>
     </footer>
 
     <!-- JavaScript pour le défilement fluide -->
@@ -217,6 +511,284 @@
         document.querySelector(".menu-toggle").addEventListener("click", function() {
             document.querySelector("ul").classList.toggle("active");
         });
-    </script>    
+    </script>
+
+    <!-- Script de traduction -->
+    <script>
+        // Système de traduction complet
+        const translations = {
+            fr: {
+                // Navigation
+                'nav-accueil': 'Accueil',
+                'nav-a-propos': 'À propos',
+                'nav-competences': 'Compétences',
+                'nav-portfolio': 'Portfolio',
+                'nav-contact': 'Contact',
+                
+                // Accueil
+                'accueil-titre': 'Andon Pendichev',
+                'accueil-sous-titre': 'Étudiant en BUT R&T',
+                
+                // À propos
+                'about-titre': 'À propos',
+                'about-pour-moi': 'Pour moi',
+                'about-text': 'Actuellement étudiant en deuxième année de BUT Réseaux et Télécommunications à l\'IUT de Villetaneuse, je suis à la recherche d\'une expérience professionnelle. Curieux, adaptable et motivé, je suis désireux de contribuer activement aux projets de votre entreprise tout en renforçant mon expertise technique. Engagé, je me distingue par mon sens du service en équipe et ma passion pour l\'apprentissage. Afin d\'enrichir mon parcours professionnel, je suis ouvert aux opportunités d\'emploi dans mon domaine. Ponctuel et organisé, je participe au bon déroulement des activités en faisant preuve de sérieux et d\'implication.',
+                'about-personnalite': 'Personnalité',
+                'about-creatif': 'Créatif : Je suis capable de m\'adapter à des situations nouvelles et de changer de perspective si nécessaire pour trouver des solutions originales.',
+                'about-determined': 'Déterminé : Je crois fermement en mes capacités à réussir.',
+                'about-motivated': 'Motivé : Je m\'investis pleinement, avec énergie et enthousiasme.',
+                'about-resolu': 'Résolu : Je suis discipliné dans mon approche, planifiant et exécutant mes actions de manière réfléchie.',
+                'about-cooperative': 'Coopératif : Je respecte mes engagements et joue mon rôle dans l\'équipe, ce qui renforce la confiance mutuelle.',
+                'about-formation': 'Formation',
+                'about-formation-1': '2024-2027 - UNIVERSITÉ SORBONNE PARIS NORD - IUT DE VILLETANEUSE, Bachelor Universitaire de Technologie en Réseaux et Télécommunications',
+                'about-formation-2': '2021-2024 - LYCÉE PRIVÉ SAINT-PIERRE CALAIS, Baccalauréat général',
+                
+                // Compétences
+                'skills-titre': 'Mes Compétences Techniques',
+                'skills-administrer': 'Administrer',
+                'skills-connecter': 'Connecter',
+                'skills-programmer': 'Programmer',
+                'skills-hover': 'Survolez pour découvrir mes compétences',
+                'skills-admin-titre': 'Administration & Supervision',
+                'skills-connect-titre': 'Networking & Télécoms',
+                'skills-programmer-titre': 'Développement & Scripts',
+                'skills-reseaux': 'Réseaux',
+                'skills-systemes': 'Systèmes',
+                'skills-services': 'Services',
+                'skills-virtualisation': 'Virtualisation',
+                'skills-core-networking': 'Core Networking',
+                'skills-routage': 'Routage & Switching',
+                'skills-sans-fil': 'Sans-fil',
+                'skills-telephonie': 'Téléphonie',
+                'skills-cablage': 'Câblage',
+                'skills-langages': 'Langages',
+                'skills-web': 'Web',
+                'skills-bdd': 'Bases de données',
+                'skills-automatisation': 'Automatisation',
+                
+                // Portfolio
+                'portfolio-titre': 'Mon Portfolio',
+                'portfolio-cv-titre': '📄 Mes CV',
+                'portfolio-cv-text': 'Téléchargez mes CV en français et anglais',
+                'portfolio-cv-fr': 'CV Français',
+                'portfolio-cv-en': 'CV English',
+                'portfolio-filtre-tous': 'Tous les projets',
+                'portfolio-filtre-reseaux': 'Réseaux',
+                'portfolio-filtre-electronique': 'Électronique',
+                'portfolio-filtre-developpement': 'Développement',
+                'portfolio-filtre-cybersecurite': 'Cybersécurité',
+                'portfolio-filtre-personnel': 'Personnel',
+                'portfolio-voir-plus': 'Voir plus',
+                'portfolio-voir-projet': 'Voir le projet',
+                'portfolio-voir-pdf': 'Voir le PDF',
+                'portfolio-voir-video': 'Voir la vidéo',
+                'portfolio-voir-site': 'Voir le site',
+                
+                // Contact
+                'contact-titre': 'Me contacter',
+                'contact-nom': 'Nom :',
+                'contact-email': 'Email :',
+                'contact-telephone': 'Numéro :',
+                
+                // Footer
+                'footer': '© 2024 Andon Pendichev. Tous droits réservés.'
+            },
+            
+            en: {
+                // Navigation
+                'nav-accueil': 'Home',
+                'nav-a-propos': 'About',
+                'nav-competences': 'Skills',
+                'nav-portfolio': 'Portfolio',
+                'nav-contact': 'Contact',
+                
+                // Accueil
+                'accueil-titre': 'Andon Pendichev',
+                'accueil-sous-titre': 'Networks & Telecommunications Student',
+                
+                // À propos
+                'about-titre': 'About Me',
+                'about-pour-moi': 'About Me',
+                'about-text': 'Currently a second-year student in Networks and Telecommunications at IUT Villetaneuse, I am seeking professional experience. Curious, adaptable, and motivated, I am eager to actively contribute to your company\'s projects while strengthening my technical expertise. Committed, I stand out through my team service mindset and passion for learning. To enrich my professional journey, I am open to employment opportunities in my field. Punctual and organized, I contribute to the smooth running of activities with seriousness and involvement.',
+                'about-personnalite': 'Personality',
+                'about-creatif': 'Creative: I am able to adapt to new situations and change perspective when necessary to find original solutions.',
+                'about-determined': 'Determined: I firmly believe in my ability to succeed.',
+                'about-motivated': 'Motivated: I invest myself fully, with energy and enthusiasm.',
+                'about-resolu': 'Resolute: I am disciplined in my approach, planning and executing my actions thoughtfully.',
+                'about-cooperative': 'Cooperative: I honor my commitments and play my role in the team, which strengthens mutual trust.',
+                'about-formation': 'Education',
+                'about-formation-1': '2024-2027 - SORBONNE PARIS NORD UNIVERSITY - IUT VILLETANEUSE, Bachelor of Technology in Networks and Telecommunications',
+                'about-formation-2': '2021-2024 - SAINT-PIERRE PRIVATE HIGH SCHOOL CALAIS, General Baccalaureate',
+                
+                // Compétences
+                'skills-titre': 'My Technical Skills',
+                'skills-administrer': 'Administer',
+                'skills-connecter': 'Connect',
+                'skills-programmer': 'Program',
+                'skills-hover': 'Hover to discover my skills',
+                'skills-admin-titre': 'Administration & Supervision',
+                'skills-connect-titre': 'Networking & Telecoms',
+                'skills-programmer-titre': 'Development & Scripts',
+                'skills-reseaux': 'Networks',
+                'skills-systemes': 'Systems',
+                'skills-services': 'Services',
+                'skills-virtualisation': 'Virtualization',
+                'skills-core-networking': 'Core Networking',
+                'skills-routage': 'Routing & Switching',
+                'skills-sans-fil': 'Wireless',
+                'skills-telephonie': 'Telephony',
+                'skills-cablage': 'Cabling',
+                'skills-langages': 'Languages',
+                'skills-web': 'Web',
+                'skills-bdd': 'Databases',
+                'skills-automatisation': 'Automation',
+                
+                // Portfolio
+                'portfolio-titre': 'My Portfolio',
+                'portfolio-cv-titre': '📄 My Resumes',
+                'portfolio-cv-text': 'Download my resumes in French and English',
+                'portfolio-cv-fr': 'French Resume',
+                'portfolio-cv-en': 'English Resume',
+                'portfolio-filtre-tous': 'All projects',
+                'portfolio-filtre-reseaux': 'Networks',
+                'portfolio-filtre-electronique': 'Electronics',
+                'portfolio-filtre-developpement': 'Development',
+                'portfolio-filtre-cybersecurite': 'Cybersecurity',
+                'portfolio-filtre-personnel': 'Personal',
+                'portfolio-voir-plus': 'See more',
+                'portfolio-voir-projet': 'View project',
+                'portfolio-voir-pdf': 'View PDF',
+                'portfolio-voir-video': 'Watch video',
+                'portfolio-voir-site': 'View site',
+                
+                // Contact
+                'contact-titre': 'Contact Me',
+                'contact-nom': 'Name:',
+                'contact-email': 'Email:',
+                'contact-telephone': 'Phone:',
+                
+                // Footer
+                'footer': '© 2024 Andon Pendichev. All rights reserved.'
+            }
+        };
+
+        let currentLang = 'fr';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            updateAllTexts();
+            updateLanguageButton();
+        }
+
+        function updateAllTexts() {
+            // Met à jour tous les textes
+            for (const [key, value] of Object.entries(translations[currentLang])) {
+                const elements = document.querySelectorAll(`[data-i18n="${key}"]`);
+                elements.forEach(element => {
+                    element.textContent = value;
+                });
+            }
+        }
+
+        function updateLanguageButton() {
+            const button = document.getElementById('language-toggle');
+            if (currentLang === 'fr') {
+                button.innerHTML = '<i class="fas fa-globe"></i> EN';
+            } else {
+                button.innerHTML = '<i class="fas fa-globe"></i> FR';
+            }
+        }
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('language-toggle').addEventListener('click', toggleLanguage);
+        });
+
+        // Filtrage des projets (garder ton code existant)
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+<script>
+// Menu hamburger amélioré
+document.querySelector(".menu-toggle").addEventListener("click", function() {
+    const menu = document.querySelector(".nav-menu");
+    const icon = this.querySelector('i');
+    
+    menu.classList.toggle("active");
+    
+    if (menu.classList.contains("active")) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+});
+
+// Fermer le menu quand on clique sur un lien
+document.querySelectorAll('.nav-menu li a').forEach(link => {
+    link.addEventListener('click', () => {
+        const menu = document.querySelector(".nav-menu");
+        const icon = document.querySelector('.menu-toggle i');
+        
+        menu.classList.remove("active");
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    });
+});
+
+// Fermer le menu quand on clique sur le bouton langue
+document.getElementById('language-toggle').addEventListener('click', function(e) {
+    // La traduction se fera normalement
+    // Le menu restera ouvert sur mobile pour voir le changement
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu    = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+      });
+
+      // Optionnel : fermer le menu quand on clique sur un lien
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
