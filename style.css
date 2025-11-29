@@ -5,7 +5,6 @@
     font-family: century;
 }
 
-
 header{
     background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./9210E2B5-D4E3-4F03-85D6-C8EA4F6003A5.jpeg);
     height: 100vh;
@@ -33,14 +32,22 @@ header{
     font-size: 2rem ;
 }
 
-ul{
+/* Navigation principale */
+.nav-principale {
+    max-width: 114rem ;
+    margin: 0 auto;
+}
+
+/* Menu desktop */
+.nav-menu {
     list-style: none ;
     float: right;
     display: flex;
     margin-top: 20px;
+    align-items: center;
 }
 
-ul li a{
+.nav-menu li a{
     text-decoration: none;
     color: #fff;
     padding: 10px 20px ;
@@ -52,19 +59,38 @@ ul li a{
     transition: 0.6s ease;
 }
 
-ul li a:hover{
+.nav-menu li a:hover{
     background: #ff9800;
     color: black ;
 }
 
-ul li.active a{
+.nav-menu li.active a{
     background: #ff9800;
     color: black;
 }
 
-.prancipale{
-    max-width: 114rem ;
-    margin: 0 auto;
+/* Bouton de langue */
+.language-btn {
+    background: rgba(255, 152, 0, 0.2);
+    color: #fff;
+    border: 2px solid #ff9800;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.language-btn:hover {
+    background: #ff9800;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.language-btn i {
+    margin-right: 5px;
 }
 
 .titre {
@@ -72,73 +98,119 @@ ul li.active a{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; /* Pour centrer le texte */
-    color: #fff; /* Rendre le texte lisible sur l'image */
+    text-align: center;
+    color: #fff;
 }
 
 .titre h1 {
-    font-size: 4rem; /* Ajustez selon vos besoins */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Améliore la lisibilité sur un fond sombre */
+    font-size: 4rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .titre h2 {
-    font-size: 2rem; /* Plus petit que le titre principal */
-    margin-top: 1rem; /* Espacement entre le titre et le sous-titre */
-    color: #ff9800; /* Couleur différente pour le mettre en valeur */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Ombre légère pour la lisibilité */
-    font-weight: 400; /* Moins épais que le titre principal */
-}
-
-.titre h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: #ff9800;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 400;
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-/* Bouton menu burger (caché par défaut) */
+/* Menu hamburger */
 .menu-toggle {
     display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
     font-size: 24px;
-    cursor: pointer;
     color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-/* Media Query pour les petits écrans */
+/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Affiche le bouton burger */
-        position: absolute;
-        top: 15px;
-        right: 20px;
+        display: block;
     }
 
-    ul {
-        display: none; /* Cache le menu par défaut */
+    .nav-menu {
+        display: none;
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
+        background: rgba(0, 0, 0, 0.95);
+        position: fixed;
+        top: 0;
         right: 0;
-        width: 100%;
+        width: 250px;
+        height: 100vh;
         text-align: center;
-        padding: 10px 0;
+        padding: 80px 0 20px 0;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        z-index: 1000;
+        overflow-y: auto;
     }
 
-    ul.active {
-        display: flex; /* Affiche le menu lorsqu'il est activé */
+    .nav-menu.active {
+        display: flex;
     }
 
-    ul li {
-        margin: 10px 0;
+    .nav-menu li {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .nav-menu li a {
+        padding: 15px;
+        display: block;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .language-btn {
+        margin: 20px auto;
+        display: block;
+        width: 80%;
+        text-align: center;
+    }
+
+    /* Fermeture du menu */
+    .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1002;
     }
 }
 
-
+/* Pour les écrans moyens */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .nav-menu li {
+        margin-left: 10px;
+    }
+    
+    .nav-menu li a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .language-btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
