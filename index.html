@@ -1,833 +1,843 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andon Pendichev - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style3.css">
-    <link rel="stylesheet" href="comp.css">
-    <link rel="stylesheet" href="portfolio.css">
-    <link rel="stylesheet" href="test@.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Andon Pendichev — Cybersecurity student · SOC, detection engineering &amp; cyber risk</title>
+  <meta name="description" content="Portfolio of Andon Pendichev, cybersecurity student (BUT Networks &amp; Telecoms, Université Sorbonne Paris Nord). SOC internship at BULATSA: production SIEM log parsers and a risk-based prioritisation prototype.">
+  <meta name="author" content="Andon Pendichev">
+  <link rel="canonical" href="https://pendichev.github.io/Portfolio/">
+  <link rel="alternate" hreflang="en" href="https://pendichev.github.io/Portfolio/?lang=en">
+  <link rel="alternate" hreflang="fr" href="https://pendichev.github.io/Portfolio/?lang=fr">
+  <link rel="alternate" hreflang="x-default" href="https://pendichev.github.io/Portfolio/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Andon Pendichev — Cybersecurity student">
+  <meta property="og:description" content="SOC, detection engineering and cyber risk. From raw security data to decisions.">
+  <meta property="og:url" content="https://pendichev.github.io/Portfolio/">
+  <meta property="og:image" content="https://pendichev.github.io/Portfolio/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#f6f1e9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0c0a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script src="assets/js/boot.js"></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Andon Pendichev",
+    "jobTitle": "Cybersecurity student — SOC, detection engineering and cyber risk",
+    "url": "https://pendichev.github.io/Portfolio/",
+    "image": "https://pendichev.github.io/Portfolio/assets/img/portrait.webp",
+    "email": "mailto:pendichev.andon@gmail.com",
+    "address": { "@type": "PostalAddress", "addressRegion": "Île-de-France", "addressCountry": "FR" },
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Université Sorbonne Paris Nord — IUT de Villetaneuse" },
+    "knowsLanguage": ["bg", "fr", "en", "es"],
+    "sameAs": ["https://www.linkedin.com/in/andon-pendichev", "https://github.com/pendichev"]
+  }
+  </script>
 </head>
-
 <body>
+  <!-- Icon sprite (Lucide icons, ISC licence) -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-languages" viewBox="0 0 24 24"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3 20 12 6 21Z"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+    <symbol id="i-bug" viewBox="0 0 24 24"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+    <symbol id="i-graduation" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  </svg>
 
-    <!-- Menu de navigation -->
-    <header>
-        <div class="logo">
-            <a href="https://iutv.univ-paris13.fr/?sitemap">IUT Villetaneuse</a>
-        </div> 
-    
-        <button class="menu-toggle">
-            <i class="fas fa-bars"></i>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Andon Pendichev — back to top" data-i18n-attr="aria-label:brand.aria">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="16"/><path d="m19 22 11 10-11 10"/><path d="M34 43h12"/></svg>
+        <span class="brand__name">Andon Pendichev</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main" data-i18n-attr="aria-label:nav.aria">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about" data-i18n="nav.about">About</a></li>
+          <li><a class="nav__link" href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a class="nav__link" href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a class="nav__link" href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a class="nav__link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__tools">
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:tools.language">
+          <button type="button" class="lang-switch__btn" data-set-lang="en" aria-pressed="true" lang="en" title="English">EN</button>
+          <button type="button" class="lang-switch__btn" data-set-lang="fr" aria-pressed="false" lang="fr" title="Français">FR</button>
+        </div>
+        <button type="button" class="icon-btn theme-toggle" id="theme-toggle" aria-pressed="true" aria-label="Dark theme" data-i18n-attr="aria-label:tools.theme;title:tools.theme" title="Dark theme">
+          <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
         </button>
-    
-        <nav class="nav-principale">
-            <ul class="nav-menu">
-                <li><a href="#accueil" data-i18n="nav-accueil">Accueil</a></li>
-                <li><a href="#about" data-i18n="nav-a-propos">À propos</a></li>
-                <li><a href="#competences" data-i18n="nav-competences">Compétences</a></li>
-                <li><a href="#portfolio" data-i18n="nav-projets">Projets</a></li>
-                <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
-                <li>
-                    <button id="language-toggle" class="language-btn">
-                        <i class="fas fa-globe"></i> EN
-                    </button>
+        <button type="button" class="icon-btn menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu" data-i18n-attr="aria-label:tools.menu">
+          <svg class="icon icon--menu" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon--close" aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="status-pill"><span class="status-pill__dot" aria-hidden="true"></span><span data-i18n="hero.status">Open to internships &amp; junior roles</span></p>
+          <p class="hero__eyebrow mono" data-i18n="hero.eyebrow">Cybersecurity · SOC · Detection engineering · Cyber risk</p>
+          <h1 class="hero__title" id="hero-title">Andon Pendichev</h1>
+          <p class="hero__lead" data-i18n="hero.lead">I turn raw security data into <em>decisions</em>.</p>
+          <p class="hero__text" data-i18n="hero.text">Third-year Networks &amp; Telecoms student on the cybersecurity track at Université Sorbonne Paris Nord. Fresh from three months in the security teams of BULATSA, Bulgaria’s air navigation service provider — a critical-infrastructure operator under NIS2.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects"><span data-i18n="hero.cta1">See my work</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a class="btn btn--ghost" href="#cv"><svg class="icon" aria-hidden="true"><use href="#i-file-text"/></svg><span data-i18n="hero.cta2">Get my CV</span></a>
+          </div>
+          <ul class="hero__meta mono">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg><span data-i18n="hero.location">Île-de-France, France</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-languages"/></svg><span>BG · FR · EN · ES</span></li>
+          </ul>
+        </div>
+
+        <figure class="terminal" id="terminal">
+          <div class="terminal__bar" aria-hidden="true">
+            <span class="terminal__dots"><i></i><i></i><i></i></span>
+            <span class="terminal__title">soc — raw → normalised → correlated</span>
+          </div>
+<pre class="terminal__body" aria-hidden="true"><code><span class="t-line"><span class="t-prompt">~/soc $</span> <span class="t-cmd">tail -1 keycloak-audit.log</span></span>
+<span class="t-line t-raw">type=<span class="t-str">"LOGIN_ERROR"</span>, realmName=<span class="t-str">"PORTAL"</span>, clientId=<span class="t-str">"webapp-frontend"</span>, ipAddress=<span class="t-str">"198.51.100.23"</span>, username=<span class="t-str">"i.petrov@example.bg"</span>, error=<span class="t-str">"invalid_user_credentials"</span></span>
+<span class="t-line t-gap"> </span>
+<span class="t-line"><span class="t-prompt">~/soc $</span> <span class="t-cmd">parse --model udm</span></span>
+<span class="t-line"><span class="t-key">ip.src</span> <span class="t-dim">.......</span> <span class="t-val">198.51.100.23</span></span>
+<span class="t-line"><span class="t-key">user.dst</span> <span class="t-dim">.....</span> <span class="t-val">i.petrov@example.bg</span></span>
+<span class="t-line"><span class="t-key">federated.sp</span> <span class="t-dim">.</span> <span class="t-val">webapp-frontend</span></span>
+<span class="t-line"><span class="t-key">ec.activity</span> <span class="t-dim">..</span> <span class="t-val">Logon</span></span>
+<span class="t-line"><span class="t-key">ec.outcome</span> <span class="t-dim">...</span> <span class="t-bad">Failure</span></span>
+<span class="t-line t-gap"> </span>
+<span class="t-line"><span class="t-prompt">~/soc $</span> <span class="t-cmd">investigate ip.src=198.51.100.23</span></span>
+<span class="t-line"><span class="t-ok">✓</span> netflow  <span class="t-ok">✓</span> imperva  <span class="t-ok">✓</span> traefik  <span class="t-ok">✓</span> keycloak</span>
+<span class="t-line t-note">→ 1 query · 4 sources · full session rebuilt<span class="t-cursor"></span></span></code></pre>
+          <figcaption class="terminal__caption">
+            <span class="visually-hidden" data-i18n="hero.terminal.sr">Illustration: a raw identity-provider log line is parsed into normalised fields, then one query correlates it across four log sources.</span>
+            <span aria-hidden="true" data-i18n="hero.terminal.caption">Fictional values — real field mapping from my SOC internship.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="container">
+        <ul class="hero-stats">
+          <li class="hero-stats__item"><strong class="hero-stats__num">4</strong><span data-i18n="hero.stat1">SIEM log parsers shipped to production</span></li>
+          <li class="hero-stats__item"><strong class="hero-stats__num">2</strong><span data-i18n="hero.stat2">internships in 24/7 operations — SOC&nbsp;&amp;&nbsp;NOC</span></li>
+          <li class="hero-stats__item"><strong class="hero-stats__num">12</strong><span data-i18n="hero.stat3">university projects in cyber, networks &amp; telecoms</span></li>
+          <li class="hero-stats__item"><strong class="hero-stats__num">4</strong><span data-i18n="hero.stat4">languages — Bulgarian, French, English, Spanish</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-head__index mono"><span>01</span> / <span data-i18n="nav.about">About</span></p>
+          <h2 class="section-head__title" id="about-title" data-i18n="about.title">Hello, I’m Andon.</h2>
+        </header>
+
+        <div class="about">
+          <figure class="about__photo reveal">
+            <img src="assets/img/portrait.webp" width="800" height="1000" alt="Portrait of Andon Pendichev" data-i18n-attr="alt:about.photoAlt" loading="lazy" decoding="async">
+          </figure>
+
+          <div class="about__body">
+            <p class="about__lead reveal" data-i18n="about.p1">I’m drawn to the part of cybersecurity where data becomes a decision: making logs searchable, connecting events across sources, and working out what really needs fixing first.</p>
+            <p class="reveal" data-i18n="about.p2">I’m in the third year of a Bachelor of Technology (BUT) in Networks &amp; Telecommunications, cybersecurity track, at IUT de Villetaneuse — Université Sorbonne Paris Nord. In summer 2026 I spent three months at BULATSA, rotating through ICT governance, network infrastructure and the Security Operations Centre, where I shipped four SIEM log parsers to production and built a risk-prioritisation prototype.</p>
+            <p class="reveal" data-i18n="about.p3">Critical infrastructure taught me rigour: every action is thought through, documented and traceable. I’m now looking for an internship or a junior role in SOC, detection engineering or cyber-risk management.</p>
+
+            <dl class="facts reveal">
+              <div class="facts__item"><dt data-i18n="about.fact1.k">Based in</dt><dd data-i18n="about.fact1.v">Île-de-France, France</dd></div>
+              <div class="facts__item"><dt data-i18n="about.fact2.k">Studying</dt><dd data-i18n="about.fact2.v">BUT Networks &amp; Telecoms · cybersecurity track · year 3</dd></div>
+              <div class="facts__item"><dt data-i18n="about.fact3.k">Languages</dt><dd data-i18n="about.fact3.v">Bulgarian (native), French (C2), English (C1), Spanish (A2)</dd></div>
+              <div class="facts__item"><dt data-i18n="about.fact4.k">Looking for</dt><dd data-i18n="about.fact4.v">Internship or junior role · SOC, detection, cyber risk</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="cv reveal" id="cv">
+          <div class="cv__intro">
+            <h3 class="cv__title" data-i18n="cv.title">My CV</h3>
+            <p data-i18n="cv.text">One page, updated after my BULATSA internship — in English and in French.</p>
+          </div>
+          <div class="cv__cards">
+            <article class="cv-card">
+              <span class="cv-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-file-text"/></svg></span>
+              <div class="cv-card__text">
+                <h4 class="cv-card__title" data-i18n="cv.en.title">CV — English</h4>
+                <p class="cv-card__meta mono" data-i18n="cv.meta">PDF · 1 page</p>
+              </div>
+              <div class="cv-card__actions">
+                <a class="btn btn--sm btn--ghost" href="documents/CV_Andon_PENDICHEV_EN.pdf" target="_blank" rel="noopener"><span data-i18n="cv.view">View</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                <a class="icon-btn icon-btn--solid" href="documents/CV_Andon_PENDICHEV_EN.pdf" download aria-label="Download the English CV" title="Download" data-i18n-attr="aria-label:cv.en.download;title:cv.download"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></a>
+              </div>
+            </article>
+            <article class="cv-card">
+              <span class="cv-card__icon" aria-hidden="true"><svg class="icon"><use href="#i-file-text"/></svg></span>
+              <div class="cv-card__text">
+                <h4 class="cv-card__title" lang="fr">CV — Français</h4>
+                <p class="cv-card__meta mono" data-i18n="cv.meta">PDF · 1 page</p>
+              </div>
+              <div class="cv-card__actions">
+                <a class="btn btn--sm btn--ghost" href="documents/CV_Andon_PENDICHEV_FR.pdf" target="_blank" rel="noopener"><span data-i18n="cv.view">View</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+                <a class="icon-btn icon-btn--solid" href="documents/CV_Andon_PENDICHEV_FR.pdf" download aria-label="Download the French CV" title="Download" data-i18n-attr="aria-label:cv.fr.download;title:cv.download"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <article class="beyond reveal">
+          <div class="beyond__media">
+            <img src="assets/img/handball.webp" width="1024" height="768" alt="The Bulgarian national handball team lined up on court" data-i18n-attr="alt:beyond.alt" loading="lazy" decoding="async">
+          </div>
+          <div class="beyond__body">
+            <p class="kicker mono" data-i18n="beyond.kicker">Beyond the screen</p>
+            <h3 class="beyond__title" data-i18n="beyond.title">Ten years of team handball</h3>
+            <p data-i18n="beyond.p1">I play in France’s Nationale 3 league and I’m a member of Bulgaria’s national team. Sport taught me what I bring to a team: discipline, reliability and the habit of preparing before the pressure hits.</p>
+            <p data-i18n="beyond.p2">I also enjoy English literature, discovering other cultures and taking part in community associations — and I keep a steady tech watch on cybersecurity and AI.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================== EXPERIENCE ============================== -->
+    <section class="section section--alt" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-head__index mono"><span>02</span> / <span data-i18n="nav.experience">Experience</span></p>
+          <h2 class="section-head__title" id="experience-title" data-i18n="exp.title">Experience &amp; education</h2>
+          <p class="section-head__lead" data-i18n="exp.lead">Two internships in 24/7 operations, and a degree built around hands-on projects.</p>
+        </header>
+
+        <div class="exp">
+          <div class="exp__work">
+            <h3 class="exp__subtitle mono"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg><span data-i18n="exp.work">Work experience</span></h3>
+
+            <ol class="timeline">
+              <li class="xp reveal">
+                <span class="xp__dot" aria-hidden="true"></span>
+                <article class="xp__card">
+                  <header class="xp__head">
+                    <div>
+                      <h4 class="xp__role" data-i18n="xp1.role">Cybersecurity Intern</h4>
+                      <p class="xp__org"><span data-i18n="xp1.org">BULATSA — Bulgarian Air Traffic Services Authority</span></p>
+                    </div>
+                    <p class="xp__when mono" data-i18n="xp1.when">May – Jul 2026 · 3 months</p>
+                  </header>
+                  <p class="xp__where mono" data-i18n="xp1.where">Information Systems Directorate · Sofia, Bulgaria</p>
+                  <p class="xp__summary" data-i18n="xp1.summary">Air navigation service provider and NIS2 essential entity. Rotation across ICT governance, network infrastructure and the Security Operations Centre (SOC).</p>
+                  <ul class="xp__list">
+                    <li data-i18n="xp1.b1">Brought <strong>4 unparsed production log sources</strong> into the SIEM with custom NetWitness XML parsers (Traefik, Keycloak, Imperva WAF, NetFlow/CEF) — zero corrections at platform-admin review, deployed to production.</li>
+                    <li data-i18n="xp1.b2">Enabled <strong>single-query session tracing</strong>, from network flow to identity-provider login, through shared Unified Data Model pivot keys.</li>
+                    <li data-i18n="xp1.b3">Triaged WAF alerts (known-CVE exploitation attempts, directory traversal, false positives), flagged authentication abuse and documented incidents following playbooks.</li>
+                    <li data-i18n="xp1.b4">Ran internal vulnerability scans and prioritised findings with CVSS, CVE/NVD and the asset inventory; contributed to a security policy review against ISO/IEC 27005 and NIS2.</li>
+                    <li data-i18n="xp1.b5">Designed and built <strong>WARS</strong>, a Python prototype that ranks exposed web assets by contextual risk, and observed an executive cyber-crisis exercise (NIST CSF 2.0, ransomware scenario).</li>
+                  </ul>
+                  <p class="xp__badge"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg><span data-i18n="xp1.badge">Rated “outstanding” by my internship supervisor</span></p>
+                  <ul class="chips" aria-label="Tools and topics" data-i18n-attr="aria-label:a11y.tags">
+                    <li>NetWitness</li><li>SIEM</li><li>XML parsers</li><li>Imperva WAF</li><li>Keycloak</li><li>NetFlow</li><li>ISO/IEC 27005</li><li>NIS2</li>
+                  </ul>
+                </article>
+              </li>
+
+              <li class="xp reveal">
+                <span class="xp__dot" aria-hidden="true"></span>
+                <article class="xp__card">
+                  <header class="xp__head">
+                    <div>
+                      <h4 class="xp__role" data-i18n="xp2.role">Network Operations Center (NOC) Intern</h4>
+                      <p class="xp__org">A1 Group</p>
+                    </div>
+                    <p class="xp__when mono" data-i18n="xp2.when">2025 · 3 months</p>
+                  </header>
+                  <p class="xp__where mono" data-i18n="xp2.where">IP, Transport &amp; Fixed Access network monitoring · Sofia, Bulgaria</p>
+                  <ul class="xp__list">
+                    <li data-i18n="xp2.b1">Monitored fixed and IP networks in real time (transport links, customer access lines) in a 24/7 NOC, with alarm-correlation tools.</li>
+                    <li data-i18n="xp2.b2">Analysed incidents (latency, packet loss, error rates) and helped prioritise tickets by customer impact and SLAs.</li>
+                    <li data-i18n="xp2.b3">Helped troubleshoot links and configurations, escalated to field and engineering teams and followed up until service was restored.</li>
+                  </ul>
+                  <ul class="chips" aria-label="Tools and topics" data-i18n-attr="aria-label:a11y.tags">
+                    <li data-i18n="xp2.t1">Network monitoring</li><li data-i18n="xp2.t2">Alarm correlation</li><li data-i18n="xp2.t3">Incident management</li><li>SLA</li>
+                  </ul>
+                </article>
+              </li>
+            </ol>
+          </div>
+
+          <aside class="exp__side">
+            <h3 class="exp__subtitle mono"><svg class="icon" aria-hidden="true"><use href="#i-graduation"/></svg><span data-i18n="exp.education">Education</span></h3>
+            <article class="edu reveal">
+              <p class="edu__when mono">2024 – 2027</p>
+              <h4 class="edu__degree" data-i18n="edu1.degree">Bachelor of Technology (BUT) in Networks &amp; Telecommunications</h4>
+              <p class="edu__school">Université Sorbonne Paris Nord — IUT de Villetaneuse</p>
+              <p class="edu__note" data-i18n="edu1.note">Cybersecurity track · 180 ECTS · currently in year 3</p>
+            </article>
+            <article class="edu reveal">
+              <p class="edu__when mono">2021 – 2024</p>
+              <h4 class="edu__degree" data-i18n="edu2.degree">Baccalauréat (general)&nbsp;— Mathematics &amp; English</h4>
+              <p class="edu__school" data-i18n="edu2.school">Lycée privé Saint-Pierre, Calais</p>
+              <p class="edu__note" data-i18n="edu2.note">With honours (mention Bien) · named “Most Deserving Student”</p>
+            </article>
+
+            <figure class="quote reveal">
+              <svg class="quote__icon" aria-hidden="true"><use href="#i-quote"/></svg>
+              <blockquote class="quote__text" lang="en">
+                <p>He has consistently shown professionalism, technical curiosity, analytical thinking, and a strong capacity for learning.</p>
+              </blockquote>
+              <figcaption class="quote__by">
+                <span class="quote__role" data-i18n="quote.role">Internship supervisor — Acting Director, Information Systems Directorate, BULATSA</span>
+                <span class="quote__note mono" data-i18n="quote.note">Recommendation letter available on request</span>
+              </figcaption>
+            </figure>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-head__index mono"><span>03</span> / <span data-i18n="nav.projects">Projects</span></p>
+          <h2 class="section-head__title" id="projects-title" data-i18n="projects.title">Selected work</h2>
+          <p class="section-head__lead" data-i18n="projects.lead">Two deliverables from my internship, then the university projects that built the foundations.</p>
+        </header>
+
+        <div class="featured-label reveal">
+          <p class="featured-label__title mono"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="featured.label">Featured · internship at BULATSA</span></p>
+          <p class="featured-label__note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span data-i18n="featured.note">Covered by a confidentiality agreement: everything here stays at a public level and all examples use fictional values.</span></p>
+        </div>
+
+        <!-- Feature 1: SIEM parsers -->
+        <article class="feature reveal" id="siem-parsers" aria-labelledby="f1-title">
+          <div class="feature__grid">
+            <div class="feature__content">
+              <p class="kicker mono" data-i18n="f1.kicker">Detection engineering · in production</p>
+              <h3 class="feature__title" id="f1-title" data-i18n="f1.title">Four SIEM log parsers, designed as one coherent set</h3>
+              <p data-i18n="f1.p1">Four sources on the public web access chain were collected but never parsed: stored as raw text, invisible to search, impossible to correlate. I wrote a custom XML parser for each in NetWitness (Log Parser Tool v2) and mapped every field to the platform’s Unified Data Model.</p>
+              <p data-i18n="f1.p2">The hard part was semantics, not extraction: choosing the right meta-key among hundreds, avoiding reserved and deprecated ones, and freezing the shared pivot keys across all four parsers first — because a mismatch raises no error. Correlation just fails, silently.</p>
+              <ul class="stats">
+                <li><strong>4</strong><span data-i18n="f1.s1">sources normalised</span></li>
+                <li><strong>0</strong><span data-i18n="f1.s2">corrections at platform review</span></li>
+                <li><strong>1</strong><span data-i18n="f1.s3">query to trace a full session</span></li>
+              </ul>
+              <ul class="chips" aria-label="Tools and topics" data-i18n-attr="aria-label:a11y.tags">
+                <li>NetWitness</li><li>Log Parser Tool v2</li><li>XML</li><li>Regex</li><li>Unified Data Model</li><li>CEF</li><li>Syslog / JSON</li>
+              </ul>
+            </div>
+
+            <figure class="chain" aria-labelledby="chain-caption">
+              <figcaption class="chain__caption mono" id="chain-caption" data-i18n="chain.caption">The public web access chain</figcaption>
+              <ol class="chain__list">
+                <li class="chain__row">
+                  <span class="chain__layer mono" data-i18n="chain.l1">Network</span>
+                  <span class="chain__card"><strong>NetFlow</strong><span class="mono" data-i18n="chain.f1">CEF records</span></span>
+                  <span class="chain__key mono">ip.src</span>
                 </li>
+                <li class="chain__row">
+                  <span class="chain__layer mono" data-i18n="chain.l2">Filtering</span>
+                  <span class="chain__card"><strong>Imperva WAF</strong><span class="mono" data-i18n="chain.f2">key=value · CVE IDs in free text</span></span>
+                  <span class="chain__key mono">ip.src</span>
+                </li>
+                <li class="chain__row">
+                  <span class="chain__layer mono" data-i18n="chain.l3">Routing</span>
+                  <span class="chain__card"><strong data-i18n="chain.n3">Traefik reverse proxy</strong><span class="mono" data-i18n="chain.f3">JSON wrapped in syslog</span></span>
+                  <span class="chain__key mono">ip.src</span>
+                </li>
+                <li class="chain__row">
+                  <span class="chain__layer mono" data-i18n="chain.l4">Identity</span>
+                  <span class="chain__card"><strong>Keycloak IdP</strong><span class="mono" data-i18n="chain.f4">OIDC events · Cyrillic values</span></span>
+                  <span class="chain__key mono">ip.src</span>
+                </li>
+              </ol>
+              <p class="chain__result" data-i18n="chain.result">One search on <code>ip.src</code> now returns the flow, the WAF alert, the proxy requests and the login attempts of the same actor.</p>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Feature 2: WARS -->
+        <article class="feature feature--wars reveal" id="wars" aria-labelledby="f2-title">
+          <div class="feature__grid">
+            <div class="feature__content">
+              <p class="kicker mono" data-i18n="f2.kicker">Risk-based prioritisation · research prototype</p>
+              <h3 class="feature__title" id="f2-title" data-i18n="f2.title">WARS — ranking exposed web assets by real risk</h3>
+              <p data-i18n="f2.p1">Sorted by CVSS alone, a vulnerability list quickly becomes a wall of “criticals”: two 9.8s look identical. WARS (Weighted Asset Risk Score) adds what CVSS deliberately leaves out — how likely exploitation is and how much the affected asset matters — to answer one question: what do we fix first on Monday morning?</p>
+              <p data-i18n="f2.p2">I designed and built it end to end in Python, within the asset-based approach of ISO/IEC 27005. Each asset gets a 0–100 score, a P1–P5 band and a factor-by-factor breakdown that can be defended in front of an auditor.</p>
+              <ul class="chips" aria-label="Tools and topics" data-i18n-attr="aria-label:a11y.tags">
+                <li>Python</li><li>asyncio</li><li>httpx</li><li>Playwright</li><li>Pydantic</li><li>LangGraph</li><li>NVD</li><li>EPSS</li><li>CISA KEV</li><li>MITRE ATT&amp;CK</li>
+              </ul>
+            </div>
+
+            <figure class="funnel-card" aria-labelledby="funnel-caption">
+              <figcaption id="funnel-caption">
+                <span class="kicker mono" data-i18n="funnel.kicker">Test run · public test target</span>
+                <span class="funnel-card__title" data-i18n="funnel.title">From 1,428 discovered assets to a ranked shortlist of 12</span>
+              </figcaption>
+              <ol class="funnel">
+                <li class="funnel__step funnel__step--1"><strong class="mono" data-i18n="funnel.n1">1,428</strong><span data-i18n="funnel.s1">assets discovered</span></li>
+                <li class="funnel__step funnel__step--2"><strong class="mono">384</strong><span data-i18n="funnel.s2">in scope</span></li>
+                <li class="funnel__step funnel__step--3"><strong class="mono">128</strong><span data-i18n="funnel.s3">classified</span></li>
+                <li class="funnel__step funnel__step--4"><strong class="mono">12</strong><span data-i18n="funnel.s4">risk-scored</span></li>
+              </ol>
+              <div class="bands">
+                <p class="bands__title mono" data-i18n="bands.title">The 12 scored assets, by band</p>
+                <div class="bands__bar" aria-hidden="true">
+                  <span class="band-seg band-seg--p1 g2"></span><span class="band-seg band-seg--p2 g2"></span><span class="band-seg band-seg--p3 g2"></span><span class="band-seg band-seg--p4 g3"></span><span class="band-seg band-seg--p5 g2"></span><span class="band-seg band-seg--pu g1"></span>
+                </div>
+                <ul class="bands__legend mono">
+                  <li><i class="band-dot band-dot--p1"></i><span data-i18n="bands.p1">P1 critical</span> <b>2</b></li>
+                  <li><i class="band-dot band-dot--p2"></i><span data-i18n="bands.p2">P2 high</span> <b>2</b></li>
+                  <li><i class="band-dot band-dot--p3"></i><span data-i18n="bands.p3">P3 moderate</span> <b>2</b></li>
+                  <li><i class="band-dot band-dot--p4"></i><span data-i18n="bands.p4">P4 low</span> <b>3</b></li>
+                  <li><i class="band-dot band-dot--p5"></i><span data-i18n="bands.p5">P5 info</span> <b>2</b></li>
+                  <li><i class="band-dot band-dot--pu"></i><span data-i18n="bands.pu">unscored → human review</span> <b>1</b></li>
+                </ul>
+              </div>
+            </figure>
+          </div>
+
+          <ol class="pipeline">
+            <li class="pipeline__step">
+              <span class="pipeline__num mono">01</span>
+              <h4 class="pipeline__name" data-i18n="pipe1.name">Discover</h4>
+              <p class="pipeline__q" data-i18n="pipe1.q">What is visible from the Internet?</p>
+              <p data-i18n="pipe1.text">Passive crawl only: GET and HEAD requests, robots.txt respected, conservative rate limits.</p>
+              <p class="pipeline__tech mono">httpx · asyncio · defusedxml</p>
+            </li>
+            <li class="pipeline__step">
+              <span class="pipeline__num mono">02</span>
+              <h4 class="pipeline__name" data-i18n="pipe2.name">Classify</h4>
+              <p class="pipeline__q" data-i18n="pipe2.q">What does each asset do?</p>
+              <p data-i18n="pipe2.text">Information, business process or both — and how sensitive. The only step where an LLM is used.</p>
+              <p class="pipeline__tech mono" data-i18n="pipe2.tech">LangGraph · LLM · rule layer</p>
+            </li>
+            <li class="pipeline__step">
+              <span class="pipeline__num mono">03</span>
+              <h4 class="pipeline__name" data-i18n="pipe3.name">Assess</h4>
+              <p class="pipeline__q" data-i18n="pipe3.q">What could happen, and how bad?</p>
+              <p data-i18n="pipe3.text">Findings enriched with CVSS from NVD, EPSS exploitation likelihood, CISA KEV and MITRE ATT&amp;CK techniques.</p>
+              <p class="pipeline__tech mono">NVD · EPSS · KEV · ATT&amp;CK</p>
+            </li>
+            <li class="pipeline__step">
+              <span class="pipeline__num mono">04</span>
+              <h4 class="pipeline__name" data-i18n="pipe4.name">Report</h4>
+              <p class="pipeline__q" data-i18n="pipe4.q">What do we fix first?</p>
+              <p data-i18n="pipe4.text">Self-contained HTML/PDF report ranked P1–P5, every score broken down factor by factor, TLP 2.0 marked.</p>
+              <p class="pipeline__tech mono">Playwright · HTML · PDF</p>
+            </li>
+          </ol>
+          <p class="pipeline__note" data-i18n="pipe.note">Each step is a standalone script that hands validated JSON (Pydantic) to the next — so any step can be replayed and audited on its own.</p>
+
+          <div class="wars-grid">
+            <div class="principles">
+              <h4 class="principles__title" data-i18n="principles.title">Design decisions I stand by</h4>
+              <ul class="principles__list">
+                <li data-i18n="principles.1"><strong>The model never touches a number.</strong> The LLM only answers “what is this asset?”. Factors, formula and thresholds are deterministic, so every score can be justified line by line — and the tool still runs on its rules without an API key.</li>
+                <li data-i18n="principles.2"><strong>Multiply, don’t add.</strong> If one factor is close to zero the score must collapse: a severe flaw on an asset with no business value should not top the list.</li>
+                <li data-i18n="principles.3"><strong>Known exploitation is a floor.</strong> A CISA KEV match keeps the score in the critical band, whatever the other factors say.</li>
+                <li data-i18n="principles.4"><strong>Uncertainty counts as risk.</strong> A doubtful classification, a failed step or a missing source sends the asset to human review — never silently to low priority.</li>
+              </ul>
+              <p class="principles__limit" data-i18n="principles.limit"><strong>What I don’t claim:</strong> the weighting is argued, not yet statistically validated. The next step is to calibrate it against real remediation decisions.</p>
+              <figure class="quote quote--inline">
+                <blockquote class="quote__text" lang="en"><p>“…an excellent example of how academic knowledge can be applied to a practical operational challenge.”</p></blockquote>
+                <figcaption class="quote__by"><span class="quote__role" data-i18n="quote.short">Internship supervisor, BULATSA</span></figcaption>
+              </figure>
+            </div>
+
+            <form class="calc" id="wars-calc" aria-labelledby="calc-title">
+              <div class="calc__head">
+                <p class="kicker mono" data-i18n="calc.kicker">Try the formula</p>
+                <h4 class="calc__title" id="calc-title" data-i18n="calc.title">Same CVSS 9.8, two very different priorities</h4>
+                <div class="calc__presets" role="group" aria-label="Examples" data-i18n-attr="aria-label:calc.presets">
+                  <button type="button" class="preset" data-preset="static" aria-pressed="false" data-i18n="calc.preset1">Static info page</button>
+                  <button type="button" class="preset" data-preset="portal" aria-pressed="true" data-i18n="calc.preset2">Public login portal, in KEV</button>
+                </div>
+              </div>
+
+              <div class="calc__rows">
+                <div class="calc__row">
+                  <label for="f-s"><b class="mono">S</b> <span data-i18n="calc.s">Severity</span> <small class="mono" data-i18n="calc.s.hint">CVSS ÷ 10</small></label>
+                  <input type="range" id="f-s" name="s" min="0" max="1" step="0.01" value="0.98">
+                  <output class="mono" for="f-s" id="o-s">0.98</output>
+                </div>
+                <div class="calc__row">
+                  <label for="f-l"><b class="mono">L</b> <span data-i18n="calc.l">Likelihood</span> <small class="mono" data-i18n="calc.l.hint">EPSS</small></label>
+                  <input type="range" id="f-l" name="l" min="0" max="1" step="0.01" value="0.94">
+                  <output class="mono" for="f-l" id="o-l">0.94</output>
+                </div>
+                <div class="calc__row">
+                  <label for="f-e"><b class="mono">E</b> <span data-i18n="calc.e">Exposure</span> <small class="mono" data-i18n="calc.e.hint">0.2 – 0.8</small></label>
+                  <input type="range" id="f-e" name="e" min="0.2" max="0.8" step="0.05" value="0.8">
+                  <output class="mono" for="f-e" id="o-e">0.80</output>
+                </div>
+                <div class="calc__row">
+                  <label for="f-ac"><b class="mono">AC</b> <span data-i18n="calc.ac">Asset criticality</span> <small class="mono">1 – 2</small></label>
+                  <input type="range" id="f-ac" name="ac" min="1" max="2" step="0.1" value="2">
+                  <output class="mono" for="f-ac" id="o-ac">2.0</output>
+                </div>
+                <div class="calc__row">
+                  <label for="f-bi"><b class="mono">BI</b> <span data-i18n="calc.bi">Business impact</span> <small class="mono">1 – 2</small></label>
+                  <input type="range" id="f-bi" name="bi" min="1" max="2" step="0.1" value="1.8">
+                  <output class="mono" for="f-bi" id="o-bi">1.8</output>
+                </div>
+                <label class="calc__kev" for="f-kev">
+                  <input type="checkbox" id="f-kev" name="kev" checked>
+                  <span data-i18n="calc.kev">Listed in CISA KEV — exploited in the wild</span>
+                </label>
+              </div>
+
+              <div class="calc__result" data-band="p1" id="calc-result">
+                <div class="calc__score">
+                  <span class="mono" data-i18n="calc.score">WARS score</span>
+                  <output class="calc__value mono" id="wars-score" aria-live="polite">82.9</output>
+                </div>
+                <div class="calc__band"><strong class="mono" id="wars-band">P1</strong><span id="wars-band-name">Critical</span></div>
+                <div class="calc__meter" aria-hidden="true"><span class="calc__meter-fill" id="wars-meter"></span></div>
+              </div>
+              <p class="calc__formula mono">WARS = (S × L × E × AC × BI) ÷ N × 100<span class="calc__n" data-i18n="calc.n"> — N = 3.2, the maximum possible product</span></p>
+              <p class="calc__note" data-i18n="calc.note">Simplified: the prototype also aggregates several findings per asset and damps low-confidence ones.</p>
+            </form>
+          </div>
+        </article>
+
+        <!-- University projects -->
+        <div class="projects-head reveal">
+          <div>
+            <h3 class="projects-head__title" data-i18n="uni.title">University projects</h3>
+            <p class="projects-head__text" data-i18n="uni.text">“SAÉ” are the hands-on, graded team projects at the heart of the French BUT curriculum. Each card opens the original deliverable.</p>
+          </div>
+          <div class="filters" role="group" aria-label="Filter projects by field" data-i18n-attr="aria-label:filters.aria">
+            <button type="button" class="filter" data-filter="all" aria-pressed="true"><span data-i18n="filters.all">All</span> <span class="filter__count">12</span></button>
+            <button type="button" class="filter" data-filter="cyber" aria-pressed="false"><span data-i18n="cat.cyber">Cybersecurity</span> <span class="filter__count">3</span></button>
+            <button type="button" class="filter" data-filter="network" aria-pressed="false"><span data-i18n="cat.network">Networks</span> <span class="filter__count">3</span></button>
+            <button type="button" class="filter" data-filter="telecom" aria-pressed="false"><span data-i18n="cat.telecom">Telecoms &amp; electronics</span> <span class="filter__count">3</span></button>
+            <button type="button" class="filter" data-filter="dev" aria-pressed="false"><span data-i18n="cat.dev">Development</span> <span class="filter__count">3</span></button>
+          </div>
+        </div>
+
+        <ul class="project-grid" id="project-grid">
+          <li class="project reveal" data-category="cyber">
+            <a class="project__media" href="documents/projects/sae304-pentesting.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/sae304-pentesting.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--cyber" data-i18n="cat.cyber">Cybersecurity</span><span class="project__code mono">SAÉ 3.04 · 2025–26</span></p>
+              <h4 class="project__title" data-i18n="p304.title">Discovering penetration testing</h4>
+              <p class="project__text" data-i18n="p304.text">Educational pentest in an isolated lab: reconnaissance, Nessus vulnerability scanning and controlled Metasploit exploitation of Metasploitable 2 and Windows XP targets, wrapped up in a report with risk analysis and remediation advice.</p>
+              <ul class="chips chips--sm"><li>Kali Linux</li><li>Nessus</li><li>Metasploit</li><li data-i18n="tag.reporting">Reporting</li></ul>
+              <a class="project__link" href="documents/projects/sae304-pentesting.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="cyber">
+            <a class="project__media" href="documents/projects/sae303-mcs-tender-response.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/sae303-mcs-tender.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--cyber" data-i18n="cat.cyber">Cybersecurity</span><span class="project__code mono">SAÉ 3.03 · 2025–26</span></p>
+              <h4 class="project__title" data-i18n="p303.title">Security maintenance &amp; support: answering a public tender</h4>
+              <p class="project__text" data-i18n="p303.text">Technical proposal for tender MP 24-16 of the Agence de Services et de Paiement: team organisation and skills matrix, 24/7 monitoring, N1–N3 incident handling and SLA commitments for a security maintenance mission.</p>
+              <ul class="chips chips--sm"><li data-i18n="tag.mcs">Security maintenance</li><li data-i18n="tag.monitoring">24/7 monitoring</li><li data-i18n="tag.incident">Incident response</li><li>SLA</li></ul>
+              <a class="project__link" href="documents/projects/sae303-mcs-tender-response.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="telecom">
+            <a class="project__media" href="documents/projects/sae301-optical-transmission.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/sae301-optical-ring.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--telecom" data-i18n="cat.telecom">Telecoms &amp; electronics</span><span class="project__code mono">SAÉ 3.01 · 2025–26</span></p>
+              <h4 class="project__title" data-i18n="p301.title">Long-distance optical transmission system</h4>
+              <p class="project__text" data-i18n="p301.text">A 10 km fibre-optic ring carrying 1 Gbit/s on four CWDM wavelengths, with optical add/drop multiplexers (OADM) and SFP lasers — optical budget calculated and OSNR measured above 40 dB.</p>
+              <ul class="chips chips--sm"><li data-i18n="tag.fibre">Fibre optics</li><li>CWDM</li><li>OADM</li><li>OSNR</li></ul>
+              <a class="project__link" href="documents/projects/sae301-optical-transmission.pdf" target="_blank" rel="noopener"><span data-i18n="link.slides">View the presentation</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="network">
+            <a class="project__media" href="documents/projects/integrative-project-jurisnova.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/jurisnova-network.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--network" data-i18n="cat.network">Networks</span><span class="project__code mono" data-i18n="pjn.code">Integrative project · 2024–25</span></p>
+              <h4 class="project__title" data-i18n="pjn.title">JurisNova: a segmented, secured law-firm network</h4>
+              <p class="project__text" data-i18n="pjn.text">Network for a two-floor law firm: VLANs for staff, a web DMZ, a database DMZ and an isolated guest Wi-Fi, pfSense firewall and ACLs, Apache, GLPI and MariaDB services — plus SLA and budget.</p>
+              <ul class="chips chips--sm"><li>VLAN</li><li>DMZ</li><li>pfSense</li><li>GLPI</li></ul>
+              <a class="project__link" href="documents/projects/integrative-project-jurisnova.pdf" target="_blank" rel="noopener"><span data-i18n="link.slides">View the presentation</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="dev">
+            <a class="project__media" href="documents/projects/sae23-ipam-platform.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/sae23-ipam.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--dev" data-i18n="cat.dev">Development</span><span class="project__code mono">SAÉ 2.03 · 2024–25</span></p>
+              <h4 class="project__title" data-i18n="p23.title">IP address management platform for an ISP</h4>
+              <p class="project__text" data-i18n="p23.text">Web tool that automates public IP assignment to an ISP’s customers: database design, PHP interface, automatic subnetting (VLAN, VRF) and generation of device configuration files, with input validation and SQL error handling.</p>
+              <ul class="chips chips--sm"><li>PHP</li><li>MySQL</li><li>IPAM</li><li data-i18n="tag.automation">Automation</li></ul>
+              <a class="project__link" href="documents/projects/sae23-ipam-platform.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="telecom">
+            <a class="project__media" href="documents/projects/sae22-signal-measurement.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/sae22-signal.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--telecom" data-i18n="cat.telecom">Telecoms &amp; electronics</span><span class="project__code mono">SAÉ 2.02 · 2024–25</span></p>
+              <h4 class="project__title" data-i18n="p22.title">AM/FM and walkie-talkie transmitters</h4>
+              <p class="project__text" data-i18n="p22.text">Built two radio products to a client brief — an AM/FM broadcast transmitter and a walkie-talkie transmitter — and validated them with time-domain and spectral measurements.</p>
+              <ul class="chips chips--sm"><li>AM/FM</li><li>RF</li><li data-i18n="tag.scope">Oscilloscope</li><li data-i18n="tag.spectrum">Spectrum analysis</li></ul>
+              <a class="project__link" href="documents/projects/sae22-signal-measurement.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="network">
+            <a class="project__media" href="documents/projects/sae21-small-business-network.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/sae21-network.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--network" data-i18n="cat.network">Networks</span><span class="project__code mono">SAÉ 2.01 · 2024–25</span></p>
+              <h4 class="project__title" data-i18n="p21.title">Two-site network for a small company</h4>
+              <p class="project__text" data-i18n="p21.text">Designed and deployed the network of a company with sites in Lyon and Grenoble, in roles mirroring a real IT team: addressing plan, DNS, HTTP, NAT/PAT, ACLs and SSH hardening, tested with Wireshark.</p>
+              <ul class="chips chips--sm"><li>Cisco IOS</li><li>NAT/PAT</li><li>ACL</li><li>GNS3</li><li>Wireshark</li></ul>
+              <a class="project__link" href="documents/projects/sae21-small-business-network.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="dev">
+            <a class="project__media" href="projects/sae15/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/sae15-dataviz.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--dev" data-i18n="cat.dev">Development</span><span class="project__code mono">SAÉ 1.05 · 2024–25</span></p>
+              <h4 class="project__title" data-i18n="p15.title">Cultural companies across French regions</h4>
+              <p class="project__text" data-i18n="p15.text">Processed a public dataset on cultural companies in French regions (2017–2018) and published it as a web page with tables and interactive Chart.js charts.</p>
+              <ul class="chips chips--sm"><li>CSV</li><li>HTML / CSS</li><li>Chart.js</li></ul>
+              <a class="project__link" href="projects/sae15/" target="_blank" rel="noopener"><span data-i18n="link.project">Open the project</span> <span class="mono project__type">WEB</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="dev">
+            <a class="project__media" href="https://github.com/pendichev/Portfolio" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/sae14-first-site.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--dev" data-i18n="cat.dev">Development</span><span class="project__code mono">SAÉ 1.04 · 2024–25</span></p>
+              <h4 class="project__title" data-i18n="p14.title">My first web presence</h4>
+              <p class="project__text" data-i18n="p14.text">The first version of this portfolio, hand-coded in HTML, CSS and JavaScript with a French/English switch — rebuilt from scratch in 2026 into the site you’re reading.</p>
+              <ul class="chips chips--sm"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <a class="project__link" href="https://github.com/pendichev/Portfolio" target="_blank" rel="noopener noreferrer"><span data-i18n="link.source">View the source</span> <span class="mono project__type">GITHUB</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="telecom">
+            <a class="project__media" href="documents/projects/sae13-4bit-microprocessor.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/sae13-4bit-cpu.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--telecom" data-i18n="cat.telecom">Telecoms &amp; electronics</span><span class="project__code mono">SAÉ 1.03 · 2024–25</span></p>
+              <h4 class="project__title" data-i18n="p13.title">A 4-bit microprocessor on Arduino</h4>
+              <p class="project__text" data-i18n="p13.text">Discovering a transmission device: coded a 4-bit microprocessor on Arduino (register bank, accumulator, ALU, 2:1 multiplexer) running four instructions, driven from a phone over Wi-Fi with the result shown on LEDs.</p>
+              <ul class="chips chips--sm"><li>Arduino</li><li>C++</li><li data-i18n="tag.logic">Digital logic</li><li>IoT</li></ul>
+              <a class="project__link" href="documents/projects/sae13-4bit-microprocessor.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="network">
+            <a class="project__media" href="documents/projects/sae12-networking-basics.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/sae12-marionnet.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--network" data-i18n="cat.network">Networks</span><span class="project__code mono">SAÉ 1.02 · 2024–25</span></p>
+              <h4 class="project__title" data-i18n="p12.title">First steps in computer networks</h4>
+              <p class="project__text" data-i18n="p12.text">Configured Linux hosts and a router in the Marionnet emulator — IP addressing, interfaces, static and default routes — then tested and troubleshot connectivity.</p>
+              <ul class="chips chips--sm"><li>Linux</li><li>iproute2</li><li data-i18n="tag.routing">Routing</li><li>Marionnet</li></ul>
+              <a class="project__link" href="documents/projects/sae12-networking-basics.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="cyber">
+            <a class="project__media project__media--video" href="media/sae11-2fa-awareness.mp4" data-video="media/sae11-2fa-awareness.mp4" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/projects/sae11-2fa-video.webp" width="800" height="500" alt="" loading="lazy" decoding="async">
+              <span class="project__play"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></span>
+            </a>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--cyber" data-i18n="cat.cyber">Cybersecurity</span><span class="project__code mono">SAÉ 1.01 · 2024–25</span></p>
+              <h4 class="project__title" data-i18n="p11.title">Two-factor authentication awareness video</h4>
+              <p class="project__text" data-i18n="p11.text">Awareness video for a non-technical audience on why and how to protect accounts with two-factor authentication (2FA).</p>
+              <ul class="chips chips--sm"><li data-i18n="tag.2fa">2FA</li><li data-i18n="tag.awareness">Awareness</li><li data-i18n="tag.video">Video</li></ul>
+              <a class="project__link" href="media/sae11-2fa-awareness.mp4" data-video="media/sae11-2fa-awareness.mp4" target="_blank" rel="noopener"><span data-i18n="link.video">Watch the video</span> <span class="mono project__type">MP4</span><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== SKILLS ============================== -->
+    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-head__index mono"><span>04</span> / <span data-i18n="nav.skills">Skills</span></p>
+          <h2 class="section-head__title" id="skills-title" data-i18n="skills.title">Toolbox</h2>
+          <p class="section-head__lead" data-i18n="skills.lead">Grouped the way I use them — from reading a packet to defending a risk decision.</p>
+        </header>
+
+        <div class="skills-grid">
+          <article class="skill reveal">
+            <div class="skill__head"><span class="skill__icon" aria-hidden="true"><svg class="icon"><use href="#i-activity"/></svg></span><h3 class="skill__title" data-i18n="sk1.title">SOC &amp; detection</h3></div>
+            <p class="skill__desc" data-i18n="sk1.desc">Turning logs into searchable, correlated evidence.</p>
+            <ul class="chips chips--sm"><li>NetWitness SIEM</li><li data-i18n="sk1.c1">XML log parsers</li><li>Unified Data Model</li><li data-i18n="sk1.c2">Alert triage</li><li data-i18n="sk1.c3">Multi-source correlation</li><li>Regex</li><li>Syslog</li><li>JSON</li><li>CEF</li><li>NetFlow</li><li>Imperva WAF</li><li>Keycloak (OIDC)</li><li>MITRE ATT&amp;CK</li></ul>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__head"><span class="skill__icon" aria-hidden="true"><svg class="icon"><use href="#i-scale"/></svg></span><h3 class="skill__title" data-i18n="sk2.title">GRC &amp; cyber risk</h3></div>
+            <p class="skill__desc" data-i18n="sk2.desc">Frameworks to decide what matters — and to prove it.</p>
+            <ul class="chips chips--sm"><li>ISO/IEC 27001</li><li>ISO/IEC 27005</li><li>NIS2</li><li>NIST CSF 2.0</li><li data-i18n="sk2.c1">CIA triad</li><li>CVE</li><li>CVSS</li><li>NVD</li><li>EPSS</li><li>CISA KEV</li><li>TLP 2.0</li></ul>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__head"><span class="skill__icon" aria-hidden="true"><svg class="icon"><use href="#i-bug"/></svg></span><h3 class="skill__title" data-i18n="sk3.title">Offensive security</h3></div>
+            <p class="skill__desc" data-i18n="sk3.desc">Understanding attacks to prioritise defences.</p>
+            <ul class="chips chips--sm"><li>Kali Linux</li><li>Nessus</li><li>Metasploit</li><li>Metasploitable</li><li data-i18n="sk3.c1">Exploitation</li><li data-i18n="sk3.c2">Pentest reporting</li></ul>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__head"><span class="skill__icon" aria-hidden="true"><svg class="icon"><use href="#i-network"/></svg></span><h3 class="skill__title" data-i18n="sk4.title">Networking</h3></div>
+            <p class="skill__desc" data-i18n="sk4.desc">The foundations of everything I monitor.</p>
+            <ul class="chips chips--sm"><li>TCP/IP</li><li>HTTP · DNS · SSH · FTP</li><li>Cisco IOS</li><li data-i18n="sk4.c1">Routing &amp; switching</li><li>VLAN</li><li>DMZ</li><li data-i18n="sk4.c2">Firewalls</li><li>OpenVPN</li><li>GNS3</li><li>Packet Tracer</li><li data-i18n="sk4.c3">Wireless</li><li>VoIP / SIP</li><li data-i18n="sk4.c4">Fibre optics (WDM, OTDR)</li></ul>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__head"><span class="skill__icon" aria-hidden="true"><svg class="icon"><use href="#i-server"/></svg></span><h3 class="skill__title" data-i18n="sk5.title">Systems</h3></div>
+            <p class="skill__desc" data-i18n="sk5.desc">Running the machines behind the services.</p>
+            <ul class="chips chips--sm"><li>Linux</li><li>Windows</li><li>Active Directory</li><li>DNS</li><li>DHCP</li><li>VMware</li><li>VirtualBox</li></ul>
+          </article>
+          <article class="skill reveal">
+            <div class="skill__head"><span class="skill__icon" aria-hidden="true"><svg class="icon"><use href="#i-sparkles"/></svg></span><h3 class="skill__title" data-i18n="sk6.title">Development &amp; AI</h3></div>
+            <p class="skill__desc" data-i18n="sk6.desc">Automating analysis — with AI only where it belongs.</p>
+            <ul class="chips chips--sm"><li>Python</li><li>asyncio</li><li>httpx</li><li>Playwright</li><li>BeautifulSoup</li><li>Pydantic</li><li data-i18n="sk6.c1">TCP/UDP sockets</li><li>LangGraph</li><li data-i18n="sk6.c2">LLM APIs</li><li>Bash</li><li>SQL / MySQL</li><li>PHP</li><li>HTML / CSS / JS</li><li>Git</li></ul>
+          </article>
+        </div>
+
+        <div class="skills-extra">
+          <article class="langs reveal">
+            <h3 class="skills-extra__title"><svg class="icon" aria-hidden="true"><use href="#i-languages"/></svg><span data-i18n="langs.title">Languages</span></h3>
+            <ul class="langs__list">
+              <li class="lang"><span class="lang__name" data-i18n="langs.bg">Bulgarian</span><span class="lang__meter lang__meter--6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="lang__level mono" data-i18n="langs.native">Native</span></li>
+              <li class="lang"><span class="lang__name" data-i18n="langs.fr">French</span><span class="lang__meter lang__meter--6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="lang__level mono">C2</span></li>
+              <li class="lang"><span class="lang__name" data-i18n="langs.en">English</span><span class="lang__meter lang__meter--5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="lang__level mono">C1</span></li>
+              <li class="lang"><span class="lang__name" data-i18n="langs.es">Spanish</span><span class="lang__meter lang__meter--2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="lang__level mono">A2</span></li>
             </ul>
-        </nav>
-    </header>
-
-    <!-- Section Accueil -->
-    <section id="accueil" class>
-        <div class="titre">  
-            <h1 data-i18n="accueil-titre">Andon Pendichev</h1>
-            <h2 data-i18n="accueil-sous-titre">Étudiant en Cybersécurité</h2>
+          </article>
+          <article class="strengths reveal">
+            <h3 class="skills-extra__title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="strengths.title">Strengths my supervisor highlighted</span></h3>
+            <ul class="chips">
+              <li data-i18n="strengths.1">Attention to detail</li><li data-i18n="strengths.2">Autonomy</li><li data-i18n="strengths.3">Teamwork</li><li data-i18n="strengths.4">Analytical thinking</li><li data-i18n="strengths.5">Technical curiosity</li><li data-i18n="strengths.6">Fast learning</li>
+            </ul>
+            <p class="strengths__note" data-i18n="strengths.note">From my internship evaluation at BULATSA — the kind of feedback I want to keep earning.</p>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- Section À propos -->
-    <section id="about" class="section">
-        <h1 data-i18n="about-titre">À propos</h1>
-        <main>
-            <section>
-                <h2 data-i18n="about-pour-moi">Pour moi</h2>
-                <p data-i18n="about-text">Actuellement étudiant en deuxième année de BUT Réseaux et Télécommunications à l'IUT de Villetaneuse, je suis à la recherche d'une expérience professionnelle. Curieux, adaptable et motivé, je suis désireux de contribuer activement aux projets de votre entreprise tout en renforçant mon expertise technique. Engagé, je me distingue par mon sens du service en équipe et ma passion pour l'apprentissage. Afin d'enrichir mon parcours professionnel, je suis ouvert aux opportunités d'emploi dans mon domaine. Ponctuel et organisé, je participe au bon déroulement des activités en faisant preuve de sérieux et d'implication.</p>
-            </section>
-            <section>
-                <h2 data-i18n="about-personnalite">Personnalité</h2>
-                <p data-i18n="about-creatif">Créatif : Je suis capable de m'adapter à des situations nouvelles et de changer de perspective si nécessaire pour trouver des solutions originales.</p>
-                <p data-i18n="about-determined">Déterminé : Je crois fermement en mes capacités à réussir.</p>
-                <p data-i18n="about-motivated">Motivé : Je m'investis pleinement, avec énergie et enthousiasme.</p>
-                <p data-i18n="about-resolu">Résolu : Je suis discipliné dans mon approche, planifiant et exécutant mes actions de manière réfléchie.</p>
-                <p data-i18n="about-cooperative">Coopératif : Je respecte mes engagements et joue mon rôle dans l'équipe, ce qui renforce la confiance mutuelle.</p>
-            </section>
-            <section>
-                <h2 data-i18n="about-formation">Formation</h2>
-                <p data-i18n="about-formation-1">2024-2027 - UNIVERSITÉ SORBONNE PARIS NORD - IUT DE VILLETANEUSE, Bachelor Universitaire de Technologie en Réseaux et Télécommunications</p>
-                <p data-i18n="about-formation-2">2021-2024 - LYCÉE PRIVÉ SAINT-PIERRE CALAIS, Baccalauréat général</p>
-            </section>
-        </main>
-    </section>
-
-    <!-- Section Compétences -->
-    <section id="competences" class="skills-section">
-        <h2 data-i18n="skills-titre">Compétences Techniques</h2>
-        
-        <div class="skills-container">
-            <!-- Carte Administrer -->
-            <div class="skill-card">
-                <div class="skill-card-inner">
-                    <div class="skill-card-front">
-                        <i class="fas fa-server skill-icon"></i>
-                        <h3 data-i18n="skills-administrer">Administrer</h3>
-                        <p data-i18n="skills-hover">Survolez pour découvrir mes compétences</p>
-                    </div>
-                    <div class="skill-card-back">
-                        <h3 data-i18n="skills-admin-titre">Administration & Supervision</h3>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fas fa-network-wired"></i>
-                                    <span data-i18n="skills-reseaux">Réseaux</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">LAN/WAN</span>
-                                    <span class="skill-item">Pare-feu</span>
-                                    <span class="skill-item">VPN</span>
-                                    <span class="skill-item">Supervision</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fas fa-desktop"></i>
-                                    <span data-i18n="skills-systemes">Systèmes</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">Linux</span>
-                                    <span class="skill-item">Windows</span>
-                                    <span class="skill-item">iOS</span>
-                                    <span class="skill-item">Serveurs</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fas fa-cogs"></i>
-                                    <span data-i18n="skills-services">Services</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">Active Directory</span>
-                                    <span class="skill-item">DNS</span>
-                                    <span class="skill-item">DHCP</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fas fa-cloud"></i>
-                                    <span data-i18n="skills-virtualisation">Virtualisation</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">VMware</span>
-                                    <span class="skill-item">VirtualBox</span>
-                                    <span class="skill-item">GNS3</span>
-                                    <span class="skill-item">Packet Tracer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carte Connecter -->
-            <div class="skill-card">
-                <div class="skill-card-inner">
-                    <div class="skill-card-front">
-                        <i class="fas fa-network-wired skill-icon"></i>
-                        <h3 data-i18n="skills-connecter">Connecter</h3>
-                        <p data-i18n="skills-hover">Survolez pour découvrir mes compétences</p>
-                    </div>
-                    <div class="skill-card-back">
-                        <h3 data-i18n="skills-connect-titre">Networking & Télécoms</h3>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fas fa-project-diagram"></i>
-                                    <span data-i18n="skills-core-networking">Core Networking</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">TCP/IP</span>
-                                    <span class="skill-item">HTTP/HTTPS</span>
-                                    <span class="skill-item">DNS</span>
-                                    <span class="skill-item">SSH/FTP</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fas fa-route"></i>
-                                    <span data-i18n="skills-routage">Routage & Switching</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">Routage</span>
-                                    <span class="skill-item">Switching</span>
-                                    <span class="skill-item">VLAN</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fas fa-wifi"></i>
-                                    <span data-i18n="skills-sans-fil">Sans-fil</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">WiFi</span>
-                                    <span class="skill-item">Réseaux mobiles</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fas fa-phone-alt"></i>
-                                    <span data-i18n="skills-telephonie">Téléphonie</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">VoIP</span>
-                                    <span class="skill-item">SIP</span>
-                                    <span class="skill-item">PABX/IPBX</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fas fa-cable"></i>
-                                    <span data-i18n="skills-cablage">Câblage</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">Cuivre</span>
-                                    <span class="skill-item">Fibre optique</span>
-                                    <span class="skill-item">Baies</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carte Programmer -->
-            <div class="skill-card">
-                <div class="skill-card-inner">
-                    <div class="skill-card-front">
-                        <i class="fas fa-code skill-icon"></i>
-                        <h3 data-i18n="skills-programmer">Programmer</h3>
-                        <p data-i18n="skills-hover">Survolez pour découvrir mes compétences</p>
-                    </div>
-                    <div class="skill-card-back">
-                        <h3 data-i18n="skills-programmer-titre">Développement & Scripts</h3>
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fab fa-python"></i>
-                                    <span data-i18n="skills-langages">Langages</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">Python</span>
-                                    <span class="skill-item">Java</span>
-                                    <span class="skill-item">PHP</span>
-                                    <span class="skill-item">Bash</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fab fa-html5"></i>
-                                    <span data-i18n="skills-web">Web</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">HTML5</span>
-                                    <span class="skill-item">CSS3</span>
-                                    <span class="skill-item">JavaScript</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fas fa-database"></i>
-                                    <span data-i18n="skills-bdd">Bases de données</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">MySQL</span>
-                                    <span class="skill-item">SQL</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <div class="skill-category-title">
-                                    <i class="fas fa-robot"></i>
-                                    <span data-i18n="skills-automatisation">Automatisation</span>
-                                </div>
-                                <div class="skill-items">
-                                    <span class="skill-item">Scripts</span>
-                                    <span class="skill-item">Tâches planifiées</span>
-                                    <span class="skill-item">Outils DevOps</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="contact__inner reveal">
+          <p class="section-head__index mono"><span>05</span> / <span data-i18n="nav.contact">Contact</span></p>
+          <h2 class="contact__title" id="contact-title" data-i18n="contact.title">Let’s talk.</h2>
+          <p class="contact__lead" data-i18n="contact.lead">I’m looking for an internship or a junior role in SOC, detection engineering or cyber-risk management. Email is the best way to reach me.</p>
+          <div class="contact__actions">
+            <a class="btn btn--primary btn--lg" href="mailto:pendichev.andon@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>pendichev.andon@gmail.com</span></a>
+            <button type="button" class="btn btn--ghost btn--lg" data-copy="pendichev.andon@gmail.com">
+              <svg class="icon icon--copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="icon icon--check" aria-hidden="true"><use href="#i-check"/></svg>
+              <span class="copy-label" data-i18n="contact.copy">Copy email</span>
+            </button>
+            <span class="visually-hidden" role="status" id="copy-status"></span>
+          </div>
+          <ul class="contact__links">
+            <li><a class="contact-link" href="tel:+33766679238"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span><small class="mono" data-i18n="contact.phone">Phone</small>+33 7 66 67 92 38</span></a></li>
+            <li><a class="contact-link" href="https://www.linkedin.com/in/andon-pendichev" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg><span><small class="mono">LinkedIn</small>in/andon-pendichev</span></a></li>
+            <li><a class="contact-link" href="https://github.com/pendichev" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span><small class="mono">GitHub</small>pendichev</span></a></li>
+            <li><span class="contact-link contact-link--static"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg><span><small class="mono" data-i18n="contact.location">Location</small><span data-i18n="hero.location">Île-de-France, France</span></span></span></li>
+          </ul>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Section Portfolio -->
-    <section id="portfolio" class="section">
-        <div class="portfolio-container">
-            <div class="portfolio-header">
-                <h1 data-i18n="portfolio-titre">Projets</h1>
-            </div>
-            
-            <!-- Section CV -->
-            <div class="cv-section">
-                <h2 data-i18n="portfolio-cv-titre">📄 Mes CVs</h2>
-                <p data-i18n="portfolio-cv-text">Téléchargez mes CVs en français et anglais</p>
-                <div class="cv-buttons">
-                    <a href="PendichevAndon.pdf" class="cv-button" target="_blank">
-                        <i class="fas fa-file-pdf"></i>
-                        <span data-i18n="portfolio-cv-fr">CV Français</span>
-                    </a>
-                    <a href="AndonPendichev.pdf" class="cv-button" target="_blank">
-                        <i class="fas fa-file-pdf"></i>
-                        <span data-i18n="portfolio-cv-en">CV English</span>
-                    </a>
-                </div>
-            </div>
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Andon Pendichev</p>
+      <p class="footer__made mono" data-i18n="footer.made">Hand-coded in HTML, CSS &amp; vanilla JS · no trackers, no third-party requests</p>
+      <a class="footer__top" href="#top"><span data-i18n="footer.top">Back to top</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
+    </div>
+  </footer>
 
-            <!-- Filtres de projets -->
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all" data-i18n="portfolio-filtre-tous">Tous les projets</button>
-                <button class="filter-btn" data-filter="reseaux" data-i18n="portfolio-filtre-reseaux">Réseaux</button>
-                <button class="filter-btn" data-filter="electronique" data-i18n="portfolio-filtre-electronique">Électronique</button>
-                <button class="filter-btn" data-filter="developpement" data-i18n="portfolio-filtre-developpement">Développement</button>
-                <button class="filter-btn" data-filter="cybersecurite" data-i18n="portfolio-filtre-cybersecurite">Cybersécurité</button>
-                <button class="filter-btn" data-filter="personnel" data-i18n="portfolio-filtre-personnel">Personnel</button>
-            </div>
-            
-            <!-- Grid de projets -->
-            <div class="portfolio-grid">
-                <!-- Projet 1 -->
-                <div class="portfolio-item" data-category="cybersecurite">
-                    <span class="project-category" data-i18n="portfolio-filtre-cybersecurite">Cybersécurité</span>
-                    <img src="SAE304.png" alt="SAE304">
-                    <a href="SAE304.pdf" target="_blank">
-                        <div class="description">
-                            <h3>Découvrir le pentesting</h3>
-                            <p>Réalisation d'un test d'intrusion (pentest) pédagogique avec Kali Linux, Nessus et Metasploit, en identifiant et exploitant des vulnérabilités critiques pour analyser les risques et proposer des recommandations de sécurisation.</p>
-                            <span class="project-link" data-i18n="portfolio-voir-plus">Voir le PDF</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 2 -->
-                <div class="portfolio-item" data-category="cybersecurite">
-                    <span class="project-category" data-i18n="portfolio-filtre-cybersecurite">Cybersécurité</span>
-                    <img src="SAE303.png" alt="SAE303">
-                    <a href="SAE303.pdf" target="_blank">
-                        <div class="description">
-                            <h3>Concevoir un réseau informatique sécurisé multi-sites</h3>
-                            <p>Une réponse complète à un appel d'offres MP 24-16 de l'ASP pour la mission de Maintien en Condition de Sécurité (MCS Support), détaillant organisation d'équipe, méthodologie 24/7, processus d'incidents et engagements SLA.</p>
-                            <span class="project-link" data-i18n="portfolio-voir-plus">Voir le PDF</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 3 -->
-                <div class="portfolio-item" data-category="electronique">
-                    <span class="project-category" data-i18n="portfolio-filtre-electronique">Électronique</span>
-                    <img src="SAE301.png" alt="SAE301">
-                    <a href="SAE301.pdf" target="_blank">
-                        <div class="description">
-                            <h3>Mettre en oeuvre un système de transmission</h3>
-                            <p>Un système de transmission par fibre optique longue distance (10 km en topologie anneau), utilisant CWDM, OADM et lasers SFP pour un débit de 1 Gbit/s sur 4 longueurs d'onde, avec performances validées (OSNR >40 dB).</p>
-                            <span class="project-link" data-i18n="portfolio-voir-plus">Voir le PDF</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- Projet 4 -->
-                <div class="portfolio-item" data-category="reseaux">
-                    <span class="project-category" data-i18n="portfolio-filtre-reseaux">Réseaux</span>
-                    <img src="logo.png" alt="SAEJ">
-                    <a href="JurisNova.pdf" target="_blank">
-                        <div class="description">
-                            <h3>Projet integratif</h3>
-                            <p>Segmentation réseau (VLANs, DMZ, LAN), Implémentation de la cybersécurité (ACLs), Déploiement de services (Apache, GLPI, MariaDB), Gestion du SLA et du budget.</p>
-                            <span class="project-link" data-i18n="portfolio-voir-plus">Voir plus</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 5 -->
-                <div class="portfolio-item" data-category="developpement">
-                    <span class="project-category" data-i18n="portfolio-filtre-developpement">Développement</span>
-                    <img src="s23.png" alt="SAE23">
-                    <a href="SAE23_Pendichev.pdf" target="_blank">
-                        <div class="description">
-                            <h3>Mettre en place une solution informatique pour l'entreprise</h3>
-                            <p>Conception et mise en œuvre de base de données, Développement web (PHP), Automatisation réseau (VRF, VLAN, IP), Interface utilisateur (HMI), Sécurité & gestion des erreurs (SQL).</p>
-                            <span class="project-link" data-i18n="portfolio-voir-projet">Voir le projet</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 6 -->
-                <div class="portfolio-item" data-category="electronique">
-                    <span class="project-category" data-i18n="portfolio-filtre-electronique">Électronique</span>
-                    <img src="S22.png" alt="SAE22">
-                    <a href="SAE22_Pendichev.pdf" target="_blank">
-                        <div class="description">
-                            <h3>Mesurer et caractériser un signal</h3>
-                            <p>Mise en œuvre de circuits analogiques, Analyse du signal, Ingénierie RF, Documentation technique, Protocole expérimental, Travail en collaboration.</p>
-                            <span class="project-link" data-i18n="portfolio-voir-pdf">Voir le PDF</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 7 -->
-                <div class="portfolio-item" data-category="cybersecurite">
-                    <span class="project-category" data-i18n="portfolio-filtre-cybersecurite">Cybersécurité</span>
-                    <img src="screen.png" alt="SAE21">
-                    <a href="SAE21 Rapport.pdf" target="_blank">
-                        <div class="description">
-                            <h3>Construire un Réseau Informatique pour une petite structure</h3>
-                            <p>Conception d'architecture réseau, Mise en œuvre de services (DNS, HTTP, NAT/PAT), Configuration de sécurité (ACLs, SSH), Tests et dépannage (Wireshark), Maîtrise d'outils (Packet Tracer, GNS3)</p>
-                            <span class="project-link" data-i18n="portfolio-voir-pdf">Voir le PDF</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 8 -->
-                <div class="portfolio-item" data-category="cybersecurite">
-                    <span class="project-category" data-i18n="portfolio-filtre-cybersecurite">Cybersécurité</span>
-                    <img src="Screenshot 2025-02-05 at 16.00.17.png" alt="Projet Cybersécurité">
-                    <a href="L'A2F.mp4" target="_blank">
-                        <div class="description">
-                            <h3>Hygiène Informatique & Cybersécurité</h3>
-                            <p>Communication technique, gestion de projet, sensibilisation aux risques informatiques</p>
-                            <span class="project-link" data-i18n="portfolio-voir-video">Voir la vidéo</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 9 -->
-                <div class="portfolio-item" data-category="reseaux">
-                    <span class="project-category" data-i18n="portfolio-filtre-reseaux">Réseaux</span>
-                    <img src="s21.png" alt="Projet Réseaux">
-                    <a href="CR_SAE12.pdf" target="_blank">
-                        <div class="description">
-                            <h3>Initiation aux Réseaux Informatiques</h3>
-                            <p>Configuration réseau, dépannage, utilisation d'outils numériques</p>
-                            <span class="project-link" data-i18n="portfolio-voir-projet">Voir le projet</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 10 -->
-                <div class="portfolio-item" data-category="developpement">
-                    <span class="project-category" data-i18n="portfolio-filtre-developpement">Développement</span>
-                    <img src="scr1.png" alt="Projet Data">
-                    <a href="sae15.html" target="_blank">
-                        <div class="description">
-                            <h3>Analyse & Visualisation de Données</h3>
-                            <p>Analyse de données d'entreprises culturelles, création de dashboards interactifs</p>
-                            <span class="project-link" data-i18n="portfolio-voir-projet">Voir le projet</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 11 -->
-                <div class="portfolio-item" data-category="developpement">
-                    <span class="project-category" data-i18n="portfolio-filtre-developpement">Développement</span>
-                    <img src="9210E2B5-D4E3-4F03-85D6-C8EA4F6003A5.jpeg" alt="Projet Web">
-                    <a href="portfolio.html" target="_blank">
-                        <div class="description">
-                            <h3>Présentation Web & Design</h3>
-                            <p>Communication numérique, design de supports web, rédaction technique</p>
-                            <span class="project-link" data-i18n="portfolio-voir-site">Voir le site</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 12 -->
-                <div class="portfolio-item" data-category="electronique">
-                    <span class="project-category" data-i18n="portfolio-filtre-electronique">Électronique</span>
-                    <img src="sae12.jpeg" alt="Projet Transmission">
-                    <div class="description">
-                        <h3>Dispositif de Transmission</h3>
-                        <p>Analyse de liaison, mesures techniques, présentation de résultats</p>
-                    </div>
-                </div>
-
-                <!-- Projet 13 -->
-                <div class="portfolio-item" data-category="electronique">
-                    <span class="project-category" data-i18n="portfolio-filtre-electronique">Électronique</span>
-                    <img src="arduino.webp" alt="Projet Arduino">
-                    <a href="sae13.pdf" target="_blank">
-                        <div class="description">
-                            <h3>Microprocesseur Arduino 4 bits</h3>
-                            <p>Développement professionnel, programmation embarquée, IoT</p>
-                            <span class="project-link" data-i18n="portfolio-voir-pdf">Voir le PDF</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 14 -->
-                <div class="portfolio-item" data-category="personnel">
-                    <span class="project-category" data-i18n="portfolio-filtre-personnel">Personnel</span>
-                    <img src="IMG_9748.jpeg" alt="Handball">
-                    <a href="handball.jpeg" target="_blank">
-                        <div class="description">
-                            <h3>Handball - Sport de Haut Niveau</h3>
-                            <p>Nationale 3 Masculine, Équipe nationale de Bulgarie, 10 ans d'expérience</p>
-                            <span class="project-link" data-i18n="portfolio-voir-plus">Voir plus</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Projet 15 -->
-                <div class="portfolio-item" data-category="personnel">
-                    <span class="project-category" data-i18n="portfolio-filtre-personnel">Personnel</span>
-                    <img src="a1.png" alt="A1">
-                    <a href="a1_.png" target="_blank">
-                        <div class="description">
-                            <h3>Stage, A1 Bulgarie</h3>
-                            <p>Une maîtrise pratique des outils de supervision et de collaborer avec des ingénieurs dans un environnement opérationnel 24h/24 et 7j/7.</p>
-                            <span class="project-link" data-i18n="portfolio-voir-plus">Voir plus</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h1 data-i18n="contact-titre">Me contacter</h1>
-            <div class="info">
-                <p><strong data-i18n="contact-nom">Nom :</strong> Andon Pendichev</p>
-                <p><strong data-i18n="contact-email">Email :</strong> <a href="mailto:pendichev.andon@gmail.com">pendichev.andon@gmail.com</a></p>
-                <p><strong data-i18n="contact-telephone">Numéro :</strong> +33 7 66 67 92 38</p>
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/andon-pendichev-a8b141338/" target="_blank">LinkedIn</a>
-                <a href="https://www.facebook.com/andon.pendichev.7" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com/andonpendichev/" target="_blank">Instagram</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer">© 2024 Andon Pendichev. Tous droits réservés.</p>
-    </footer>
-
-    <!-- JavaScript pour le défilement fluide -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-    <script>
-        document.querySelector(".menu-toggle").addEventListener("click", function() {
-            document.querySelector("ul").classList.toggle("active");
-        });
-    </script>
-
-    <!-- Script de traduction -->
-    <script>
-        // Système de traduction complet
-        const translations = {
-            fr: {
-                // Navigation
-                'nav-accueil': 'Accueil',
-                'nav-a-propos': 'À propos',
-                'nav-competences': 'Compétences',
-                'nav-projets': 'Projets',
-                'nav-contact': 'Contact',
-                
-                // Accueil
-                'accueil-titre': 'Andon Pendichev',
-                'accueil-sous-titre': 'Étudiant en Cybersécurité',
-                
-                // À propos
-                'about-titre': 'À propos',
-                'about-pour-moi': 'Pour moi',
-                'about-text': 'Actuellement étudiant en deuxième année de BUT Réseaux et Télécommunications à l\'IUT de Villetaneuse, je suis à la recherche d\'une expérience professionnelle. Curieux, adaptable et motivé, je suis désireux de contribuer activement aux projets de votre entreprise tout en renforçant mon expertise technique. Engagé, je me distingue par mon sens du service en équipe et ma passion pour l\'apprentissage. Afin d\'enrichir mon parcours professionnel, je suis ouvert aux opportunités d\'emploi dans mon domaine. Ponctuel et organisé, je participe au bon déroulement des activités en faisant preuve de sérieux et d\'implication.',
-                'about-personnalite': 'Personnalité',
-                'about-creatif': 'Créatif : Je suis capable de m\'adapter à des situations nouvelles et de changer de perspective si nécessaire pour trouver des solutions originales.',
-                'about-determined': 'Déterminé : Je crois fermement en mes capacités à réussir.',
-                'about-motivated': 'Motivé : Je m\'investis pleinement, avec énergie et enthousiasme.',
-                'about-resolu': 'Résolu : Je suis discipliné dans mon approche, planifiant et exécutant mes actions de manière réfléchie.',
-                'about-cooperative': 'Coopératif : Je respecte mes engagements et joue mon rôle dans l\'équipe, ce qui renforce la confiance mutuelle.',
-                'about-formation': 'Formation',
-                'about-formation-1': '2024-2027 - UNIVERSITÉ SORBONNE PARIS NORD - IUT DE VILLETANEUSE, Bachelor Universitaire de Technologie en Réseaux et Télécommunications',
-                'about-formation-2': '2021-2024 - LYCÉE PRIVÉ SAINT-PIERRE CALAIS, Baccalauréat général',
-                
-                // Compétences
-                'skills-titre': 'Compétences Techniques',
-                'skills-administrer': 'Administrer',
-                'skills-connecter': 'Connecter',
-                'skills-programmer': 'Programmer',
-                'skills-hover': 'Survolez pour découvrir mes compétences',
-                'skills-admin-titre': 'Administration & Supervision',
-                'skills-connect-titre': 'Networking & Télécoms',
-                'skills-programmer-titre': 'Développement & Scripts',
-                'skills-reseaux': 'Réseaux',
-                'skills-systemes': 'Systèmes',
-                'skills-services': 'Services',
-                'skills-virtualisation': 'Virtualisation',
-                'skills-core-networking': 'Core Networking',
-                'skills-routage': 'Routage & Switching',
-                'skills-sans-fil': 'Sans-fil',
-                'skills-telephonie': 'Téléphonie',
-                'skills-cablage': 'Câblage',
-                'skills-langages': 'Langages',
-                'skills-web': 'Web',
-                'skills-bdd': 'Bases de données',
-                'skills-automatisation': 'Automatisation',
-                
-                // Portfolio
-                'portfolio-titre': 'Projets',
-                'portfolio-cv-titre': '📄 Mes CVs',
-                'portfolio-cv-text': 'Téléchargez mes CV en français et anglais',
-                'portfolio-cv-fr': 'CV Français',
-                'portfolio-cv-en': 'CV English',
-                'portfolio-filtre-tous': 'Tous les projets',
-                'portfolio-filtre-reseaux': 'Réseaux',
-                'portfolio-filtre-electronique': 'Électronique',
-                'portfolio-filtre-developpement': 'Développement',
-                'portfolio-filtre-cybersecurite': 'Cybersécurité',
-                'portfolio-filtre-personnel': 'Personnel',
-                'portfolio-voir-plus': 'Voir plus',
-                'portfolio-voir-projet': 'Voir le projet',
-                'portfolio-voir-pdf': 'Voir le PDF',
-                'portfolio-voir-video': 'Voir la vidéo',
-                'portfolio-voir-site': 'Voir le site',
-                
-                // Contact
-                'contact-titre': 'Me contacter',
-                'contact-nom': 'Nom :',
-                'contact-email': 'Email :',
-                'contact-telephone': 'Numéro :',
-                
-                // Footer
-                'footer': '© 2024 Andon Pendichev. Tous droits réservés.'
-            },
-            
-            en: {
-                // Navigation
-                'nav-accueil': 'Home',
-                'nav-a-propos': 'About',
-                'nav-competences': 'Skills',
-                'nav-projets': 'Projects',
-                'nav-contact': 'Contact',
-                
-                // Accueil
-                'accueil-titre': 'Andon Pendichev',
-                'accueil-sous-titre': 'Cybersecurity Student',
-                
-                // À propos
-                'about-titre': 'About Me',
-                'about-pour-moi': 'About Me',
-                'about-text': 'Currently a second-year student in Networks and Telecommunications at IUT Villetaneuse, I am seeking professional experience. Curious, adaptable, and motivated, I am eager to actively contribute to your company\'s projects while strengthening my technical expertise. Committed, I stand out through my team service mindset and passion for learning. To enrich my professional journey, I am open to employment opportunities in my field. Punctual and organized, I contribute to the smooth running of activities with seriousness and involvement.',
-                'about-personnalite': 'Personality',
-                'about-creatif': 'Creative: I am able to adapt to new situations and change perspective when necessary to find original solutions.',
-                'about-determined': 'Determined: I firmly believe in my ability to succeed.',
-                'about-motivated': 'Motivated: I invest myself fully, with energy and enthusiasm.',
-                'about-resolu': 'Resolute: I am disciplined in my approach, planning and executing my actions thoughtfully.',
-                'about-cooperative': 'Cooperative: I honor my commitments and play my role in the team, which strengthens mutual trust.',
-                'about-formation': 'Education',
-                'about-formation-1': '2024-2027 - SORBONNE PARIS NORD UNIVERSITY - IUT VILLETANEUSE, Bachelor of Technology in Networks and Telecommunications',
-                'about-formation-2': '2021-2024 - SAINT-PIERRE PRIVATE HIGH SCHOOL CALAIS, General Baccalaureate',
-                
-                // Compétences
-                'skills-titre': 'Technical Skills',
-                'skills-administrer': 'Administer',
-                'skills-connecter': 'Connect',
-                'skills-programmer': 'Program',
-                'skills-hover': 'Hover to discover my skills',
-                'skills-admin-titre': 'Administration & Supervision',
-                'skills-connect-titre': 'Networking & Telecoms',
-                'skills-programmer-titre': 'Development & Scripts',
-                'skills-reseaux': 'Networks',
-                'skills-systemes': 'Systems',
-                'skills-services': 'Services',
-                'skills-virtualisation': 'Virtualization',
-                'skills-core-networking': 'Core Networking',
-                'skills-routage': 'Routing & Switching',
-                'skills-sans-fil': 'Wireless',
-                'skills-telephonie': 'Telephony',
-                'skills-cablage': 'Cabling',
-                'skills-langages': 'Languages',
-                'skills-web': 'Web',
-                'skills-bdd': 'Databases',
-                'skills-automatisation': 'Automation',
-                
-                // Portfolio
-                'portfolio-titre': 'Projects',
-                'portfolio-cv-titre': '📄 My Resumes',
-                'portfolio-cv-text': 'Download my resumes in French and English',
-                'portfolio-cv-fr': 'French Resume',
-                'portfolio-cv-en': 'English Resume',
-                'portfolio-filtre-tous': 'All projects',
-                'portfolio-filtre-reseaux': 'Networks',
-                'portfolio-filtre-electronique': 'Electronics',
-                'portfolio-filtre-developpement': 'Development',
-                'portfolio-filtre-cybersecurite': 'Cybersecurity',
-                'portfolio-filtre-personnel': 'Personal',
-                'portfolio-voir-plus': 'See more',
-                'portfolio-voir-projet': 'View project',
-                'portfolio-voir-pdf': 'View PDF',
-                'portfolio-voir-video': 'Watch video',
-                'portfolio-voir-site': 'View site',
-                
-                // Contact
-                'contact-titre': 'Contact Me',
-                'contact-nom': 'Name:',
-                'contact-email': 'Email:',
-                'contact-telephone': 'Phone:',
-                
-                // Footer
-                'footer': '© 2024 Andon Pendichev. All rights reserved.'
-            }
-        };
-
-        let currentLang = 'fr';
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'fr' ? 'en' : 'fr';
-            updateAllTexts();
-            updateLanguageButton();
-        }
-
-        function updateAllTexts() {
-            // Met à jour tous les textes
-            for (const [key, value] of Object.entries(translations[currentLang])) {
-                const elements = document.querySelectorAll(`[data-i18n="${key}"]`);
-                elements.forEach(element => {
-                    element.textContent = value;
-                });
-            }
-        }
-
-        function updateLanguageButton() {
-            const button = document.getElementById('language-toggle');
-            if (currentLang === 'fr') {
-                button.innerHTML = '<i class="fas fa-globe"></i> EN';
-            } else {
-                button.innerHTML = '<i class="fas fa-globe"></i> FR';
-            }
-        }
-
-        // Initialisation
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('language-toggle').addEventListener('click', toggleLanguage);
-        });
-
-        // Filtrage des projets (garder ton code existant)
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    portfolioItems.forEach(item => {
-                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            item.style.display = 'block';
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'translateY(0)';
-                            }, 100);
-                        } else {
-                            item.style.opacity = '0';
-                            item.style.transform = 'translateY(20px)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-<script>
-// Menu hamburger amélioré
-document.querySelector(".menu-toggle").addEventListener("click", function() {
-    const menu = document.querySelector(".nav-menu");
-    const icon = this.querySelector('i');
-    
-    menu.classList.toggle("active");
-    
-    if (menu.classList.contains("active")) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    }
-});
-
-// Fermer le menu quand on clique sur un lien
-document.querySelectorAll('.nav-menu li a').forEach(link => {
-    link.addEventListener('click', () => {
-        const menu = document.querySelector(".nav-menu");
-        const icon = document.querySelector('.menu-toggle i');
-        
-        menu.classList.remove("active");
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    });
-});
-
-// Fermer le menu quand on clique sur le bouton langue
-document.getElementById('language-toggle').addEventListener('click', function(e) {
-    // La traduction se fera normalement
-    // Le menu restera ouvert sur mobile pour voir le changement
-});
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu    = document.querySelector('.nav-menu');
-
-    if (menuToggle && navMenu) {
-      menuToggle.addEventListener('click', function () {
-        navMenu.classList.toggle('active');
-      });
-
-      // Optionnel : fermer le menu quand on clique sur un lien
-      navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          navMenu.classList.remove('active');
-        });
-      });
-    }
-  });
-</script>
-
+  <dialog class="modal" id="video-modal" aria-labelledby="video-title">
+    <div class="modal__head">
+      <h2 class="modal__title" id="video-title" data-i18n="p11.title">Two-factor authentication awareness video</h2>
+      <button type="button" class="icon-btn" data-close aria-label="Close" data-i18n-attr="aria-label:a11y.close"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <video class="modal__video" controls preload="none" playsinline poster="assets/img/projects/sae11-2fa-video.webp"></video>
+  </dialog>
 </body>
 </html>
