@@ -466,7 +466,8 @@ code {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: calc(var(--header-h) + clamp(40px, 7vw, 88px)) 0 clamp(8px, 2vw, 24px);
+  overflow: clip visible; /* clip sideways only, so the photo's shadow isn't cut off */
+  padding: calc(var(--header-h) + clamp(40px, 7vw, 88px)) 0 clamp(32px, 5vw, 56px);
 }
 .hero__bg {
   position: absolute;
@@ -547,14 +548,6 @@ code {
 }
 /* Each half of the tagline wraps as a unit, so the line breaks after the comma. */
 .hero__lead > span { display: inline-block; }
-.hero__lead em {
-  font-style: normal;
-  color: var(--accent-text);
-  text-decoration: underline;
-  text-decoration-color: var(--accent-line);
-  text-decoration-thickness: .1em;
-  text-underline-offset: .16em;
-}
 .hero__text { max-width: 58ch; margin-bottom: 30px; font-size: 1.05rem; text-wrap: pretty; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
 .hero__meta {
@@ -608,44 +601,10 @@ code {
 .hero__card-k { font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-text); }
 .hero__card-v { font-size: .95rem; font-weight: 600; color: var(--text); }
 
-/* Stats strip */
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: clamp(48px, 7vw, 80px);
-  border-top: 1px solid var(--line);
-}
-.hero-stats__item {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 22px 22px 0 0;
-  font-size: .9rem;
-  line-height: 1.4;
-  color: var(--text-3);
-}
-.hero-stats__item + .hero-stats__item { padding-left: 22px; border-left: 1px solid var(--line); }
-.hero-stats__num {
-  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
-  font-weight: 650;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  color: var(--text);
-}
-
 @media (max-width: 1020px) {
   .hero__grid { grid-template-columns: minmax(0, 1fr); }
   .hero__photo { justify-self: start; max-width: 340px; }
   .hero__card { left: 16px; bottom: 16px; }
-}
-@media (max-width: 760px) {
-  .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 0; gap: 12px; }
-  .hero-stats__item,
-  .hero-stats__item + .hero-stats__item {
-    padding: 16px 0 0;
-    border-left: 0;
-    border-top: 1px solid var(--line);
-  }
 }
 @media (max-width: 480px) {
   .hero__actions .btn { flex: 1 1 auto; }

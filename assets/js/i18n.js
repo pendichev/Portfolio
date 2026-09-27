@@ -33,18 +33,14 @@ window.I18N.fr = {
 
   /* Hero */
   'hero.status': 'Ouvert aux stages et premiers postes',
-  'hero.eyebrow': 'Cybersécurité · SOC · Ingénierie de la détection · Risques cyber',
-  'hero.lead': '<span>Réseaux &amp; télécoms par formation,</span> <span><em>cybersécurité</em> par choix.</span>',
-  'hero.text': 'Étudiant en troisième année à l’IUT de Villetaneuse — Université Sorbonne Paris Nord. De la fibre optique et des liaisons radio à la conception de réseaux, aux outils web et aux opérations de sécurité, j’aime comprendre comment les systèmes fonctionnent de bout en bout.',
+  'hero.eyebrow': 'SOC · Ingénierie de la détection · Risques cyber',
+  'hero.lead': '<span>Étudiant en réseaux &amp; télécoms,</span> <span>spécialisé en cybersécurité.</span>',
+  'hero.text': 'J’étudie à l’Université Sorbonne Paris Nord et j’ai deux stages en exploitation 24/7 à mon actif&nbsp;: l’un dans un centre de supervision réseau, l’autre en cybersécurité.',
   'hero.cta1': 'Voir mes réalisations',
   'hero.cta2': 'Mon CV',
   'hero.location': 'Île-de-France, France',
   'hero.card.k': 'Actuellement',
   'hero.card.v': 'BUT Réseaux &amp; Télécoms, 3ᵉ année',
-  'hero.stat1': 'projets en sécurité, réseaux, télécoms &amp; développement',
-  'hero.stat2': 'stages en Bulgarie — exploitation réseau &amp; cybersécurité',
-  'hero.stat3': 'ans de handball en équipe, dont l’équipe nationale de Bulgarie',
-  'hero.stat4': 'langues — bulgare, français, anglais, espagnol',
 
   /* About */
   'about.title': 'Bonjour, je suis Andon.',
