@@ -15,7 +15,7 @@ assets/
   css/main.css              All styles (design tokens at the top)
   js/boot.js                Picks theme + language before the page is painted
   js/i18n.js                French translations
-  js/main.js                Interactions (menu, filters, calculator, etc.)
+  js/main.js                Interactions (menu, filters, video dialog, etc.)
   fonts/                    Geist & Geist Mono (SIL Open Font License)
   img/                      Portrait, photos, favicon, social preview image
   img/projects/             Project thumbnails (800 × 500 WebP)

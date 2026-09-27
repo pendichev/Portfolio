@@ -7,7 +7,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <title>Andon Pendichev — Cybersecurity student · SOC, detection engineering &amp; cyber risk</title>
-  <meta name="description" content="Portfolio of Andon Pendichev, cybersecurity student (BUT Networks &amp; Telecoms, Université Sorbonne Paris Nord). SOC internship at BULATSA: production SIEM log parsers and a risk-based prioritisation prototype.">
+  <meta name="description" content="Portfolio of Andon Pendichev, networks &amp; telecoms student specialising in cybersecurity (BUT R&amp;T, Université Sorbonne Paris Nord): projects, experience, skills and CV.">
   <meta name="author" content="Andon Pendichev">
   <link rel="canonical" href="https://pendichev.github.io/Portfolio/">
   <link rel="alternate" hreflang="en" href="https://pendichev.github.io/Portfolio/?lang=en">
@@ -16,7 +16,7 @@
 
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Andon Pendichev — Cybersecurity student">
-  <meta property="og:description" content="SOC, detection engineering and cyber risk. From raw security data to decisions.">
+  <meta property="og:description" content="Networks &amp; telecoms by training, cybersecurity by choice.">
   <meta property="og:url" content="https://pendichev.github.io/Portfolio/">
   <meta property="og:image" content="https://pendichev.github.io/Portfolio/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -33,6 +33,7 @@
 
   <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/portrait.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="assets/css/main.css">
 
   <script src="assets/js/boot.js"></script>
@@ -76,8 +77,6 @@
     <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3 20 12 6 21Z"/></symbol>
-    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
-    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
     <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
     <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
     <symbol id="i-bug" viewBox="0 0 24 24"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></symbol>
@@ -87,7 +86,6 @@
     <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
     <symbol id="i-graduation" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
     <symbol id="i-award" viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></symbol>
-    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
     <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
@@ -139,8 +137,8 @@
           <p class="status-pill"><span class="status-pill__dot" aria-hidden="true"></span><span data-i18n="hero.status">Open to internships &amp; junior roles</span></p>
           <p class="hero__eyebrow mono" data-i18n="hero.eyebrow">Cybersecurity · SOC · Detection engineering · Cyber risk</p>
           <h1 class="hero__title" id="hero-title">Andon Pendichev</h1>
-          <p class="hero__lead" data-i18n="hero.lead">I turn raw security data into <em>decisions</em>.</p>
-          <p class="hero__text" data-i18n="hero.text">Third-year Networks &amp; Telecoms student on the cybersecurity track at Université Sorbonne Paris Nord. Fresh from three months in the security teams of BULATSA, Bulgaria’s air navigation service provider — a critical-infrastructure operator under NIS2.</p>
+          <p class="hero__lead" data-i18n="hero.lead"><span>Networks &amp; telecoms by training,</span> <span><em>cybersecurity</em> by choice.</span></p>
+          <p class="hero__text" data-i18n="hero.text">Third-year student at IUT de Villetaneuse — Université Sorbonne Paris Nord. From optical fibre and radio links to network design, web tools and security operations, I&nbsp;like understanding how systems work end to end.</p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#projects"><span data-i18n="hero.cta1">See my work</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
             <a class="btn btn--ghost" href="#cv"><svg class="icon" aria-hidden="true"><use href="#i-file-text"/></svg><span data-i18n="hero.cta2">Get my CV</span></a>
@@ -151,36 +149,20 @@
           </ul>
         </div>
 
-        <figure class="terminal" id="terminal">
-          <div class="terminal__bar" aria-hidden="true">
-            <span class="terminal__dots"><i></i><i></i><i></i></span>
-            <span class="terminal__title">soc — raw → normalised → correlated</span>
-          </div>
-<pre class="terminal__body" aria-hidden="true"><code><span class="t-line"><span class="t-prompt">~/soc $</span> <span class="t-cmd">tail -1 keycloak-audit.log</span></span>
-<span class="t-line t-raw">type=<span class="t-str">"LOGIN_ERROR"</span>, realmName=<span class="t-str">"PORTAL"</span>, clientId=<span class="t-str">"webapp-frontend"</span>, ipAddress=<span class="t-str">"198.51.100.23"</span>, username=<span class="t-str">"i.petrov@example.bg"</span>, error=<span class="t-str">"invalid_user_credentials"</span></span>
-<span class="t-line t-gap"> </span>
-<span class="t-line"><span class="t-prompt">~/soc $</span> <span class="t-cmd">parse --model udm</span></span>
-<span class="t-line"><span class="t-key">ip.src</span> <span class="t-dim">.......</span> <span class="t-val">198.51.100.23</span></span>
-<span class="t-line"><span class="t-key">user.dst</span> <span class="t-dim">.....</span> <span class="t-val">i.petrov@example.bg</span></span>
-<span class="t-line"><span class="t-key">federated.sp</span> <span class="t-dim">.</span> <span class="t-val">webapp-frontend</span></span>
-<span class="t-line"><span class="t-key">ec.activity</span> <span class="t-dim">..</span> <span class="t-val">Logon</span></span>
-<span class="t-line"><span class="t-key">ec.outcome</span> <span class="t-dim">...</span> <span class="t-bad">Failure</span></span>
-<span class="t-line t-gap"> </span>
-<span class="t-line"><span class="t-prompt">~/soc $</span> <span class="t-cmd">investigate ip.src=198.51.100.23</span></span>
-<span class="t-line"><span class="t-ok">✓</span> netflow  <span class="t-ok">✓</span> imperva  <span class="t-ok">✓</span> traefik  <span class="t-ok">✓</span> keycloak</span>
-<span class="t-line t-note">→ 1 query · 4 sources · full session rebuilt<span class="t-cursor"></span></span></code></pre>
-          <figcaption class="terminal__caption">
-            <span class="visually-hidden" data-i18n="hero.terminal.sr">Illustration: a raw identity-provider log line is parsed into normalised fields, then one query correlates it across four log sources.</span>
-            <span aria-hidden="true" data-i18n="hero.terminal.caption">Fictional values — real field mapping from my SOC internship.</span>
+        <figure class="hero__photo">
+          <img src="assets/img/portrait.webp" width="800" height="1000" alt="Portrait of Andon Pendichev" data-i18n-attr="alt:about.photoAlt" fetchpriority="high" decoding="async">
+          <figcaption class="hero__card">
+            <span class="hero__card-k mono" data-i18n="hero.card.k">Currently</span>
+            <span class="hero__card-v" data-i18n="hero.card.v">BUT Networks &amp; Telecoms, year 3</span>
           </figcaption>
         </figure>
       </div>
 
       <div class="container">
         <ul class="hero-stats">
-          <li class="hero-stats__item"><strong class="hero-stats__num">4</strong><span data-i18n="hero.stat1">SIEM log parsers shipped to production</span></li>
-          <li class="hero-stats__item"><strong class="hero-stats__num">2</strong><span data-i18n="hero.stat2">internships in 24/7 operations — SOC&nbsp;&amp;&nbsp;NOC</span></li>
-          <li class="hero-stats__item"><strong class="hero-stats__num">12</strong><span data-i18n="hero.stat3">university projects in cyber, networks &amp; telecoms</span></li>
+          <li class="hero-stats__item"><strong class="hero-stats__num">14</strong><span data-i18n="hero.stat1">projects in security, networks, telecoms &amp; development</span></li>
+          <li class="hero-stats__item"><strong class="hero-stats__num">2</strong><span data-i18n="hero.stat2">internships in Bulgaria — network operations &amp; cybersecurity</span></li>
+          <li class="hero-stats__item"><strong class="hero-stats__num">10</strong><span data-i18n="hero.stat3">years of team handball, incl. the Bulgarian national team</span></li>
           <li class="hero-stats__item"><strong class="hero-stats__num">4</strong><span data-i18n="hero.stat4">languages — Bulgarian, French, English, Spanish</span></li>
         </ul>
       </div>
@@ -195,28 +177,24 @@
         </header>
 
         <div class="about">
-          <figure class="about__photo reveal">
-            <img src="assets/img/portrait.webp" width="800" height="1000" alt="Portrait of Andon Pendichev" data-i18n-attr="alt:about.photoAlt" loading="lazy" decoding="async">
-          </figure>
+          <dl class="facts facts--stack reveal">
+            <div class="facts__item"><dt data-i18n="about.fact1.k">Based in</dt><dd data-i18n="about.fact1.v">Île-de-France, France</dd></div>
+            <div class="facts__item"><dt data-i18n="about.fact2.k">Studying</dt><dd data-i18n="about.fact2.v">BUT Networks &amp; Telecoms · cybersecurity track · year 3</dd></div>
+            <div class="facts__item"><dt data-i18n="about.fact3.k">Languages</dt><dd data-i18n="about.fact3.v">Bulgarian (native), French (C2), English (C1), Spanish (A2)</dd></div>
+            <div class="facts__item"><dt data-i18n="about.fact4.k">Looking for</dt><dd data-i18n="about.fact4.v">Internship or junior role · SOC, detection, cyber risk</dd></div>
+          </dl>
 
           <div class="about__body">
-            <p class="about__lead reveal" data-i18n="about.p1">I’m drawn to the part of cybersecurity where data becomes a decision: making logs searchable, connecting events across sources, and working out what really needs fixing first.</p>
-            <p class="reveal" data-i18n="about.p2">I’m in the third year of a Bachelor of Technology (BUT) in Networks &amp; Telecommunications, cybersecurity track, at IUT de Villetaneuse — Université Sorbonne Paris Nord. In summer 2026 I spent three months at BULATSA, rotating through ICT governance, network infrastructure and the Security Operations Centre, where I shipped four SIEM log parsers to production and built a risk-prioritisation prototype.</p>
-            <p class="reveal" data-i18n="about.p3">Critical infrastructure taught me rigour: every action is thought through, documented and traceable. I’m now looking for an internship or a junior role in SOC, detection engineering or cyber-risk management.</p>
-
-            <dl class="facts reveal">
-              <div class="facts__item"><dt data-i18n="about.fact1.k">Based in</dt><dd data-i18n="about.fact1.v">Île-de-France, France</dd></div>
-              <div class="facts__item"><dt data-i18n="about.fact2.k">Studying</dt><dd data-i18n="about.fact2.v">BUT Networks &amp; Telecoms · cybersecurity track · year 3</dd></div>
-              <div class="facts__item"><dt data-i18n="about.fact3.k">Languages</dt><dd data-i18n="about.fact3.v">Bulgarian (native), French (C2), English (C1), Spanish (A2)</dd></div>
-              <div class="facts__item"><dt data-i18n="about.fact4.k">Looking for</dt><dd data-i18n="about.fact4.v">Internship or junior role · SOC, detection, cyber risk</dd></div>
-            </dl>
+            <p class="about__lead reveal" data-i18n="about.p1">I like understanding how systems really work, end to end — and then making them harder to break.</p>
+            <p class="reveal" data-i18n="about.p2">I’m in the third year of a Bachelor of Technology (BUT) in Networks &amp; Telecommunications, cybersecurity track, at IUT de Villetaneuse — Université Sorbonne Paris Nord. My degree has taken me across the whole stack: I’ve measured optical fibre links and built radio transmitters, designed segmented networks and written web tools, and on the security side run a pentest lab and answered a security-operations tender.</p>
+            <p class="reveal" data-i18n="about.p3">Two internships in Bulgaria gave me a taste of 24/7 operations: network monitoring in A1’s NOC, then cybersecurity at BULATSA, the national air navigation service provider. I’m now looking for an internship or a junior role in SOC, detection engineering or cyber-risk management.</p>
           </div>
         </div>
 
         <div class="cv reveal" id="cv">
           <div class="cv__intro">
             <h3 class="cv__title" data-i18n="cv.title">My CV</h3>
-            <p data-i18n="cv.text">One page, updated after my BULATSA internship — in English and in French.</p>
+            <p data-i18n="cv.text">One page, kept up to date — in English and in French.</p>
           </div>
           <div class="cv__cards">
             <article class="cv-card">
@@ -283,17 +261,14 @@
                     <p class="xp__when mono" data-i18n="xp1.when">May – Jul 2026 · 3 months</p>
                   </header>
                   <p class="xp__where mono" data-i18n="xp1.where">Information Systems Directorate · Sofia, Bulgaria</p>
-                  <p class="xp__summary" data-i18n="xp1.summary">Air navigation service provider and NIS2 essential entity. Rotation across ICT governance, network infrastructure and the Security Operations Centre (SOC).</p>
                   <ul class="xp__list">
-                    <li data-i18n="xp1.b1">Brought <strong>4 unparsed production log sources</strong> into the SIEM with custom NetWitness XML parsers (Traefik, Keycloak, Imperva WAF, NetFlow/CEF) — zero corrections at platform-admin review, deployed to production.</li>
-                    <li data-i18n="xp1.b2">Enabled <strong>single-query session tracing</strong>, from network flow to identity-provider login, through shared Unified Data Model pivot keys.</li>
-                    <li data-i18n="xp1.b3">Triaged WAF alerts (known-CVE exploitation attempts, directory traversal, false positives), flagged authentication abuse and documented incidents following playbooks.</li>
-                    <li data-i18n="xp1.b4">Ran internal vulnerability scans and prioritised findings with CVSS, CVE/NVD and the asset inventory; contributed to a security policy review against ISO/IEC 27005 and NIS2.</li>
-                    <li data-i18n="xp1.b5">Designed and built <strong>WARS</strong>, a Python prototype that ranks exposed web assets by contextual risk, and observed an executive cyber-crisis exercise (NIST CSF 2.0, ransomware scenario).</li>
+                    <li data-i18n="xp1.b1">Built four SIEM log parsers (NetWitness) for sources the SOC could not search yet — now in production.</li>
+                    <li data-i18n="xp1.b2">Took part in daily SOC monitoring: WAF alert triage, detection of authentication abuse and incident write-ups.</li>
+                    <li data-i18n="xp1.b3">Supported vulnerability management and a security-policy review (ISO/IEC 27005, NIS2), and prototyped a risk-prioritisation tool in Python.</li>
                   </ul>
                   <p class="xp__badge"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg><span data-i18n="xp1.badge">Rated “outstanding” by my internship supervisor</span></p>
                   <ul class="chips" aria-label="Tools and topics" data-i18n-attr="aria-label:a11y.tags">
-                    <li>NetWitness</li><li>SIEM</li><li>XML parsers</li><li>Imperva WAF</li><li>Keycloak</li><li>NetFlow</li><li>ISO/IEC 27005</li><li>NIS2</li>
+                    <li>SIEM</li><li>NetWitness</li><li>WAF</li><li>ISO/IEC 27005</li><li>NIS2</li>
                   </ul>
                 </article>
               </li>
@@ -337,16 +312,6 @@
               <p class="edu__note" data-i18n="edu2.note">With honours (mention Bien) · named “Most Deserving Student”</p>
             </article>
 
-            <figure class="quote reveal">
-              <svg class="quote__icon" aria-hidden="true"><use href="#i-quote"/></svg>
-              <blockquote class="quote__text" lang="en">
-                <p>He has consistently shown professionalism, technical curiosity, analytical thinking, and a strong capacity for learning.</p>
-              </blockquote>
-              <figcaption class="quote__by">
-                <span class="quote__role" data-i18n="quote.role">Internship supervisor — Acting Director, Information Systems Directorate, BULATSA</span>
-                <span class="quote__note mono" data-i18n="quote.note">Recommendation letter available on request</span>
-              </figcaption>
-            </figure>
           </aside>
         </div>
       </div>
@@ -358,219 +323,15 @@
         <header class="section-head reveal">
           <p class="section-head__index mono"><span>03</span> / <span data-i18n="nav.projects">Projects</span></p>
           <h2 class="section-head__title" id="projects-title" data-i18n="projects.title">Selected work</h2>
-          <p class="section-head__lead" data-i18n="projects.lead">Two deliverables from my internship, then the university projects that built the foundations.</p>
+          <p class="section-head__lead" data-i18n="projects.lead">Twelve projects from my degree — the “SAÉ”, the graded hands-on team projects of the French BUT — and two from my internship. Each card opens the original deliverable.</p>
         </header>
 
-        <div class="featured-label reveal">
-          <p class="featured-label__title mono"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="featured.label">Featured · internship at BULATSA</span></p>
-          <p class="featured-label__note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span data-i18n="featured.note">Covered by a confidentiality agreement: everything here stays at a public level and all examples use fictional values.</span></p>
-        </div>
-
-        <!-- Feature 1: SIEM parsers -->
-        <article class="feature reveal" id="siem-parsers" aria-labelledby="f1-title">
-          <div class="feature__grid">
-            <div class="feature__content">
-              <p class="kicker mono" data-i18n="f1.kicker">Detection engineering · in production</p>
-              <h3 class="feature__title" id="f1-title" data-i18n="f1.title">Four SIEM log parsers, designed as one coherent set</h3>
-              <p data-i18n="f1.p1">Four sources on the public web access chain were collected but never parsed: stored as raw text, invisible to search, impossible to correlate. I wrote a custom XML parser for each in NetWitness (Log Parser Tool v2) and mapped every field to the platform’s Unified Data Model.</p>
-              <p data-i18n="f1.p2">The hard part was semantics, not extraction: choosing the right meta-key among hundreds, avoiding reserved and deprecated ones, and freezing the shared pivot keys across all four parsers first — because a mismatch raises no error. Correlation just fails, silently.</p>
-              <ul class="stats">
-                <li><strong>4</strong><span data-i18n="f1.s1">sources normalised</span></li>
-                <li><strong>0</strong><span data-i18n="f1.s2">corrections at platform review</span></li>
-                <li><strong>1</strong><span data-i18n="f1.s3">query to trace a full session</span></li>
-              </ul>
-              <ul class="chips" aria-label="Tools and topics" data-i18n-attr="aria-label:a11y.tags">
-                <li>NetWitness</li><li>Log Parser Tool v2</li><li>XML</li><li>Regex</li><li>Unified Data Model</li><li>CEF</li><li>Syslog / JSON</li>
-              </ul>
-            </div>
-
-            <figure class="chain" aria-labelledby="chain-caption">
-              <figcaption class="chain__caption mono" id="chain-caption" data-i18n="chain.caption">The public web access chain</figcaption>
-              <ol class="chain__list">
-                <li class="chain__row">
-                  <span class="chain__layer mono" data-i18n="chain.l1">Network</span>
-                  <span class="chain__card"><strong>NetFlow</strong><span class="mono" data-i18n="chain.f1">CEF records</span></span>
-                  <span class="chain__key mono">ip.src</span>
-                </li>
-                <li class="chain__row">
-                  <span class="chain__layer mono" data-i18n="chain.l2">Filtering</span>
-                  <span class="chain__card"><strong>Imperva WAF</strong><span class="mono" data-i18n="chain.f2">key=value · CVE IDs in free text</span></span>
-                  <span class="chain__key mono">ip.src</span>
-                </li>
-                <li class="chain__row">
-                  <span class="chain__layer mono" data-i18n="chain.l3">Routing</span>
-                  <span class="chain__card"><strong data-i18n="chain.n3">Traefik reverse proxy</strong><span class="mono" data-i18n="chain.f3">JSON wrapped in syslog</span></span>
-                  <span class="chain__key mono">ip.src</span>
-                </li>
-                <li class="chain__row">
-                  <span class="chain__layer mono" data-i18n="chain.l4">Identity</span>
-                  <span class="chain__card"><strong>Keycloak IdP</strong><span class="mono" data-i18n="chain.f4">OIDC events · Cyrillic values</span></span>
-                  <span class="chain__key mono">ip.src</span>
-                </li>
-              </ol>
-              <p class="chain__result" data-i18n="chain.result">One search on <code>ip.src</code> now returns the flow, the WAF alert, the proxy requests and the login attempts of the same actor.</p>
-            </figure>
-          </div>
-        </article>
-
-        <!-- Feature 2: WARS -->
-        <article class="feature feature--wars reveal" id="wars" aria-labelledby="f2-title">
-          <div class="feature__grid">
-            <div class="feature__content">
-              <p class="kicker mono" data-i18n="f2.kicker">Risk-based prioritisation · research prototype</p>
-              <h3 class="feature__title" id="f2-title" data-i18n="f2.title">WARS — ranking exposed web assets by real risk</h3>
-              <p data-i18n="f2.p1">Sorted by CVSS alone, a vulnerability list quickly becomes a wall of “criticals”: two 9.8s look identical. WARS (Weighted Asset Risk Score) adds what CVSS deliberately leaves out — how likely exploitation is and how much the affected asset matters — to answer one question: what do we fix first on Monday morning?</p>
-              <p data-i18n="f2.p2">I designed and built it end to end in Python, within the asset-based approach of ISO/IEC 27005. Each asset gets a 0–100 score, a P1–P5 band and a factor-by-factor breakdown that can be defended in front of an auditor.</p>
-              <ul class="chips" aria-label="Tools and topics" data-i18n-attr="aria-label:a11y.tags">
-                <li>Python</li><li>asyncio</li><li>httpx</li><li>Playwright</li><li>Pydantic</li><li>LangGraph</li><li>NVD</li><li>EPSS</li><li>CISA KEV</li><li>MITRE ATT&amp;CK</li>
-              </ul>
-            </div>
-
-            <figure class="funnel-card" aria-labelledby="funnel-caption">
-              <figcaption id="funnel-caption">
-                <span class="kicker mono" data-i18n="funnel.kicker">Test run · public test target</span>
-                <span class="funnel-card__title" data-i18n="funnel.title">From 1,428 discovered assets to a ranked shortlist of 12</span>
-              </figcaption>
-              <ol class="funnel">
-                <li class="funnel__step funnel__step--1"><strong class="mono" data-i18n="funnel.n1">1,428</strong><span data-i18n="funnel.s1">assets discovered</span></li>
-                <li class="funnel__step funnel__step--2"><strong class="mono">384</strong><span data-i18n="funnel.s2">in scope</span></li>
-                <li class="funnel__step funnel__step--3"><strong class="mono">128</strong><span data-i18n="funnel.s3">classified</span></li>
-                <li class="funnel__step funnel__step--4"><strong class="mono">12</strong><span data-i18n="funnel.s4">risk-scored</span></li>
-              </ol>
-              <div class="bands">
-                <p class="bands__title mono" data-i18n="bands.title">The 12 scored assets, by band</p>
-                <div class="bands__bar" aria-hidden="true">
-                  <span class="band-seg band-seg--p1 g2"></span><span class="band-seg band-seg--p2 g2"></span><span class="band-seg band-seg--p3 g2"></span><span class="band-seg band-seg--p4 g3"></span><span class="band-seg band-seg--p5 g2"></span><span class="band-seg band-seg--pu g1"></span>
-                </div>
-                <ul class="bands__legend mono">
-                  <li><i class="band-dot band-dot--p1"></i><span data-i18n="bands.p1">P1 critical</span> <b>2</b></li>
-                  <li><i class="band-dot band-dot--p2"></i><span data-i18n="bands.p2">P2 high</span> <b>2</b></li>
-                  <li><i class="band-dot band-dot--p3"></i><span data-i18n="bands.p3">P3 moderate</span> <b>2</b></li>
-                  <li><i class="band-dot band-dot--p4"></i><span data-i18n="bands.p4">P4 low</span> <b>3</b></li>
-                  <li><i class="band-dot band-dot--p5"></i><span data-i18n="bands.p5">P5 info</span> <b>2</b></li>
-                  <li><i class="band-dot band-dot--pu"></i><span data-i18n="bands.pu">unscored → human review</span> <b>1</b></li>
-                </ul>
-              </div>
-            </figure>
-          </div>
-
-          <ol class="pipeline">
-            <li class="pipeline__step">
-              <span class="pipeline__num mono">01</span>
-              <h4 class="pipeline__name" data-i18n="pipe1.name">Discover</h4>
-              <p class="pipeline__q" data-i18n="pipe1.q">What is visible from the Internet?</p>
-              <p data-i18n="pipe1.text">Passive crawl only: GET and HEAD requests, robots.txt respected, conservative rate limits.</p>
-              <p class="pipeline__tech mono">httpx · asyncio · defusedxml</p>
-            </li>
-            <li class="pipeline__step">
-              <span class="pipeline__num mono">02</span>
-              <h4 class="pipeline__name" data-i18n="pipe2.name">Classify</h4>
-              <p class="pipeline__q" data-i18n="pipe2.q">What does each asset do?</p>
-              <p data-i18n="pipe2.text">Information, business process or both — and how sensitive. The only step where an LLM is used.</p>
-              <p class="pipeline__tech mono" data-i18n="pipe2.tech">LangGraph · LLM · rule layer</p>
-            </li>
-            <li class="pipeline__step">
-              <span class="pipeline__num mono">03</span>
-              <h4 class="pipeline__name" data-i18n="pipe3.name">Assess</h4>
-              <p class="pipeline__q" data-i18n="pipe3.q">What could happen, and how bad?</p>
-              <p data-i18n="pipe3.text">Findings enriched with CVSS from NVD, EPSS exploitation likelihood, CISA KEV and MITRE ATT&amp;CK techniques.</p>
-              <p class="pipeline__tech mono">NVD · EPSS · KEV · ATT&amp;CK</p>
-            </li>
-            <li class="pipeline__step">
-              <span class="pipeline__num mono">04</span>
-              <h4 class="pipeline__name" data-i18n="pipe4.name">Report</h4>
-              <p class="pipeline__q" data-i18n="pipe4.q">What do we fix first?</p>
-              <p data-i18n="pipe4.text">Self-contained HTML/PDF report ranked P1–P5, every score broken down factor by factor, TLP 2.0 marked.</p>
-              <p class="pipeline__tech mono">Playwright · HTML · PDF</p>
-            </li>
-          </ol>
-          <p class="pipeline__note" data-i18n="pipe.note">Each step is a standalone script that hands validated JSON (Pydantic) to the next — so any step can be replayed and audited on its own.</p>
-
-          <div class="wars-grid">
-            <div class="principles">
-              <h4 class="principles__title" data-i18n="principles.title">Design decisions I stand by</h4>
-              <ul class="principles__list">
-                <li data-i18n="principles.1"><strong>The model never touches a number.</strong> The LLM only answers “what is this asset?”. Factors, formula and thresholds are deterministic, so every score can be justified line by line — and the tool still runs on its rules without an API key.</li>
-                <li data-i18n="principles.2"><strong>Multiply, don’t add.</strong> If one factor is close to zero the score must collapse: a severe flaw on an asset with no business value should not top the list.</li>
-                <li data-i18n="principles.3"><strong>Known exploitation is a floor.</strong> A CISA KEV match keeps the score in the critical band, whatever the other factors say.</li>
-                <li data-i18n="principles.4"><strong>Uncertainty counts as risk.</strong> A doubtful classification, a failed step or a missing source sends the asset to human review — never silently to low priority.</li>
-              </ul>
-              <p class="principles__limit" data-i18n="principles.limit"><strong>What I don’t claim:</strong> the weighting is argued, not yet statistically validated. The next step is to calibrate it against real remediation decisions.</p>
-              <figure class="quote quote--inline">
-                <blockquote class="quote__text" lang="en"><p>“…an excellent example of how academic knowledge can be applied to a practical operational challenge.”</p></blockquote>
-                <figcaption class="quote__by"><span class="quote__role" data-i18n="quote.short">Internship supervisor, BULATSA</span></figcaption>
-              </figure>
-            </div>
-
-            <form class="calc" id="wars-calc" aria-labelledby="calc-title">
-              <div class="calc__head">
-                <p class="kicker mono" data-i18n="calc.kicker">Try the formula</p>
-                <h4 class="calc__title" id="calc-title" data-i18n="calc.title">Same CVSS 9.8, two very different priorities</h4>
-                <div class="calc__presets" role="group" aria-label="Examples" data-i18n-attr="aria-label:calc.presets">
-                  <button type="button" class="preset" data-preset="static" aria-pressed="false" data-i18n="calc.preset1">Static info page</button>
-                  <button type="button" class="preset" data-preset="portal" aria-pressed="true" data-i18n="calc.preset2">Public login portal, in KEV</button>
-                </div>
-              </div>
-
-              <div class="calc__rows">
-                <div class="calc__row">
-                  <label for="f-s"><b class="mono">S</b> <span data-i18n="calc.s">Severity</span> <small class="mono" data-i18n="calc.s.hint">CVSS ÷ 10</small></label>
-                  <input type="range" id="f-s" name="s" min="0" max="1" step="0.01" value="0.98">
-                  <output class="mono" for="f-s" id="o-s">0.98</output>
-                </div>
-                <div class="calc__row">
-                  <label for="f-l"><b class="mono">L</b> <span data-i18n="calc.l">Likelihood</span> <small class="mono" data-i18n="calc.l.hint">EPSS</small></label>
-                  <input type="range" id="f-l" name="l" min="0" max="1" step="0.01" value="0.94">
-                  <output class="mono" for="f-l" id="o-l">0.94</output>
-                </div>
-                <div class="calc__row">
-                  <label for="f-e"><b class="mono">E</b> <span data-i18n="calc.e">Exposure</span> <small class="mono" data-i18n="calc.e.hint">0.2 – 0.8</small></label>
-                  <input type="range" id="f-e" name="e" min="0.2" max="0.8" step="0.05" value="0.8">
-                  <output class="mono" for="f-e" id="o-e">0.80</output>
-                </div>
-                <div class="calc__row">
-                  <label for="f-ac"><b class="mono">AC</b> <span data-i18n="calc.ac">Asset criticality</span> <small class="mono">1 – 2</small></label>
-                  <input type="range" id="f-ac" name="ac" min="1" max="2" step="0.1" value="2">
-                  <output class="mono" for="f-ac" id="o-ac">2.0</output>
-                </div>
-                <div class="calc__row">
-                  <label for="f-bi"><b class="mono">BI</b> <span data-i18n="calc.bi">Business impact</span> <small class="mono">1 – 2</small></label>
-                  <input type="range" id="f-bi" name="bi" min="1" max="2" step="0.1" value="1.8">
-                  <output class="mono" for="f-bi" id="o-bi">1.8</output>
-                </div>
-                <label class="calc__kev" for="f-kev">
-                  <input type="checkbox" id="f-kev" name="kev" checked>
-                  <span data-i18n="calc.kev">Listed in CISA KEV — exploited in the wild</span>
-                </label>
-              </div>
-
-              <div class="calc__result" data-band="p1" id="calc-result">
-                <div class="calc__score">
-                  <span class="mono" data-i18n="calc.score">WARS score</span>
-                  <output class="calc__value mono" id="wars-score" aria-live="polite">82.9</output>
-                </div>
-                <div class="calc__band"><strong class="mono" id="wars-band">P1</strong><span id="wars-band-name">Critical</span></div>
-                <div class="calc__meter" aria-hidden="true"><span class="calc__meter-fill" id="wars-meter"></span></div>
-              </div>
-              <p class="calc__formula mono">WARS = (S × L × E × AC × BI) ÷ N × 100<span class="calc__n" data-i18n="calc.n"> — N = 3.2, the maximum possible product</span></p>
-              <p class="calc__note" data-i18n="calc.note">Simplified: the prototype also aggregates several findings per asset and damps low-confidence ones.</p>
-            </form>
-          </div>
-        </article>
-
-        <!-- University projects -->
-        <div class="projects-head reveal">
-          <div>
-            <h3 class="projects-head__title" data-i18n="uni.title">University projects</h3>
-            <p class="projects-head__text" data-i18n="uni.text">“SAÉ” are the hands-on, graded team projects at the heart of the French BUT curriculum. Each card opens the original deliverable.</p>
-          </div>
-          <div class="filters" role="group" aria-label="Filter projects by field" data-i18n-attr="aria-label:filters.aria">
-            <button type="button" class="filter" data-filter="all" aria-pressed="true"><span data-i18n="filters.all">All</span> <span class="filter__count">12</span></button>
-            <button type="button" class="filter" data-filter="cyber" aria-pressed="false"><span data-i18n="cat.cyber">Cybersecurity</span> <span class="filter__count">3</span></button>
-            <button type="button" class="filter" data-filter="network" aria-pressed="false"><span data-i18n="cat.network">Networks</span> <span class="filter__count">3</span></button>
-            <button type="button" class="filter" data-filter="telecom" aria-pressed="false"><span data-i18n="cat.telecom">Telecoms &amp; electronics</span> <span class="filter__count">3</span></button>
-            <button type="button" class="filter" data-filter="dev" aria-pressed="false"><span data-i18n="cat.dev">Development</span> <span class="filter__count">3</span></button>
-          </div>
+        <div class="filters reveal" role="group" aria-label="Filter projects by field" data-i18n-attr="aria-label:filters.aria">
+          <button type="button" class="filter" data-filter="all" aria-pressed="true"><span data-i18n="filters.all">All</span> <span class="filter__count">14</span></button>
+          <button type="button" class="filter" data-filter="cyber" aria-pressed="false"><span data-i18n="cat.cyber">Cybersecurity</span> <span class="filter__count">5</span></button>
+          <button type="button" class="filter" data-filter="network" aria-pressed="false"><span data-i18n="cat.network">Networks</span> <span class="filter__count">3</span></button>
+          <button type="button" class="filter" data-filter="telecom" aria-pressed="false"><span data-i18n="cat.telecom">Telecoms &amp; electronics</span> <span class="filter__count">3</span></button>
+          <button type="button" class="filter" data-filter="dev" aria-pressed="false"><span data-i18n="cat.dev">Development</span> <span class="filter__count">3</span></button>
         </div>
 
         <ul class="project-grid" id="project-grid">
@@ -580,7 +341,7 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--cyber" data-i18n="cat.cyber">Cybersecurity</span><span class="project__code mono">SAÉ 3.04 · 2025–26</span></p>
-              <h4 class="project__title" data-i18n="p304.title">Discovering penetration testing</h4>
+              <h3 class="project__title" data-i18n="p304.title">Discovering penetration testing</h3>
               <p class="project__text" data-i18n="p304.text">Educational pentest in an isolated lab: reconnaissance, Nessus vulnerability scanning and controlled Metasploit exploitation of Metasploitable 2 and Windows XP targets, wrapped up in a report with risk analysis and remediation advice.</p>
               <ul class="chips chips--sm"><li>Kali Linux</li><li>Nessus</li><li>Metasploit</li><li data-i18n="tag.reporting">Reporting</li></ul>
               <a class="project__link" href="documents/projects/sae304-pentesting.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -593,7 +354,7 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--cyber" data-i18n="cat.cyber">Cybersecurity</span><span class="project__code mono">SAÉ 3.03 · 2025–26</span></p>
-              <h4 class="project__title" data-i18n="p303.title">Security maintenance &amp; support: answering a public tender</h4>
+              <h3 class="project__title" data-i18n="p303.title">Security maintenance &amp; support: answering a public tender</h3>
               <p class="project__text" data-i18n="p303.text">Technical proposal for tender MP 24-16 of the Agence de Services et de Paiement: team organisation and skills matrix, 24/7 monitoring, N1–N3 incident handling and SLA commitments for a security maintenance mission.</p>
               <ul class="chips chips--sm"><li data-i18n="tag.mcs">Security maintenance</li><li data-i18n="tag.monitoring">24/7 monitoring</li><li data-i18n="tag.incident">Incident response</li><li>SLA</li></ul>
               <a class="project__link" href="documents/projects/sae303-mcs-tender-response.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -606,10 +367,38 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--telecom" data-i18n="cat.telecom">Telecoms &amp; electronics</span><span class="project__code mono">SAÉ 3.01 · 2025–26</span></p>
-              <h4 class="project__title" data-i18n="p301.title">Long-distance optical transmission system</h4>
+              <h3 class="project__title" data-i18n="p301.title">Long-distance optical transmission system</h3>
               <p class="project__text" data-i18n="p301.text">A 10 km fibre-optic ring carrying 1 Gbit/s on four CWDM wavelengths, with optical add/drop multiplexers (OADM) and SFP lasers — optical budget calculated and OSNR measured above 40 dB.</p>
               <ul class="chips chips--sm"><li data-i18n="tag.fibre">Fibre optics</li><li>CWDM</li><li>OADM</li><li>OSNR</li></ul>
               <a class="project__link" href="documents/projects/sae301-optical-transmission.pdf" target="_blank" rel="noopener"><span data-i18n="link.slides">View the presentation</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="cyber">
+            <div class="project__media project__media--private" aria-hidden="true">
+              <svg class="icon"><use href="#i-activity"/></svg>
+              <span class="mono" data-i18n="pint.media">Internship · confidential</span>
+            </div>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--cyber" data-i18n="cat.cyber">Cybersecurity</span><span class="project__code mono" data-i18n="pint.code">Internship · 2026</span></p>
+              <h3 class="project__title" data-i18n="pint1.title">SIEM log parsers for an air-navigation SOC</h3>
+              <p class="project__text" data-i18n="pint1.text">Four custom NetWitness parsers — reverse proxy, identity provider, web application firewall and NetFlow — that made unparsed production logs searchable and correlated. Now in production at BULATSA.</p>
+              <ul class="chips chips--sm"><li>NetWitness</li><li>XML</li><li>Regex</li><li>SIEM</li></ul>
+              <p class="project__link project__link--private"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span data-i18n="link.private">Confidential — details on request</span></p>
+            </div>
+          </li>
+
+          <li class="project reveal" data-category="cyber">
+            <div class="project__media project__media--private" aria-hidden="true">
+              <svg class="icon"><use href="#i-shield"/></svg>
+              <span class="mono" data-i18n="pint.media">Internship · confidential</span>
+            </div>
+            <div class="project__body">
+              <p class="project__meta"><span class="tag tag--cyber" data-i18n="cat.cyber">Cybersecurity</span><span class="project__code mono" data-i18n="pint.code">Internship · 2026</span></p>
+              <h3 class="project__title" data-i18n="pint2.title">WARS — a risk-based prioritisation prototype</h3>
+              <p class="project__text" data-i18n="pint2.text">Python prototype that ranks exposed web assets by contextual risk — CVSS, EPSS, CISA KEV and asset criticality — with an LLM used only to classify assets, so every score stays auditable.</p>
+              <ul class="chips chips--sm"><li>Python</li><li>LangGraph</li><li>EPSS</li><li>CISA KEV</li></ul>
+              <p class="project__link project__link--private"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span data-i18n="link.private">Confidential — details on request</span></p>
             </div>
           </li>
 
@@ -619,7 +408,7 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--network" data-i18n="cat.network">Networks</span><span class="project__code mono" data-i18n="pjn.code">Integrative project · 2024–25</span></p>
-              <h4 class="project__title" data-i18n="pjn.title">JurisNova: a segmented, secured law-firm network</h4>
+              <h3 class="project__title" data-i18n="pjn.title">JurisNova: a segmented, secured law-firm network</h3>
               <p class="project__text" data-i18n="pjn.text">Network for a two-floor law firm: VLANs for staff, a web DMZ, a database DMZ and an isolated guest Wi-Fi, pfSense firewall and ACLs, Apache, GLPI and MariaDB services — plus SLA and budget.</p>
               <ul class="chips chips--sm"><li>VLAN</li><li>DMZ</li><li>pfSense</li><li>GLPI</li></ul>
               <a class="project__link" href="documents/projects/integrative-project-jurisnova.pdf" target="_blank" rel="noopener"><span data-i18n="link.slides">View the presentation</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -632,7 +421,7 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--dev" data-i18n="cat.dev">Development</span><span class="project__code mono">SAÉ 2.03 · 2024–25</span></p>
-              <h4 class="project__title" data-i18n="p23.title">IP address management platform for an ISP</h4>
+              <h3 class="project__title" data-i18n="p23.title">IP address management platform for an ISP</h3>
               <p class="project__text" data-i18n="p23.text">Web tool that automates public IP assignment to an ISP’s customers: database design, PHP interface, automatic subnetting (VLAN, VRF) and generation of device configuration files, with input validation and SQL error handling.</p>
               <ul class="chips chips--sm"><li>PHP</li><li>MySQL</li><li>IPAM</li><li data-i18n="tag.automation">Automation</li></ul>
               <a class="project__link" href="documents/projects/sae23-ipam-platform.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -645,7 +434,7 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--telecom" data-i18n="cat.telecom">Telecoms &amp; electronics</span><span class="project__code mono">SAÉ 2.02 · 2024–25</span></p>
-              <h4 class="project__title" data-i18n="p22.title">AM/FM and walkie-talkie transmitters</h4>
+              <h3 class="project__title" data-i18n="p22.title">AM/FM and walkie-talkie transmitters</h3>
               <p class="project__text" data-i18n="p22.text">Built two radio products to a client brief — an AM/FM broadcast transmitter and a walkie-talkie transmitter — and validated them with time-domain and spectral measurements.</p>
               <ul class="chips chips--sm"><li>AM/FM</li><li>RF</li><li data-i18n="tag.scope">Oscilloscope</li><li data-i18n="tag.spectrum">Spectrum analysis</li></ul>
               <a class="project__link" href="documents/projects/sae22-signal-measurement.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -658,7 +447,7 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--network" data-i18n="cat.network">Networks</span><span class="project__code mono">SAÉ 2.01 · 2024–25</span></p>
-              <h4 class="project__title" data-i18n="p21.title">Two-site network for a small company</h4>
+              <h3 class="project__title" data-i18n="p21.title">Two-site network for a small company</h3>
               <p class="project__text" data-i18n="p21.text">Designed and deployed the network of a company with sites in Lyon and Grenoble, in roles mirroring a real IT team: addressing plan, DNS, HTTP, NAT/PAT, ACLs and SSH hardening, tested with Wireshark.</p>
               <ul class="chips chips--sm"><li>Cisco IOS</li><li>NAT/PAT</li><li>ACL</li><li>GNS3</li><li>Wireshark</li></ul>
               <a class="project__link" href="documents/projects/sae21-small-business-network.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -671,7 +460,7 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--dev" data-i18n="cat.dev">Development</span><span class="project__code mono">SAÉ 1.05 · 2024–25</span></p>
-              <h4 class="project__title" data-i18n="p15.title">Cultural companies across French regions</h4>
+              <h3 class="project__title" data-i18n="p15.title">Cultural companies across French regions</h3>
               <p class="project__text" data-i18n="p15.text">Processed a public dataset on cultural companies in French regions (2017–2018) and published it as a web page with tables and interactive Chart.js charts.</p>
               <ul class="chips chips--sm"><li>CSV</li><li>HTML / CSS</li><li>Chart.js</li></ul>
               <a class="project__link" href="projects/sae15/" target="_blank" rel="noopener"><span data-i18n="link.project">Open the project</span> <span class="mono project__type">WEB</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -684,7 +473,7 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--dev" data-i18n="cat.dev">Development</span><span class="project__code mono">SAÉ 1.04 · 2024–25</span></p>
-              <h4 class="project__title" data-i18n="p14.title">My first web presence</h4>
+              <h3 class="project__title" data-i18n="p14.title">My first web presence</h3>
               <p class="project__text" data-i18n="p14.text">The first version of this portfolio, hand-coded in HTML, CSS and JavaScript with a French/English switch — rebuilt from scratch in 2026 into the site you’re reading.</p>
               <ul class="chips chips--sm"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
               <a class="project__link" href="https://github.com/pendichev/Portfolio" target="_blank" rel="noopener noreferrer"><span data-i18n="link.source">View the source</span> <span class="mono project__type">GITHUB</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -697,7 +486,7 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--telecom" data-i18n="cat.telecom">Telecoms &amp; electronics</span><span class="project__code mono">SAÉ 1.03 · 2024–25</span></p>
-              <h4 class="project__title" data-i18n="p13.title">A 4-bit microprocessor on Arduino</h4>
+              <h3 class="project__title" data-i18n="p13.title">A 4-bit microprocessor on Arduino</h3>
               <p class="project__text" data-i18n="p13.text">Discovering a transmission device: coded a 4-bit microprocessor on Arduino (register bank, accumulator, ALU, 2:1 multiplexer) running four instructions, driven from a phone over Wi-Fi with the result shown on LEDs.</p>
               <ul class="chips chips--sm"><li>Arduino</li><li>C++</li><li data-i18n="tag.logic">Digital logic</li><li>IoT</li></ul>
               <a class="project__link" href="documents/projects/sae13-4bit-microprocessor.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -710,7 +499,7 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--network" data-i18n="cat.network">Networks</span><span class="project__code mono">SAÉ 1.02 · 2024–25</span></p>
-              <h4 class="project__title" data-i18n="p12.title">First steps in computer networks</h4>
+              <h3 class="project__title" data-i18n="p12.title">First steps in computer networks</h3>
               <p class="project__text" data-i18n="p12.text">Configured Linux hosts and a router in the Marionnet emulator — IP addressing, interfaces, static and default routes — then tested and troubleshot connectivity.</p>
               <ul class="chips chips--sm"><li>Linux</li><li>iproute2</li><li data-i18n="tag.routing">Routing</li><li>Marionnet</li></ul>
               <a class="project__link" href="documents/projects/sae12-networking-basics.pdf" target="_blank" rel="noopener"><span data-i18n="link.report">Read the report</span> <span class="mono project__type">PDF</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -724,7 +513,7 @@
             </a>
             <div class="project__body">
               <p class="project__meta"><span class="tag tag--cyber" data-i18n="cat.cyber">Cybersecurity</span><span class="project__code mono">SAÉ 1.01 · 2024–25</span></p>
-              <h4 class="project__title" data-i18n="p11.title">Two-factor authentication awareness video</h4>
+              <h3 class="project__title" data-i18n="p11.title">Two-factor authentication awareness video</h3>
               <p class="project__text" data-i18n="p11.text">Awareness video for a non-technical audience on why and how to protect accounts with two-factor authentication (2FA).</p>
               <ul class="chips chips--sm"><li data-i18n="tag.2fa">2FA</li><li data-i18n="tag.awareness">Awareness</li><li data-i18n="tag.video">Video</li></ul>
               <a class="project__link" href="media/sae11-2fa-awareness.mp4" data-video="media/sae11-2fa-awareness.mp4" target="_blank" rel="noopener"><span data-i18n="link.video">Watch the video</span> <span class="mono project__type">MP4</span><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></a>
@@ -787,11 +576,10 @@
             </ul>
           </article>
           <article class="strengths reveal">
-            <h3 class="skills-extra__title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="strengths.title">Strengths my supervisor highlighted</span></h3>
+            <h3 class="skills-extra__title"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span data-i18n="strengths.title">How I work</span></h3>
             <ul class="chips">
               <li data-i18n="strengths.1">Attention to detail</li><li data-i18n="strengths.2">Autonomy</li><li data-i18n="strengths.3">Teamwork</li><li data-i18n="strengths.4">Analytical thinking</li><li data-i18n="strengths.5">Technical curiosity</li><li data-i18n="strengths.6">Fast learning</li>
             </ul>
-            <p class="strengths__note" data-i18n="strengths.note">From my internship evaluation at BULATSA — the kind of feedback I want to keep earning.</p>
           </article>
         </div>
       </div>
