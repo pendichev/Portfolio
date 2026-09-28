@@ -34,7 +34,7 @@ window.I18N.fr = {
   /* Hero */
   'hero.status': 'Ouvert aux stages et premiers postes',
   'hero.eyebrow': 'SOC · Ingénierie de la détection · Risques cyber',
-  'hero.lead': '<span>Étudiant en réseaux &amp; télécoms,</span> <span>spécialisé en cybersécurité.</span>',
+  'hero.lead': 'Étudiant en cybersécurité',
   'hero.text': 'J’étudie à l’Université Sorbonne Paris Nord et j’ai deux stages en exploitation 24/7 à mon actif&nbsp;: l’un dans un centre de supervision réseau, l’autre en cybersécurité.',
   'hero.cta1': 'Voir mes réalisations',
   'hero.cta2': 'Mon CV',
@@ -44,7 +44,7 @@ window.I18N.fr = {
 
   /* About */
   'about.title': 'Bonjour, je suis Andon.',
-  'about.photoAlt': 'Portrait d’Andon Pendichev',
+  'about.photoAlt': 'Andon Pendichev à Paris, avec la tour Eiffel en arrière-plan',
   'about.p1': 'J’aime comprendre comment les systèmes fonctionnent vraiment, de bout en bout — puis les rendre plus difficiles à compromettre.',
   'about.p2': 'Je suis en troisième année de BUT Réseaux &amp; Télécommunications, parcours Cybersécurité, à l’IUT de Villetaneuse — Université Sorbonne Paris Nord. Ma formation m’a fait parcourir toute la pile&nbsp;: j’ai mesuré des liaisons en fibre optique et construit des émetteurs radio, conçu des réseaux segmentés et développé des outils web, et côté sécurité, mené un pentest en laboratoire et répondu à un appel d’offres de maintien en condition de sécurité.',
   'about.p3': 'Deux stages en Bulgarie m’ont fait découvrir les opérations 24/7&nbsp;: la supervision réseau au NOC d’A1, puis la cybersécurité chez BULATSA, le prestataire national de la navigation aérienne. Je recherche aujourd’hui un stage ou un premier poste en SOC, en ingénierie de la détection ou en gestion des risques cyber.',
@@ -67,12 +67,6 @@ window.I18N.fr = {
   'cv.en.download': 'Télécharger le CV en anglais',
   'cv.fr.download': 'Télécharger le CV en français',
 
-  /* Beyond */
-  'beyond.alt': 'L’équipe nationale bulgare de handball alignée sur le terrain',
-  'beyond.kicker': 'En dehors des écrans',
-  'beyond.title': 'Dix ans de handball en équipe',
-  'beyond.p1': 'Je joue en Nationale&nbsp;3 masculine et je suis membre de l’équipe nationale de Bulgarie. Le sport m’a appris ce que j’apporte à une équipe&nbsp;: discipline, fiabilité et l’habitude de me préparer avant que la pression n’arrive.',
-  'beyond.p2': 'J’aime aussi la littérature anglaise, la découverte d’autres cultures et la vie associative — et je fais une veille régulière en cybersécurité et en IA.',
 
   /* Experience */
   'exp.title': 'Expériences &amp; formation',
