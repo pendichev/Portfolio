@@ -1104,7 +1104,6 @@ a.contact-link:hover { border-color: var(--accent-line); transform: translateY(-
 .site-footer { padding: 28px 0; border-top: 1px solid var(--line); font-size: .88rem; color: var(--text-3); }
 .footer__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; }
 .footer__inner p { margin: 0; }
-.footer__made { font-size: .74rem; }
 .footer__top { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; color: var(--text-2); }
 .footer__top:hover { color: var(--accent-text); }
 .footer__top .icon { width: 16px; height: 16px; }

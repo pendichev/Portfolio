@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>WARS — Weighted Asset Risk Score · Andon Pendichev</title>
+  <meta name="description" content="Interactive demo of WARS, a risk-based prioritisation prototype: CVSS, EPSS, CISA KEV and asset context combined into one 0–100 score and a P1–P5 priority.">
+  <meta name="author" content="Andon Pendichev">
+  <link rel="canonical" href="https://pendichev.github.io/Portfolio/projects/wars/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="WARS — Weighted Asset Risk Score">
+  <meta property="og:description" content="Which vulnerability do we fix first? Try the scoring model behind WARS, a risk-based prioritisation prototype.">
+  <meta property="og:url" content="https://pendichev.github.io/Portfolio/projects/wars/">
+  <meta property="og:image" content="https://pendichev.github.io/Portfolio/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#f6f1e9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0c0a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/img/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="../../assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="wars.css">
+
+  <script src="../../assets/js/boot.js"></script>
+  <script src="i18n.js" defer></script>
+  <script src="wars.js" defer></script>
+</head>
+<body>
+  <!-- Icon sprite (Lucide icons, ISC licence) -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M21 4h-7"/><path d="M10 4H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 20h-5"/><path d="M12 20H3"/><path d="M14 2v4"/><path d="M8 10v4"/><path d="M16 18v4"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="../../" aria-label="Andon Pendichev — portfolio home" data-i18n-attr="aria-label:brand.aria">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="16"/><path d="m19 22 11 10-11 10"/><path d="M34 43h12"/></svg>
+        <span class="brand__name">Andon Pendichev</span>
+      </a>
+      <a class="back-link" href="../../#projects"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg><span data-i18n="nav.back">All projects</span></a>
+      <div class="header__tools">
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:tools.language">
+          <button type="button" class="lang-switch__btn" data-set-lang="en" aria-pressed="true" lang="en" title="English">EN</button>
+          <button type="button" class="lang-switch__btn" data-set-lang="fr" aria-pressed="false" lang="fr" title="Français">FR</button>
+        </div>
+        <button type="button" class="icon-btn theme-toggle" id="theme-toggle" aria-pressed="true" aria-label="Dark theme" data-i18n-attr="aria-label:tools.theme;title:tools.theme" title="Dark theme">
+          <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== INTRO ============================== -->
+    <section class="w-hero" aria-labelledby="w-title">
+      <div class="container w-hero__grid">
+        <div class="w-hero__copy">
+          <p class="w-kicker mono" data-i18n="hero.kicker">Internship project · BULATSA · 2026</p>
+          <h1 class="w-hero__title" id="w-title">WARS <span class="w-hero__sub" data-i18n="hero.sub">Weighted Asset Risk Score</span></h1>
+          <p class="w-hero__lead" data-i18n="hero.lead">Sorted by CVSS alone, a vulnerability list quickly becomes a wall of “criticals”: two 9.8s look identical. WARS adds what CVSS deliberately leaves out — how likely exploitation is and how much the affected asset matters — to answer one question: what do we fix first on Monday morning?</p>
+          <p data-i18n="hero.text">I designed and built it end to end in Python during my internship, within the asset-based approach of ISO/IEC 27005. Each asset gets a 0–100 score, a P1–P5 priority band and a factor-by-factor breakdown that can be defended in front of an auditor.</p>
+          <div class="w-hero__actions">
+            <a class="btn btn--primary" href="#calculator"><span data-i18n="hero.cta1">Try the calculator</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a class="btn btn--ghost" href="#compare"><span data-i18n="hero.cta2">Compare the rankings</span></a>
+          </div>
+          <p class="w-note"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span data-i18n="hero.note">Covered by a confidentiality agreement: this page stays at a public level and every example uses fictional values.</span></p>
+        </div>
+
+        <aside class="formula" aria-labelledby="formula-title">
+          <p class="w-kicker mono" data-i18n="formula.kicker">Five questions, one score</p>
+          <h2 class="formula__title" id="formula-title"><span class="mono">WARS = (S × L × E × AC × BI) ÷ N × 100</span></h2>
+          <dl class="factors">
+            <div class="factor"><dt><b class="mono">S</b> <span data-i18n="f.s">Severity</span></dt><dd><span data-i18n="f.s.q">How severe is the flaw?</span> <small class="mono" data-i18n="f.s.src">CVSS ÷ 10 · NVD</small></dd></div>
+            <div class="factor"><dt><b class="mono">L</b> <span data-i18n="f.l">Likelihood</span></dt><dd><span data-i18n="f.l.q">How likely is it to be exploited in the next 30 days?</span> <small class="mono" data-i18n="f.l.src">EPSS · 0 – 1</small></dd></div>
+            <div class="factor"><dt><b class="mono">E</b> <span data-i18n="f.e">Exposure</span></dt><dd><span data-i18n="f.e.q">How exposed is the asset?</span> <small class="mono" data-i18n="f.e.src">discovery step · 0.2 – 0.8</small></dd></div>
+            <div class="factor"><dt><b class="mono">AC</b> <span data-i18n="f.ac">Asset criticality</span></dt><dd><span data-i18n="f.ac.q">How important is the asset?</span> <small class="mono" data-i18n="f.ac.src">classification step · 1 – 2</small></dd></div>
+            <div class="factor"><dt><b class="mono">BI</b> <span data-i18n="f.bi">Business impact</span></dt><dd><span data-i18n="f.bi.q">What would an incident cost the organisation?</span> <small class="mono" data-i18n="f.bi.src">ISO/IEC 27005 criteria · 1 – 2</small></dd></div>
+          </dl>
+          <p class="formula__kev"><b class="mono">KEV</b> <span data-i18n="formula.kev">Known to be exploited (CISA KEV)? Then the score never drops below 80, whatever the other factors say.</span></p>
+          <p class="formula__n" data-i18n="formula.n">N = 3.2 is the highest possible product, so the score runs from 0 to 100.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================== CALCULATOR ============================== -->
+    <section class="section" id="calculator" aria-labelledby="calc-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-head__index mono"><span>01</span> / <span data-i18n="calc.index">Try it</span></p>
+          <h2 class="section-head__title" id="calc-title" data-i18n="calc.title">Move the factors, watch the priority change</h2>
+          <p class="section-head__lead" data-i18n="calc.lead">Start from an example, then change one factor at a time. Because the terms multiply, a single factor close to zero pulls the whole score down — unless the flaw is already exploited in the wild.</p>
+        </header>
+
+        <form class="calc" id="wars-calc" aria-labelledby="calc-title">
+          <div class="calc__inputs">
+            <div class="calc__presets" role="group" aria-label="Examples" data-i18n-attr="aria-label:calc.presets">
+              <span class="calc__presets-label mono" data-i18n="calc.same">Same CVSS 9.8:</span>
+              <button type="button" class="preset" data-preset="static" aria-pressed="false" data-i18n="calc.preset1">Static information page</button>
+              <button type="button" class="preset" data-preset="portal" aria-pressed="true" data-i18n="calc.preset2">Public login portal, in KEV</button>
+            </div>
+
+            <div class="calc__rows">
+              <div class="calc__row">
+                <label for="f-s"><b class="mono">S</b> <span data-i18n="f.s">Severity</span> <small class="mono" data-i18n="calc.s.hint">CVSS ÷ 10</small></label>
+                <input type="range" id="f-s" name="s" min="0" max="1" step="0.01" value="0.98">
+                <output class="mono" for="f-s" id="o-s">0.98</output>
+              </div>
+              <div class="calc__row">
+                <label for="f-l"><b class="mono">L</b> <span data-i18n="f.l">Likelihood</span> <small class="mono">EPSS</small></label>
+                <input type="range" id="f-l" name="l" min="0" max="1" step="0.01" value="0.94">
+                <output class="mono" for="f-l" id="o-l">0.94</output>
+              </div>
+              <div class="calc__row">
+                <label for="f-e"><b class="mono">E</b> <span data-i18n="f.e">Exposure</span> <small class="mono" data-i18n="calc.e.hint">0.2 – 0.8</small></label>
+                <input type="range" id="f-e" name="e" min="0.2" max="0.8" step="0.05" value="0.8">
+                <output class="mono" for="f-e" id="o-e">0.80</output>
+              </div>
+              <div class="calc__row">
+                <label for="f-ac"><b class="mono">AC</b> <span data-i18n="f.ac">Asset criticality</span> <small class="mono">1 – 2</small></label>
+                <input type="range" id="f-ac" name="ac" min="1" max="2" step="0.1" value="2">
+                <output class="mono" for="f-ac" id="o-ac">2.0</output>
+              </div>
+              <div class="calc__row">
+                <label for="f-bi"><b class="mono">BI</b> <span data-i18n="f.bi">Business impact</span> <small class="mono">1 – 2</small></label>
+                <input type="range" id="f-bi" name="bi" min="1" max="2" step="0.1" value="1.8">
+                <output class="mono" for="f-bi" id="o-bi">1.8</output>
+              </div>
+              <label class="calc__kev" for="f-kev">
+                <input type="checkbox" id="f-kev" name="kev" checked>
+                <span data-i18n="calc.kev">Listed in CISA KEV — exploited in the wild</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="calc__result" data-band="p1" id="calc-result">
+            <div class="calc__top">
+              <div class="calc__score">
+                <span class="mono" data-i18n="calc.score">WARS score</span>
+                <output class="calc__value" id="wars-score" for="f-s f-l f-e f-ac f-bi f-kev">82.9</output>
+              </div>
+              <div class="calc__band"><strong class="mono" id="wars-band">P1</strong><span id="wars-band-name">Critical</span></div>
+            </div>
+
+            <div class="scale" aria-hidden="true">
+              <div class="scale__track">
+                <span class="scale__zone scale__zone--p5"></span><span class="scale__zone scale__zone--p4"></span><span class="scale__zone scale__zone--p3"></span><span class="scale__zone scale__zone--p2"></span><span class="scale__zone scale__zone--p1"></span>
+                <span class="scale__marker" id="wars-marker"></span>
+              </div>
+              <div class="scale__labels mono">
+                <span class="scale__label scale__label--p5">P5</span><span class="scale__label scale__label--p4">P4</span><span class="scale__label scale__label--p3">P3</span><span class="scale__label scale__label--p2">P2</span><span class="scale__label scale__label--p1">P1</span>
+              </div>
+              <div class="scale__ticks mono"><span>0</span><span>15</span><span>35</span><span>60</span><span>80</span><span>100</span></div>
+            </div>
+
+            <p class="calc__floor" id="kev-floor" hidden><b class="mono">KEV</b> <span data-i18n="calc.floor">Known exploitation sets a floor: without it, this finding would score <span class="mono" id="wars-raw">0.6</span>.</span></p>
+
+            <div class="calc__cvss">
+              <p class="calc__cvss-label mono" data-i18n="calc.cvss">CVSS alone would say</p>
+              <p class="calc__cvss-value"><span class="num" id="cvss-value">9.8</span> · <span id="cvss-sev">Critical</span></p>
+            </div>
+
+            <p class="calc__formula mono" id="wars-product">(0.98 × 0.94 × 0.80 × 2.0 × 1.8) ÷ 3.2 × 100</p>
+          </div>
+          <p class="calc__note" data-i18n="calc.note">Simplified: the prototype also aggregates several findings per asset and damps low-confidence ones.</p>
+          <p class="visually-hidden" role="status" id="calc-status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================== COMPARISON ============================== -->
+    <section class="section section--alt" id="compare" aria-labelledby="compare-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-head__index mono"><span>02</span> / <span data-i18n="compare.index">Why it matters</span></p>
+          <h2 class="section-head__title" id="compare-title" data-i18n="compare.title">Same six findings, two rankings</h2>
+          <p class="section-head__lead" data-i18n="compare.lead">Six fictional findings on public web assets. Sorted by CVSS, three are tied at 9.8 “Critical” and look equally urgent. WARS separates them — and moves a 7.5 on a sensitive portal ahead of a 9.8 on a static page.</p>
+        </header>
+
+        <div class="compare">
+          <div class="rank">
+            <h3 class="rank__title"><span class="mono">CVSS</span> <span data-i18n="compare.cvss">Ranked by CVSS alone</span></h3>
+            <ol class="rank__list">
+              <li class="rank__item"><span class="rank__pos mono">1</span><span class="rank__name"><b data-i18n="x1.asset">Public login portal</b><small data-i18n="x1.flaw">Authentication bypass, exploited in the wild</small></span><span class="rank__val"><span class="num" data-num="9.8">9.8</span> <span class="sev sev--critical" data-i18n="sev.critical">Critical</span></span></li>
+              <li class="rank__item"><span class="rank__pos mono">1</span><span class="rank__name"><b data-i18n="x2.asset">Public API gateway</b><small data-i18n="x2.flaw">Remote code execution</small></span><span class="rank__val"><span class="num" data-num="9.8">9.8</span> <span class="sev sev--critical" data-i18n="sev.critical">Critical</span></span></li>
+              <li class="rank__item"><span class="rank__pos mono">1</span><span class="rank__name"><b data-i18n="x3.asset">Static information page</b><small data-i18n="x3.flaw">Critical CVE, exploitation unlikely</small></span><span class="rank__val"><span class="num" data-num="9.8">9.8</span> <span class="sev sev--critical" data-i18n="sev.critical">Critical</span></span></li>
+              <li class="rank__item"><span class="rank__pos mono">4</span><span class="rank__name"><b data-i18n="x5.asset">Booking form</b><small data-i18n="x5.flaw">SQL injection</small></span><span class="rank__val"><span class="num" data-num="8.1">8.1</span> <span class="sev sev--high" data-i18n="sev.high">High</span></span></li>
+              <li class="rank__item"><span class="rank__pos mono">5</span><span class="rank__name"><b data-i18n="x4.asset">Document portal</b><small data-i18n="x4.flaw">Path traversal, likely to be exploited</small></span><span class="rank__val"><span class="num" data-num="7.5">7.5</span> <span class="sev sev--high" data-i18n="sev.high">High</span></span></li>
+              <li class="rank__item"><span class="rank__pos mono">6</span><span class="rank__name"><b data-i18n="x6.asset">Marketing microsite</b><small data-i18n="x6.flaw">Outdated JavaScript library (XSS)</small></span><span class="rank__val"><span class="num" data-num="6.1">6.1</span> <span class="sev sev--medium" data-i18n="sev.medium">Medium</span></span></li>
+            </ol>
+          </div>
+
+          <div class="rank rank--wars">
+            <h3 class="rank__title"><span class="mono">WARS</span> <span data-i18n="compare.wars">Ranked by WARS</span></h3>
+            <ol class="rank__list">
+              <li class="rank__item">
+                <span class="rank__pos mono">1</span>
+                <span class="rank__name"><b data-i18n="x1.asset">Public login portal</b><small data-i18n="x1.flaw">Authentication bypass, exploited in the wild</small></span>
+                <span class="move move--same" role="img" aria-label="Same rank as with CVSS" data-i18n-attr="aria-label:move.same"><svg class="icon" aria-hidden="true"><use href="#i-minus"/></svg></span>
+                <span class="rank__val"><span class="num" data-num="82.9">82.9</span> <span class="band band--p1">P1</span></span>
+                <button type="button" class="try" data-example="x1" data-s="0.98" data-l="0.94" data-e="0.8" data-ac="2" data-bi="1.8" data-kev="true" aria-label="Load “Public login portal” into the calculator" data-i18n-attr="aria-label:x1.try"><svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg></button>
+              </li>
+              <li class="rank__item">
+                <span class="rank__pos mono">2</span>
+                <span class="rank__name"><b data-i18n="x2.asset">Public API gateway</b><small data-i18n="x2.flaw">Remote code execution</small></span>
+                <span class="move move--down" role="img" aria-label="Down 1 place" data-i18n-attr="aria-label:move.down1"><svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>1</span>
+                <span class="rank__val"><span class="num" data-num="63.7">63.7</span> <span class="band band--p2">P2</span></span>
+                <button type="button" class="try" data-example="x2" data-s="0.98" data-l="0.85" data-e="0.8" data-ac="1.8" data-bi="1.7" data-kev="false" aria-label="Load “Public API gateway” into the calculator" data-i18n-attr="aria-label:x2.try"><svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg></button>
+              </li>
+              <li class="rank__item rank__item--up">
+                <span class="rank__pos mono">3</span>
+                <span class="rank__name"><b data-i18n="x4.asset">Document portal</b><small data-i18n="x4.flaw">Path traversal, likely to be exploited</small></span>
+                <span class="move move--up" role="img" aria-label="Up 2 places" data-i18n-attr="aria-label:move.up2"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>2</span>
+                <span class="rank__val"><span class="num" data-num="41.3">41.3</span> <span class="band band--p3">P3</span></span>
+                <button type="button" class="try" data-example="x4" data-s="0.75" data-l="0.72" data-e="0.8" data-ac="1.8" data-bi="1.7" data-kev="false" aria-label="Load “Document portal” into the calculator" data-i18n-attr="aria-label:x4.try"><svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg></button>
+              </li>
+              <li class="rank__item">
+                <span class="rank__pos mono">4</span>
+                <span class="rank__name"><b data-i18n="x5.asset">Booking form</b><small data-i18n="x5.flaw">SQL injection</small></span>
+                <span class="move move--same" role="img" aria-label="Same rank as with CVSS" data-i18n-attr="aria-label:move.same"><svg class="icon" aria-hidden="true"><use href="#i-minus"/></svg></span>
+                <span class="rank__val"><span class="num" data-num="16.5">16.5</span> <span class="band band--p4">P4</span></span>
+                <button type="button" class="try" data-example="x5" data-s="0.81" data-l="0.4" data-e="0.6" data-ac="1.7" data-bi="1.6" data-kev="false" aria-label="Load “Booking form” into the calculator" data-i18n-attr="aria-label:x5.try"><svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg></button>
+              </li>
+              <li class="rank__item rank__item--down">
+                <span class="rank__pos mono">5</span>
+                <span class="rank__name"><b data-i18n="x3.asset">Static information page</b><small data-i18n="x3.flaw">Critical CVE, exploitation unlikely</small></span>
+                <span class="move move--down" role="img" aria-label="Down 4 places" data-i18n-attr="aria-label:move.down4"><svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>4</span>
+                <span class="rank__val"><span class="num" data-num="0.6">0.6</span> <span class="band band--p5">P5</span></span>
+                <button type="button" class="try" data-example="x3" data-s="0.98" data-l="0.05" data-e="0.4" data-ac="1" data-bi="1" data-kev="false" aria-label="Load “Static information page” into the calculator" data-i18n-attr="aria-label:x3.try"><svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg></button>
+              </li>
+              <li class="rank__item">
+                <span class="rank__pos mono">6</span>
+                <span class="rank__name"><b data-i18n="x6.asset">Marketing microsite</b><small data-i18n="x6.flaw">Outdated JavaScript library (XSS)</small></span>
+                <span class="move move--same" role="img" aria-label="Same rank as with CVSS" data-i18n-attr="aria-label:move.same"><svg class="icon" aria-hidden="true"><use href="#i-minus"/></svg></span>
+                <span class="rank__val"><span class="num" data-num="0.2">0.2</span> <span class="band band--p5">P5</span></span>
+                <button type="button" class="try" data-example="x6" data-s="0.61" data-l="0.02" data-e="0.4" data-ac="1" data-bi="1.1" data-kev="false" aria-label="Load “Marketing microsite” into the calculator" data-i18n-attr="aria-label:x6.try"><svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg></button>
+              </li>
+            </ol>
+            <p class="rank__hint"><svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg><span data-i18n="compare.hint">Open any finding in the calculator to see why it lands where it does.</span></p>
+          </div>
+        </div>
+
+        <ul class="takeaways">
+          <li><strong class="mono">3 → 1</strong><span data-i18n="take.1">“Critical” findings tied at the top with CVSS, versus one P1 with WARS.</span></li>
+          <li><strong class="mono">↓ 4</strong><span data-i18n="take.2">places for the 9.8 on a static page: severe on paper, unlikely to be exploited, little at stake.</span></li>
+          <li><strong class="mono">↑ 2</strong><span data-i18n="take.3">places for the 7.5 on a document portal: likely to be exploited, on an asset that matters.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== PROTOTYPE ============================== -->
+    <section class="section" id="prototype" aria-labelledby="proto-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-head__index mono"><span>03</span> / <span data-i18n="proto.index">The prototype</span></p>
+          <h2 class="section-head__title" id="proto-title" data-i18n="proto.title">From a whole domain to a ranked shortlist</h2>
+          <p class="section-head__lead" data-i18n="proto.lead">WARS is a pipeline of four standalone steps. Each one hands validated JSON (Pydantic) to the next, so any step can be replayed and audited on its own.</p>
+        </header>
+
+        <div class="proto">
+          <ol class="pipeline">
+            <li class="pipeline__step">
+              <span class="pipeline__num mono">01</span>
+              <h3 class="pipeline__name" data-i18n="pipe1.name">Discover</h3>
+              <p class="pipeline__q" data-i18n="pipe1.q">What is visible from the Internet?</p>
+              <p data-i18n="pipe1.text">Passive crawl only: GET and HEAD requests, robots.txt respected, conservative rate limits.</p>
+              <p class="pipeline__tech mono">httpx · asyncio · defusedxml</p>
+            </li>
+            <li class="pipeline__step">
+              <span class="pipeline__num mono">02</span>
+              <h3 class="pipeline__name" data-i18n="pipe2.name">Classify</h3>
+              <p class="pipeline__q" data-i18n="pipe2.q">What does each asset do?</p>
+              <p data-i18n="pipe2.text">Information, business process or both — and how sensitive. The only step where an LLM is used.</p>
+              <p class="pipeline__tech mono" data-i18n="pipe2.tech">LangGraph · LLM · rule layer</p>
+            </li>
+            <li class="pipeline__step">
+              <span class="pipeline__num mono">03</span>
+              <h3 class="pipeline__name" data-i18n="pipe3.name">Assess</h3>
+              <p class="pipeline__q" data-i18n="pipe3.q">What could happen, and how bad?</p>
+              <p data-i18n="pipe3.text">Findings enriched with CVSS from NVD, EPSS exploitation likelihood, CISA KEV and MITRE ATT&amp;CK techniques.</p>
+              <p class="pipeline__tech mono">NVD · EPSS · KEV · ATT&amp;CK</p>
+            </li>
+            <li class="pipeline__step">
+              <span class="pipeline__num mono">04</span>
+              <h3 class="pipeline__name" data-i18n="pipe4.name">Report</h3>
+              <p class="pipeline__q" data-i18n="pipe4.q">What do we fix first?</p>
+              <p data-i18n="pipe4.text">Self-contained HTML/PDF report ranked P1–P5, every score broken down factor by factor, TLP 2.0 marked.</p>
+              <p class="pipeline__tech mono">Playwright · HTML · PDF</p>
+            </li>
+          </ol>
+
+          <figure class="funnel-card" aria-labelledby="funnel-caption">
+            <figcaption id="funnel-caption">
+              <span class="w-kicker mono" data-i18n="funnel.kicker">Test run · public test target</span>
+              <span class="funnel-card__title" data-i18n="funnel.title">From 1,428 discovered assets to a ranked shortlist of 12</span>
+            </figcaption>
+            <ol class="funnel">
+              <li class="funnel__step funnel__step--1"><strong class="num" data-num="1428" data-digits="0">1,428</strong><span data-i18n="funnel.s1">assets discovered</span></li>
+              <li class="funnel__step funnel__step--2"><strong class="num">384</strong><span data-i18n="funnel.s2">in scope</span></li>
+              <li class="funnel__step funnel__step--3"><strong class="num">128</strong><span data-i18n="funnel.s3">classified</span></li>
+              <li class="funnel__step funnel__step--4"><strong class="num">12</strong><span data-i18n="funnel.s4">risk-scored</span></li>
+            </ol>
+            <div class="bands">
+              <p class="bands__title mono" data-i18n="bands.title">The 12 scored assets, by band</p>
+              <div class="bands__bar" aria-hidden="true">
+                <span class="band-seg band-seg--p1 g2"></span><span class="band-seg band-seg--p2 g2"></span><span class="band-seg band-seg--p3 g2"></span><span class="band-seg band-seg--p4 g3"></span><span class="band-seg band-seg--p5 g2"></span><span class="band-seg band-seg--pu g1"></span>
+              </div>
+              <ul class="bands__legend mono">
+                <li><i class="band-dot band-dot--p1"></i><span data-i18n="bands.p1">P1 critical</span> <b>2</b></li>
+                <li><i class="band-dot band-dot--p2"></i><span data-i18n="bands.p2">P2 high</span> <b>2</b></li>
+                <li><i class="band-dot band-dot--p3"></i><span data-i18n="bands.p3">P3 moderate</span> <b>2</b></li>
+                <li><i class="band-dot band-dot--p4"></i><span data-i18n="bands.p4">P4 low</span> <b>3</b></li>
+                <li><i class="band-dot band-dot--p5"></i><span data-i18n="bands.p5">P5 info</span> <b>2</b></li>
+                <li><i class="band-dot band-dot--pu"></i><span data-i18n="bands.pu">unscored → human review</span> <b>1</b></li>
+              </ul>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PRINCIPLES ============================== -->
+    <section class="section section--alt" id="principles" aria-labelledby="principles-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-head__index mono"><span>04</span> / <span data-i18n="pr.index">Design decisions</span></p>
+          <h2 class="section-head__title" id="principles-title" data-i18n="pr.title">Choices I stand by — and limits I state</h2>
+        </header>
+
+        <div class="principles">
+          <ul class="principles__list">
+            <li data-i18n="principles.1"><strong>The model never touches a number.</strong> The LLM only answers “what is this asset?”. Factors, formula and thresholds are deterministic, so every score can be justified line by line — and the tool still runs on its rules without an API key.</li>
+            <li data-i18n="principles.2"><strong>Multiply, don’t add.</strong> If one factor is close to zero the score must collapse: a severe flaw on an asset with no business value should not top the list.</li>
+            <li data-i18n="principles.3"><strong>Known exploitation is a floor.</strong> A CISA KEV match keeps the score in the critical band, whatever the other factors say.</li>
+            <li data-i18n="principles.4"><strong>Uncertainty counts as risk.</strong> A doubtful classification, a failed step or a missing source sends the asset to human review — never silently to low priority.</li>
+          </ul>
+          <div class="limits">
+            <p class="limits__item" data-i18n="principles.limit"><strong>What I don’t claim:</strong> the weighting is argued, not yet statistically validated. The next step is to calibrate it against real remediation decisions.</p>
+            <p class="limits__item" data-i18n="principles.scope"><strong>What it doesn’t cover:</strong> unpublished flaws, misconfigurations without a CVE, internal assets and human or organisational risks. WARS is a decision-support tool, not a scanner.</p>
+          </div>
+        </div>
+
+        <div class="w-end">
+          <a class="btn btn--ghost" href="../../#projects"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg><span data-i18n="end.back">Back to all projects</span></a>
+          <a class="btn btn--primary" href="../../#contact"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span data-i18n="end.contact">Get in touch</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Andon Pendichev</p>
+      <a class="footer__top" href="../../"><span data-i18n="footer.home">Portfolio home</span></a>
+    </div>
+  </footer>
+</body>
+</html>

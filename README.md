@@ -23,6 +23,7 @@ documents/                  CVs (EN / FR)
 documents/projects/         Project reports (PDF)
 media/                      Videos
 projects/sae15/             SAÉ 1.05 data-visualisation page
+projects/wars/              WARS interactive demo (EN/FR, reuses assets/css and boot.js)
 ```
 
 ## Editing content
