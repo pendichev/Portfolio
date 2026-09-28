@@ -106,6 +106,7 @@ window.I18N.fr = {
   'cat.telecom': 'Télécoms &amp; électronique',
   'cat.dev': 'Développement',
   'pint.media': 'Stage · confidentiel',
+  'pint2.media': 'Stage · démo interactive',
   'pint.code': 'Stage · 2026',
   'pint1.title': 'Parsers de logs SIEM pour un SOC aéronautique',
   'pint1.text': 'Quatre parsers NetWitness sur mesure — reverse proxy, fournisseur d’identité, pare-feu applicatif et NetFlow — qui ont rendu des logs de production interrogeables et corrélables. En production chez BULATSA.',
@@ -153,7 +154,8 @@ window.I18N.fr = {
   'link.report': 'Lire le rapport',
   'link.slides': 'Voir la présentation',
   'link.project': 'Ouvrir le projet',
-  'link.source': 'Voir le code source',
+  'link.oldsite': 'Voir la première version',
+  'link.demo': 'Tester le score WARS',
   'link.video': 'Voir la vidéo',
 
   /* Skills */
@@ -203,7 +205,6 @@ window.I18N.fr = {
   'contact.copy': 'Copier l’e-mail',
   'contact.phone': 'Téléphone',
   'contact.location': 'Localisation',
-  'footer.made': 'Codé à la main en HTML, CSS &amp; JavaScript natif · aucun traceur, aucune requête tierce',
   'footer.top': 'Haut de page',
 
   /* Strings used by main.js */
