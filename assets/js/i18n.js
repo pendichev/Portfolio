@@ -154,7 +154,7 @@ window.I18N.fr = {
   'link.report': 'Lire le rapport',
   'link.slides': 'Voir la présentation',
   'link.project': 'Ouvrir le projet',
-  'link.oldsite': 'Voir la première version',
+  'link.source': 'Voir le code source',
   'link.demo': 'Tester le score WARS',
   'link.video': 'Voir la vidéo',
 
