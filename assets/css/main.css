@@ -371,9 +371,17 @@ code {
   font-weight: 600;
   letter-spacing: -0.01em;
 }
-.brand__mark { width: 32px; height: 32px; }
-.brand__mark rect { fill: var(--mark-bg); stroke: var(--line-strong); stroke-width: 2; }
-.brand__mark path { fill: none; stroke: var(--mark-fg); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+/* Logo: a shield and padlock wired into circuit traces, amber on a dark tile in both themes. */
+.brand__mark { flex: none; width: 36px; height: 36px; }
+.mk-tile { fill: var(--mark-bg); stroke: var(--line-strong); stroke-width: 2; }
+.mk-trace { fill: none; stroke: var(--mark-fg); stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
+.mk-node { fill: var(--mark-bg); stroke: var(--mark-fg); stroke-width: 1.8; }
+.mk-shield { fill: var(--mark-fg); }
+.mk-inset { fill: none; stroke: var(--mark-bg); stroke-width: 1.6; }
+.mk-lock { fill: var(--mark-bg); }
+.mk-shackle { fill: none; stroke: var(--mark-bg); stroke-width: 2.5; }
+.mk-key { fill: var(--mark-fg); }
+.mk-keyline { stroke: var(--mark-fg); stroke-width: 1.4; stroke-linecap: round; }
 .brand__name { font-size: 1rem; }
 
 .nav__list { display: flex; gap: 2px; }
