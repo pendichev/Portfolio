@@ -746,6 +746,7 @@ code {
   color: var(--text-3);
 }
 .exp__subtitle .icon { width: 16px; height: 16px; color: var(--accent-text); }
+.exp__subtitle--next { margin-top: 34px; }
 
 .timeline { position: relative; display: grid; gap: 20px; }
 .timeline::before {

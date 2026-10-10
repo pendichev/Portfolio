@@ -95,6 +95,7 @@ window.I18N.fr = {
   'edu2.degree': 'Baccalauréat général&nbsp;— spécialités Mathématiques et Anglais',
   'edu2.school': 'Lycée privé Saint-Pierre, Calais',
   'edu2.note': 'Mention Bien · distinction «&nbsp;élève le plus méritant&nbsp;»',
+  'cert1.when': 'Sept. 2026',
 
   /* Projects */
   'projects.title': 'Réalisations',
@@ -112,7 +113,7 @@ window.I18N.fr = {
   'pint1.text': 'Quatre parsers NetWitness sur mesure — reverse proxy, fournisseur d’identité, pare-feu applicatif et NetFlow — qui ont rendu des logs de production interrogeables et corrélables. En production chez BULATSA.',
   'pint2.title': 'WARS — un prototype de priorisation par le risque',
   'pint2.text': 'Prototype Python qui classe les actifs web exposés selon leur risque contextuel — CVSS, EPSS, CISA KEV et criticité de l’actif — avec un LLM limité à la classification des actifs, pour que chaque score reste auditable.',
-  'link.private': 'Confidentiel — détails sur demande',
+  'link.private': 'Confidentiel',
   'p304.title': 'Découvrir le pentesting',
   'p304.text': 'Test d’intrusion pédagogique en laboratoire isolé&nbsp;: reconnaissance, scan de vulnérabilités avec Nessus et exploitation contrôlée avec Metasploit de cibles Metasploitable&nbsp;2 et Windows XP, conclus par un rapport avec analyse des risques et recommandations.',
   'p303.title': 'Maintien en condition de sécurité&nbsp;: répondre à un appel d’offres',
