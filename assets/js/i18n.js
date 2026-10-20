@@ -95,7 +95,8 @@ window.I18N.fr = {
   'edu2.degree': 'Baccalauréat général&nbsp;— spécialités Mathématiques et Anglais',
   'edu2.school': 'Lycée privé Saint-Pierre, Calais',
   'edu2.note': 'Mention Bien · distinction «&nbsp;élève le plus méritant&nbsp;»',
-  'cert1.when': 'Sept. 2026',
+  'cert1.when': 'Oct. 2026',
+  'cert2.when': 'Sept. 2026',
 
   /* Projects */
   'projects.title': 'Réalisations',
