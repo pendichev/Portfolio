@@ -98,6 +98,9 @@ window.I18N.fr = {
   'cert1.when': 'Nov. 2026',
   'cert2.when': 'Oct. 2026',
   'cert3.when': 'Sept. 2026',
+  'cert1.verify': 'IBM Generative AI Engineering Professional Certificate — vérifier sur Coursera',
+  'cert2.verify': 'IBM Cybersecurity Analyst Professional Certificate — vérifier sur Coursera',
+  'cert3.verify': 'Google Cybersecurity Professional Certificate — vérifier sur Coursera',
 
   /* Projects */
   'projects.title': 'Réalisations',

@@ -826,14 +826,29 @@ code {
 .xp__badge .icon { width: 18px; height: 18px; color: var(--accent-text); }
 
 .edu {
+  position: relative;
   margin-bottom: 14px;
   padding: 20px 22px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
   background: var(--surface);
 }
-.edu__when { margin: 0 0 6px; font-size: .76rem; color: var(--accent-text); }
+.edu__when { margin: 0 0 6px; padding-right: 26px; font-size: .76rem; color: var(--accent-text); }
 .edu__degree { margin-bottom: 6px; font-size: 1.05rem; line-height: 1.35; letter-spacing: -0.015em; }
+/* Certificate titles open their Coursera verification page. The arrow sits in
+   the card corner so it can't be orphaned on its own line by a wrapping title. */
+.edu__verify { transition: color .2s; }
+.edu__verify:hover { color: var(--accent-text); text-decoration: underline; text-underline-offset: .16em; }
+.edu__verify .icon {
+  position: absolute;
+  top: 21px;
+  right: 22px;
+  width: 16px;
+  height: 16px;
+  color: var(--accent-text);
+  transition: transform .2s var(--ease);
+}
+.edu__verify:hover .icon { transform: translate(2px, -2px); }
 .edu__school { margin: 0 0 6px; font-size: .93rem; color: var(--text); }
 .edu__note { margin: 0; font-size: .88rem; color: var(--text-3); }
 
